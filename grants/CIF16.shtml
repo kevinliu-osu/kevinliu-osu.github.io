@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Fireworks  
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20090905
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="google" content="notranslate">
+<meta http-equiv="Content-Language" content="en">
+<title>Jia Liu</title>
+<link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+<link rel="shortcut icon" href="http://www.cs.iastate.edu/sites/all/themes/suitcase_interim/images/favicon.ico" type="image/vnd.microsoft.icon" />
+<style>
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #BC1B32;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Chrome, Safari and Opera 
+    document.documentElement.scrollTop = 0; // For IE and Firefox
+}
+</script>    
+</head>
+    
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1>Jia (Kevin) Liu,</h1>
+          <p>Assistant Professor, Depts. of CS and ECE (Courtesy), Iowa State
+            University </p>
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="menu">
+		<ul>
+			<li><a href="../">Home</a></li>
+			<li><a href="../research/">Research</a></li>
+			<li><a href="../publications/">Publications</a></li>
+			<li><a href="../">Awards</a></li>
+			<li  class="current_page_item"><a href="#">Grants</a></li>
+			<li><a href="../activities/">Activities</a></li>
+			<li><a href="../teaching/">Teaching</a></li>
+			<li><a href="../group/">My Group</a></li>
+		</ul>
+	</div>
+	<!-- end #menu -->
+	<div id="page">
+	<div id="page-bgtop">
+	<div id="page-bgbtm">
+	</div>
+		<!-- end #content -->
+		<div id="sidebar">
+            <table>
+                
+                      <tr> 
+                        <td valign="top"> 
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                            <td>
+                            <center>
+                            <img src="../images/nsf-logo.jpg">
+                            </center>
+                            <br>
+                            </td>
+                            </tr>
+
+                            <tr> 
+                              <td valign="bottom" width="100%"><a name="CIF16"></a><font size="6"><b><font face="Arial, Helvetica, sans-serif"><center>Taming Convergence and Delay in Stochastic Network Optimization with Hessian Information</center></font></b></font>
+                              </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <br>
+                                    <center><b><font size=4>NSF CCF-1618318</font></b></center>
+                                </td>
+                            </tr>
+                            <tr> 
+                                <td> 
+                                    <center><b><font size=4>Principal Investigator: Jia (Kevin) Liu</font></b></center>
+                                </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                                      
+                <tr> 
+                        <td> 
+                          <hr noshade>
+                        </td>
+                </tr>
+                
+                     <tr> 
+                        <td valign="top"> 
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      			<tr> 
+                              <td valign="top"> 
+                                <p><b><font size="3">Intellectual Merits</font></b></p>
+                                <p>The proposed SOHI-based stochastic network control and optimization technologies will not only advance the knowledge in the design of data communication networks but will also allow the general communications and signal processing research communities to explore a fundamental understanding of stochastic network control and optimization through a comprehensive study that include developing accurate theoretical models, investigating theoretical performance bounds and capacity limits, and the designing distributed algorithms. The proposed research aims to fill the void and contribute to an exciting second-order network control and optimization paradigm. The proposed research will support the communications, networking, and signal processing communities and the general public by facilitating the development of SOHI-based network protocols with substantially increased network performance.
+                                </p>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                
+                      <tr>
+                        <td width="77%" class="BodyText" valign="top"> 
+                          <hr noshade>
+                        </td>
+                      </tr>
+                      
+                     <tr> 
+                        <td width="77%" class="BodyText_Home" valign="top"> 
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0" height="131">
+                      			<tr> 
+                              <td width="84%" class="BodyText_Home" valign="top"> 
+                                <p><b><font size="3">Major Activities</font></b></p>
+                                <ol>
+                                    <li><b>Heavy-Ball-Based Joint Congestion Control and Routing (Partial SOHI)</b>
+                                        <p>
+                                            In our first research thrust, we propose a heavy-ball-based joint congestion control and routing scheme that requires only simple eigen-spectrum information of the Hessian matrix to dramatically reduce queueing delay, increase convergence speed, and achieve network utility-optimality. Our approach is based on the key idea of separating the queue-lengths from the weights in the back-pressure-based approach, and then uses a weight updating scheme that utilizes only one more time-slot of memory of the weight change history. Surprisingly, we show that this simple scheme offers two control degrees of freedom to achieve utility-optimality, low-delay, and fast-convergence. More importantly, we show that our heavy-ball-based approach leads to an important and elegant three-way performance trade-off relationship, which has not been discovered so far in the literature.
+                                        </p>
+                                    </li>
+                      
+                                    <li><b>Primal-Dual Second-Order Congestion Control and Routing (Full SOHI)</b>
+                                        <p>
+                                            To further increase convergence speed and reduce delay, in our second research thrust, we propose a full-SOHI-based joint congestion control and routing framework based on a primal-dual second-order approach. In our preliminary studies, we have established the utility-optimality and queue-stability of the proposed second-order framework. Our theoretical analysis confirms the fast-convergence and low-delay of the proposed algorithm. Our analytical results also suggest an elegant utility-optimality and queueing-delay trade-off relationship governed by a barrier parameter. This key insight unifies techniques and concepts that originated independently from control theory and optimization theory. We compare this trade-off relationship to those in the back-pressure-based methods and contrast their similarities and differences, further advancing our understanding of both first- and second-order methods in network optimization theory.
+                                        </p>
+                                    </li>			
+                                    
+                                    <li><b>SOHI-Based Distributed Control and Optimization Algorithm Design</b>
+                                        <p>
+                                            In our third research thrust, we focus on decentralizing the SOHI-based network control and optimization schemes proposed in the previous two thrusts.
+                                            For the heavy-ball-based approach, we show that it possesses a decomposition structure and only requires one-hop information exchange, which lead to the same distributed design as in the back-pressure-based approaches. This also implies that all distributed schemes developed for the back-pressure-based framework (e.g., adaptive CSMA) can be directly adapted into our heavy-ball-based framework to achieve fast-convergence and low-delay. For the primal-dual second-order approach, we exploit the special problem structure to develop a new decentralization scheme based on Sherman-Morrison-Woodbury (SMW) matrix inversion. Our preliminary workshows that our SMW-based approach is far more efficient than the existing approaches in the literature.
+                                        </p>
+                                    </li>						
+                                </ol>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td width="77%" class="BodyText" valign="top"> 
+                          <hr noshade>
+                        </td>
+                      </tr>
+                      
+                     <tr> 
+                        <td width="77%" class="BodyText_Home" valign="top"> 
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0" height="131">
+                      			<tr> 
+                              <td width="84%" class="BodyText_Home" valign="top"> 
+                                <p><b><font size="3">Products</font></b></p>
+                                <ol>
+                                    <li>J. Liu, A. Eryilmaz, N. B. Shroff, and E. S. Bentley, "Heavy-Ball: A New Approach for Taming Delay and Convergence in Wireless Network Optimization," in Proc. IEEE INFOCOM, San Francisco, CA, Apr. 2016 (<b><font color=red>Best Paper Award</font></b>, acceptance rate: 17%).</li><br>
+
+                                    <li>J. Liu, "Achieving Low-Delay and Fast-Convergence in Stochastic Network Optimization: A Nesterovian Approach," in Proc. ACM Sigmetrics, Antibes Juan-les-Pins, Jun. 2016 (acceptance rate: 13%).</li><br>
+                                    
+                                    <li>J. Liu, N. B. Shroff, C. H. Xia, H. D. Sherali, "Joint Congestion Control and Routing Optimization: An Efficient Second-Order Distributed Approach,'' IEEE/ACM Transactions on Networking, vol. 24, no. 3, pp. 1404-1420, Jun. 2016.</li><br>
+                                </ol>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td width="77%" class="BodyText" valign="top"> 
+                          <hr noshade>
+                        </td>
+                      </tr>
+                        
+            </table>
+            
+		</div>
+		<!-- end #sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	</div>
+	</div>
+	<!-- end #page -->
+</div>
+	<div id="footer">
+        <center>
+        <table>
+              <tr>
+                <td class="BodyText" valign="middle"> 
+                    <!--#config timefmt="%Y" -->
+                    Copyright &copy 2004-<!--#echo var="DATE_LOCAL" --> <a href="mailto:jialiu@iastate.edu">Jia (Kevin) Liu</a>. All rights reserved.<br> 
+                    <!--#config timefmt="%m/%d/%Y" -->Updated: <!--#echo var="LAST_MODIFIED" -->. Design adapted from   <a href="http://templated.co" rel="nofollow">TEMPLATED</a>. 
+                </td>
+                <!----------Place for the extreme tracking icon----------------------------------------->
+                <!----------Old Image Link: http://t1.extreme-dm.com/i.gif-------------->
+                <td>
+                <!-- extreme_jialiu_b782d478f8f780aa94e2c07df5dd86c1 -->
+<div id="eXTReMe"><a href="http://extremetracking.com/open?login=jialiu">
+<img src="http://t1.extreme-dm.com/i.gif" style="border: 0;"
+height="38" width="41" id="EXim" alt="eXTReMe Tracker" /></a>
+<script type="text/javascript"><!--
+var EXlogin='jialiu' // Login
+var EXvsrv='s10' // VServer
+EXs=screen;EXw=EXs.width;navigator.appName!="Netscape"?
+EXb=EXs.colorDepth:EXb=EXs.pixelDepth;EXsrc="src";
+navigator.javaEnabled()==1?EXjv="y":EXjv="n";
+EXd=document;EXw?"":EXw="na";EXb?"":EXb="na";
+EXd.write("<img "+EXsrc+"=http://e1.extreme-dm.com",
+"/"+EXvsrv+".g?login="+EXlogin+"&amp;",
+"jv="+EXjv+"&amp;j=y&amp;srw="+EXw+"&amp;srb="+EXb+"&amp;",
+"l="+escape(EXd.referrer)+" height=1 width=1>");//-->
+</script><noscript><div id="neXTReMe"><img height="1" width="1" alt=""
+src="http://e1.extreme-dm.com/s10.g?login=jialiu&amp;j=n&amp;jv=n" />
+</div></noscript></div>
+                </td>
+            </tr>
+        </table>
+    </center>
+        
+	</div>
+	<!-- end #footer -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-102207232-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    
+</body>
+</html>

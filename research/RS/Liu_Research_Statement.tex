@@ -1,0 +1,182 @@
+\documentclass[10pt]{article}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{amsfonts}
+\usepackage{graphicx}%
+\usepackage{fancyhdr}
+\usepackage{wrapfig}
+\usepackage[small,compact]{titlesec}
+\usepackage[letterpaper, top=1in, bottom=1in, left=.9in, right=.9in]{geometry}
+
+
+
+\theoremstyle{plain} \numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{finalremark}[theorem]{Final Remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{question}{Question} 
+
+
+\title{{\bf Research Statement}}
+
+\author{Jia (Kevin) Liu \\
+{\small Dept. of Computer Science}\\
+{\small Iowa State University}\\
+{\small Web: \url{http://web.cs.iastate.edu/~jialiu}}
+}
+\date{}
+
+\pagestyle{fancy}\lhead{Jia (Kevin) Liu} \rhead{June 2017} \chead{{\large{\bf Research Statement}}} \lfoot{} \rfoot{\bf \thepage} \cfoot{}
+
+\bibliographystyle{IEEEtran}
+
+\begin{document}
+
+\maketitle
+
+
+
+\section*{I. Research Overview and Goals}
+
+My research focuses on convex/non-convex optimization, machine learning, applied probability,
+stochastic control, and their applications in many real-world complex systems and networks, such as Internet-of-Things (IoT),  Cloud Computing, Cyber-Physical Systems (CPS), Data Analytics, Wireless Communication Networks, Network Economy, etc. 
+These systems can all be modeled as stochastic networks of many interacting agents sharing and competing limited resources at different time-scales and stochastic dynamics. 
+My goal is to understand fundamental performance limits of such systems, and develop efficient, adaptive, low-complexity, and scalable algorithms for diverse applications in these systems. 
+To that end, I am taking an interdisciplinary effort spanning cutting-edge topics in electrical engineering, computer science, and operations research.
+In particular, my research utilizes and contributes to network science, stochastic control theory, queueing theory, optimization theory, and low-complexity algorithm design. 
+In what follows, I will first give an overview of my research contributions in recent years, and then discuss several future research directions that I am passionate about.
+
+
+
+
+\section*{II. Main Contributions and Research Achievements}
+
+In the pursuit of my research goals, my contributions can be organized into the following four areas.
+
+
+
+\subsection*{1) Momentum-Based Distributed Stochastic Network Control and Optimization \cite{Liu16:HeavyBall_INFOCOM,Liu16:Nesterovian,Liu16:CIF_Grant}}
+
+\begin{wrapfigure}{R}{0.3\columnwidth}
+\centering
+\includegraphics[width=0.3\columnwidth]{fig_ThreeWay.eps} \\
+\vspace{.0in}
+{\small Three-way performance control.}
+\end{wrapfigure}
+The growing scale and complexity in modern complex network systems necessitate the designs of distributed scheduling and control algorithms that can operate based on locally observable information.
+To date, most of the standard distributed approaches are based on the Lagrangian dual decomposition framework and the (sub)gradient descent method, which suffer large queueing delay and slow convergence.
+To address this problem, I have developed a general theory and a series of {\em momentum-based} fast-converging and low-delay distributed control and optimization algorithms that leverage momentum information to offer {\em orders of magnitudes of improvements} in both queueing delay and convergence speed.
+Moreover, my momentum-based approach reveals an elegant and fundamental {\em three-way performance control relationship} between throughput, delay, and convergence speed, which is governed by {\em two control degrees of freedom}.
+This new momentum-based stochastic control and optimization theory includes two related approaches: i) Heavy-Ball approach \cite{Liu16:HeavyBall_INFOCOM}, and ii) Nesterovian approach \cite{Liu16:Nesterovian}, which have been published top venues at IEEE INFOCOM 2016 and ACM SIGMETRICS 2016, respectively.
+Moreover, the Heavy-Ball approach won the {\bf IEEE INFOCOM 2016 Best Paper Award}.
+Based on the results in \cite{Liu16:HeavyBall_INFOCOM,Liu16:Nesterovian}, I have received a three-year {\bf NSF grant} from the CIF program \cite{Liu16:CIF_Grant} as {\bf Sole PI}.
+This research has also been supported by AFRL 2015 Visiting Faculty Research Program at the Information Directorate (AFRL/RI) and the prestigeous AFOSR Summer Faculty Fellowship Program (SFFP) award in 2016.
+
+
+
+\subsection*{2) Second-Order Distributed Stochastic Network Optimization \cite{Liu12:DNewton_INFOCOM,Liu13:DNewton_INFOCOM,Liu16:DNewton_JCCR_ToN,Liu13:PER}}
+
+Encouraged by the promising results in the momentum-based distributed stochastic control and optimization, I went one step further to ask the following questions:
+i) Can we further increase the convergence speed and reduce delay? 
+ii) Is it possible to do better than the three-way performance trade-off? 
+It turns out that both answers are ``yes" and the key in answering these questions is to exploit full {\em second-order Hessian information} (SOHI).
+The basic philosophy of my SOHI-based approaches is to exploit not only first-order gradient information but, more importantly, second-order Hessian information in designing {\em distributed} optimization algorithms.
+So far, results in this direction have appeared in IEEE/ACM Transactions on Networking \cite{Liu16:DNewton_JCCR_ToN}, ACM Sigmetrics Performance Evaluation Review \cite{Liu13:PER}, IEEE INFOCOM'12 \cite{Liu12:DNewton_INFOCOM}, and IEEE INFOCOM'13 \cite{Liu13:DNewton_INFOCOM} ({\bf Best Paper Runner-up Award}, 1600+ submissions, acceptance rate 17\%).
+Preliminary results in this direction have also played a key role in helping me to receive my sole-PI'ed NSF grant from the CIF program \cite{Liu16:CIF_Grant}.
+My work contributes to a new and exciting paradigm shift in cross-layer network design that is evolving from first-order to second-order methods.
+I expect the outcomes of this research provide a much needed comprehensive analytical foundation, new theoretical insights, novel control and optimization algorithms, as well as practical network protocol designs that will significantly advance our understanding of tomorrow's complex systems.
+
+
+\subsection*{3) Stochastic Network Optimization with Imperfect System Information \cite{Liu09:MC_MIMO_Mobihoc,Liu16:M-MIMO,Liu15:NeTS_Grant}}
+
+For most complex cyber-physical systems and networks in the real-world, the observable system state information (e.g., network topology, queueing buffer states, channel state information in wireless networks, etc.) based on which distributed control/optimization decisions are made is usually noisy and prone to errors.
+In this research, I strive to understand the impacts of imperfect (e.g., delayed, erroneous, incomplete, etc.) system information on stochastic distributed network optimization and control.
+With such a fundamental understanding, we could develop effective distributed stochastic network control and optimization schemes to mitigate these negative impacts.
+Toward this end, in the context of joint congestion control and scheduling in 5G wireless network optimization, I showed that all existing queue-length-based approaches exhibit a pair of fundamental {\em phase transition phenomena} in queueing delay and throughput with respect to the accuracy of channel state information.
+Collectively, these discoveries on queueing delay and congestion control phase transition effects advance our understanding of the trade-offs between delay, throughput, and the accuracy/complexity of channel state information acquisition. 
+Also, our results suggest that delay and throughput scalings could potentially be employed as useful proxies to control channel state information quality and acquisition complexity.
+Results of this research has appeared in ACM MobiHoc'09 \cite{Liu09:MC_MIMO_Mobihoc} and ACM MobiHoc'16 \cite{Liu16:M-MIMO}.
+Based on the preliminary results in \cite{Liu09:MC_MIMO_Mobihoc,Liu16:M-MIMO}, I won a three-year {\bf NSF grant} from the NeTS program as the {\bf Sole PI} \cite{Liu15:NeTS_Grant}. 
+
+
+
+
+\subsection*{4) Topology and Deployment Optimization for Internet-of-Things (IoT) \cite{Liu12:FBS_Infocom,Liu12:FBS_JSAC,Li12:ASHRAE}}
+%My research interests also span other areas related to fundamental networking research, particularly in wireless network infrastructure of {\em Cyber-Physical Systems} (CPS) in future smart buildings.
+Today, most cyber-physical Internet-of-Things (IoT) require a wired- or wireless-based indoor network infrastructure for sensing, communication, and actuation.
+In the world of such cyber-physical IoT, the energy expenditure and hence battery lifetime of the  network infrastructure depend heavily upon the topology design and deployment optimization.
+However, in many indoor environments, IoT deployment is particularly challenging due to the impacts of building structures and floors/walls separations.
+In this {\em inter-disciplinary} research, we considered the problem of jointly optimizing network deployment and power control in buildings to prolong the battery lifetime of sensors in cyber-physical IoT network infrastructure under harsh indoor wireless environments.
+We showed that the problem can be formulated as a mixed-integer non-convex program (MINCP), which is NP-hard and difficult to solve especially when the network size is large.
+To address this difficulty, in our research, we proposed both global optimization and novel efficient algorithms that target at large-sized network infrastructures in buildings.
+Results in this research have appeared in IEEE Journal on Selected Areas in Communications \cite{Liu12:FBS_JSAC},  ASHRAE Transaction \cite{Li12:ASHRAE}, and IEEE INFOCOM \cite{Liu12:FBS_Infocom}.
+Results in this research have also contributed to the award of a three-year NSF grant from the CPS program.
+
+
+\section*{III. Future Directions}
+My current research has opened many interesting possibilities to the development of efficient and low-complexity algorithms for complex network systems, and made contributions to the fields of networking, control, optimization, and queueing analysis.
+Given my strong background in optimization theory, Markov decision process theory, control theory, queueing theory, and algorithm design, as well as my rich experiences in the modeling, analysis, and design of complex systems arising in real life, I believe that my extensive academic preparations have enabled me to pursue many emerging and exciting research areas. 
+In what follows, I will outline three strategic areas, among others, that I plan to investigate in the future.
+
+
+\subsection*{1) {\em Learning-Based} Adaptive Resource Allocation in Complex Large-Scale Systems}
+
+With the rapid integration of massive amounts of data and proliferation of new devices  (e.g., smart mobile devices, robotic swarms, Internet-of-things, etc.), today's network system infrastructures (e.g., data centers, cellular networks, etc.) are being stretched to their limits.
+To design highly efficient and resilient network infrastructures, a key aspect is to {\em rapidly}, {\em jointly}, and {\em optimally} deal with the cross-interactions between congestion control, routing, and various resource allocations and scheduling schemes, all within stack and across users.
+As a result, there is an urgent need for developing fast-converging distributed cross-layer congestion control and multi-path routing optimization algorithms to maximize network throughput and reduce end-to-end delay.
+Moreover, the need for joint congestion control and routing optimization is not only arising from big-data network design, but also a fundamental problem that lies at the heart of many complex large-scale system operations, such as supply chain management \cite{Bertsekas0507:DP,Neely10:SupplyChain,Dai05:SupplyChain,Jiang09:SupplyChain}, transportation network traffic control \cite{Varaiya13:Transport,Le13:Transport}, smart grid demand response \cite{Huang12:DR,Neely10:DR,Neely11:DR}, just to name a few. 
+My momentum-based network optimization approaches can be viewed as a simple {\em learning-based} approach where we exploit the memory/history information to perform network control and optimization.
+I would like to generalize this approach to incorporate other advanced and sophisticated learning algorithms for stochastic network control and optimization.
+
+
+\smallskip
+\noindent {\bf Applications:} Data Centers, Big Data Analytics Infrastructure, Internet-of-Things, Network Economy
+
+
+\subsection*{2) Delay and Age-of-Information Minimization for Crowd Sourcing/Sensing in Complex Networks}
+
+Many modern wireless networks tightly integrate physical/biological entities and cyber systems of computing and communications (e.g., network/sharing economy, smart electric power grid, transportation networks, online social networks, supply-chain management, etc.).
+The applications of such complex networks span manufacturing, transportation, infrastructure, health care, emergency response, national security and defense, etc. 
+The performances of these complex networks typically rely on accurate, prompt, and consistent sensing and feedback from the physical and biological systems, which typically include a large number of distributed and {\em crowd-sourced} sensors sharing limited network resources.
+This calls for efficient and distributed delay-sensitive scheduling design that not only optimizes system throughput, but, more importantly, provides timely and consistent service and minimizes age-of-information (AoI) that measures data freshness. 
+Existing modeling and algorithm designs are either not suitable in the crowd-sensing settings or fail to meet these stringent requirements. 
+This motivates me to explore a new theoretical foundation for efficient and distributed scheduling design that optimizes both throughput, delay, and AoI-oriented metrics in various complex large-scale systems.
+
+\smallskip
+\noindent {\bf Applications:} Network/Sharing Economy, Crowd Sensing/Sourcing, Cyber-Physical Systems.
+
+
+\subsection*{3) Joint Congestion Control and Scheduling Optimization with Directional Networking}
+
+To alleviate the rapidly increasing mobile data demands, in recent years, directional networking and communications (e.g., millimeter wave technology, massive MIMO systems, etc.) have emerged as enabling technologies for building the next generation mobile data networks and beyond. 
+The excitements of directional networking are primarily due to: i) the rich unlicensed
+spectrum resources in millimeter wave bands; ii) the ease of packing large antenna arrays into small form factors; and iii) a much simplified interference management thanks to the highly directional signals. 
+However, in spite of all of these promising progresses, the existing research efforts on directional networking are mostly concerned with problems at the physical layer or signal processing aspects. 
+The understanding of how directional networking could affect the performance of network control, scheduling, and resource allocation algorithms remains limited
+in the literature. 
+In this research, my goal is to fill this gap by conducting an in-depth theoretical study on the interactions
+between directional wireless communications technologies at the physical layer and network control and optimization algorithms at higher layers, as well as their
+impacts on queueing delay and throughput performances.
+
+\smallskip
+\noindent {\bf Applications:} Millimeter-Wave/Massive MIMO Networking, Visible Light Networking, 5G Wireless Networks
+
+
+
+%\clearpage
+%
+{\small
+\bibliography{IEEEabrv,../../../BIB/Kevin_All,../../../BIB/SmartGrid}
+}
+
+\end{document}

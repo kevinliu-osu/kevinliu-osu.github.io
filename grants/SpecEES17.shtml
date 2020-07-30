@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Fireworks  
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20090905
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="google" content="notranslate">
+<meta http-equiv="Content-Language" content="en">
+<title>Jia Liu</title>
+<link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+<link rel="shortcut icon" href="http://www.cs.iastate.edu/sites/all/themes/suitcase_interim/images/favicon.ico" type="image/vnd.microsoft.icon" />
+<style>
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #BC1B32;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Chrome, Safari and Opera 
+    document.documentElement.scrollTop = 0; // For IE and Firefox
+}
+</script>    
+</head>
+    
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1>Jia (Kevin) Liu,</h1>
+          <p>Assistant Professor, Depts. of CS and ECE (Courtesy), Iowa State
+            University </p>
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="menu">
+		<ul>
+			<li><a href="../">Home</a></li>
+			<li><a href="../research/">Research</a></li>
+			<li><a href="../publications/">Publications</a></li>
+			<li><a href="../">Awards</a></li>
+			<li  class="current_page_item"><a href="#">Grants</a></li>
+			<li><a href="../activities/">Activities</a></li>
+			<li><a href="../teaching/">Teaching</a></li>
+			<li><a href="../group/">My Group</a></li>
+		</ul>
+	</div>
+	<!-- end #menu -->
+	<div id="page">
+	<div id="page-bgtop">
+	<div id="page-bgbtm">
+	</div>
+		<!-- end #content -->
+		<div id="sidebar">
+            <table>
+                
+                      <tr> 
+                        <td valign="top"> 
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                            <td>
+                            <center>
+                            <img src="../images/nsf-logo.jpg">
+                            </center>
+                            <br>
+                            </td>
+                            </tr>
+
+                            <tr> 
+                              <td valign="bottom" width="100%"><a name="CIF16"></a><font size="6"><b><font face="Arial, Helvetica, sans-serif"><center>SpecEES: Toward Spectral and Energy Efficient Cross-Layer Designs for Millimeter-Wave-Based Massive MIMO Networks</center></font></b></font>
+                              </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <br>
+                                    <center><b><font size=4>NSF ECCS-1818791</font></b></center>
+                                </td>
+                            </tr>
+                            <tr> 
+                                <td> 
+                                    <center><b><font size=4>Principal Investigator: Jia (Kevin) Liu</font></b></center>
+                                </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                                      
+                <tr> 
+                        <td> 
+                          <hr noshade>
+                        </td>
+                </tr>
+                
+                     <tr> 
+                        <td valign="top"> 
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      			<tr> 
+                              <td valign="top"> 
+                                <p><b><font size="3">Intellectual Merits</font></b></p>
+                                <p>The potential of mmWave and M-MIMO technologies is tremendous to make a significant impact on future 5G wireless networks, which is expected to support data rates over 50 times over the current 4G LTE systems. The future multi-Gigabit wireless communication technologies are poised to enable a myriad of networking applications for (e.g., Internet-of-Things, virtual/augmented reality, etc.). Our proposed research program will advance the knowledge in both hardware design and theoretical foundation of mmWave and M-MIMO wireless networks. Moreover, our proposed research is envisioned to serve a critical need in the communications, signal processing, networking, and control research communities by exploring a joint hardware-software development for mmWave M-MIMO wireless networks. Our goal is to establish a unified research program that consists of: i) hybrid OS-CDM/Diplo-FIRE transceiver and beamforming architecture, ii) Spectral-efficient optimization through OS-CDM/Diplo-FIRE subarray clustering, and iii) Energy-efficient optimality through OS-CDM/Diplo-FIRE subarray clustering. Our proposed research aims to leverage the latest advances in mmWave M-MIMO communications at the physical layer to enable new mmWave M-MIMO network optimization opportunities. Our research will contribute to the broadly defined communications, signal processing, and networking research by developing mmWave M-MIMO joint hardware-software design to offer significantly spectral and energy efficiency.
+                                </p>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                
+                      <tr>
+                        <td width="77%" class="BodyText" valign="top"> 
+                          <hr noshade>
+                        </td>
+                      </tr>
+                      
+                     <tr> 
+                        <td width="77%" class="BodyText_Home" valign="top"> 
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0" height="131">
+                      			<tr> 
+                              <td width="84%" class="BodyText_Home" valign="top"> 
+                                <p><b><font size="3">Major Activities</font></b></p>
+                                <ol>
+                                    <li><b>Hybrid OS-CDM/Diplo-FIRE Transceiver and Beamforming Architecture</b>
+                                        <p>
+                                            In our first thrust, we focus on the beamforming hardware architecture for mmWave-based M-MIMO networks. Specifically, we propose a novel beamforming architecture that leverages the orthogonality offered by {\em on-site coding}. This leads to massively reduced number of required ADCs/DACs (analog-digital/digital-analog converters) units and low-noise amplifiers (LNA), implying dramatically improved energy efficiency. In our preliminary studies \cite{alwan1,alwan2,alwan3,alwan4}, we showed that our proposed OS-CDM beamforming architecture achieves up to 85\% energy efficiency as  compared to traditional digital beamforming. Concurrently, OS-CDM delivers the {\em same} data rate performance. To further reduce hardware, costs, and power consumptions, we propose to integrate our new Diplo-FIRE (Diplo: double, FIRE:  frequency independent receiver) beamforming concept at the analog stage with the OS-CDM scheme.  This hybrid beamforming approach promises game-changing performances for a new class of hardware-reduced, low cost, and power efficient transceivers. Moreover, the proposed hybrid OS-CDM/Diplo-FIRE beamforming architecture enables new opportunities in scheduling, control, and hardware resource allocation optimization  that are unseen in conventional beamforming techniques.
+                                        </p>
+                                    </li>
+                      
+                                    <li><b>Spectral-Efficiency Optimization with OS-CDM/Diplo-FIRE Subarray Clustering</b>
+                                        <p>
+                                            Using the proposed OS-CDM/Diplo-FIRE beamforming hardware architecture, we will exploit {\em subarray clustering} control (afforded by OS-CDM/Diplo-FIRE) to optimize analog beamwidth control. The goal is to maximize array directivity and hence spectral efficiency.  Specifically, we will investigate analog beamwidth optimization and develop low-complexity analog beam search protocols suitable for the OS-CDM/Diplo-FIRE beamforming architecture. In our preliminary studies, we showed an elegant result that it suffices to only adjust the analog beamwidth on the base station side to maximize spectral efficiency under hybrid beamforming. That is, the adjustment on the mobile station side is unnecessary. This insight significantly simplifies the analog beam training protocol under OS-CDM/Diplo-FIRE beamforming.
+                                        </p>
+                                    </li>			
+                                    
+                                    <li><b>Energy-Efficiency Optimization with OS-CDM/Diplo-FIRE Subarray Clustering</b>
+                                        <p>
+                                            We will leverage the reduced hardware benefits of the OS-CDM/Diplo-FIRE  architecture to develop subarray clustering algorithms that take stochastic user traffic demands/arrivals into account to optimize energy efficiency. Algorithmic design for energy efficiency is particularly important  at mmWave frequencies and above. This is because the overall system energy efficiency depends not only on circuit hardware and transceiver architecture, but also on network resource allocation protocols and algorithms. Unlike conventional MIMO power minimization, we will take a holistic approach by jointly considering the dynamics between OS-CDM/Diplo-FIRE subarray scheduling policies in conjunction with the stochastic time-varying nature of energy costs and user traffics.
+                                        </p>
+                                    </li>						
+                                </ol>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td width="77%" class="BodyText" valign="top"> 
+                          <hr noshade>
+                        </td>
+                      </tr>
+                      
+                     <tr> 
+                        <td width="77%" class="BodyText_Home" valign="top"> 
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0" height="131">
+                      			<tr> 
+                              <td width="84%" class="BodyText_Home" valign="top"> 
+                                <p><b><font size="3">Products</font></b></p>
+                                <ol>
+                                    <li>J. Liu and E. S. Bentley, "Hybrid-Beamforming-Based Millimeter-Wave Cellular Network Optimization," in Proc. IEEE WiOpt, Paris, France, May, 2017.</li><br>
+
+                                </ol>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td width="77%" class="BodyText" valign="top"> 
+                          <hr noshade>
+                        </td>
+                      </tr>
+                        
+            </table>
+            
+		</div>
+		<!-- end #sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	</div>
+	</div>
+	<!-- end #page -->
+</div>
+	<div id="footer">
+        <center>
+        <table>
+              <tr>
+                <td class="BodyText" valign="middle"> 
+                    <!--#config timefmt="%Y" -->
+                    Copyright &copy 2004-<!--#echo var="DATE_LOCAL" --> <a href="mailto:jialiu@iastate.edu">Jia (Kevin) Liu</a>. All rights reserved.<br> 
+                    <!--#config timefmt="%m/%d/%Y" -->Updated: <!--#echo var="LAST_MODIFIED" -->. Design adapted from   <a href="http://templated.co" rel="nofollow">TEMPLATED</a>. 
+                </td>
+                <!----------Place for the extreme tracking icon----------------------------------------->
+                <!----------Old Image Link: http://t1.extreme-dm.com/i.gif-------------->
+                <td>
+                <!-- extreme_jialiu_b782d478f8f780aa94e2c07df5dd86c1 -->
+<div id="eXTReMe"><a href="http://extremetracking.com/open?login=jialiu">
+<img src="http://t1.extreme-dm.com/i.gif" style="border: 0;"
+height="38" width="41" id="EXim" alt="eXTReMe Tracker" /></a>
+<script type="text/javascript"><!--
+var EXlogin='jialiu' // Login
+var EXvsrv='s10' // VServer
+EXs=screen;EXw=EXs.width;navigator.appName!="Netscape"?
+EXb=EXs.colorDepth:EXb=EXs.pixelDepth;EXsrc="src";
+navigator.javaEnabled()==1?EXjv="y":EXjv="n";
+EXd=document;EXw?"":EXw="na";EXb?"":EXb="na";
+EXd.write("<img "+EXsrc+"=http://e1.extreme-dm.com",
+"/"+EXvsrv+".g?login="+EXlogin+"&amp;",
+"jv="+EXjv+"&amp;j=y&amp;srw="+EXw+"&amp;srb="+EXb+"&amp;",
+"l="+escape(EXd.referrer)+" height=1 width=1>");//-->
+</script><noscript><div id="neXTReMe"><img height="1" width="1" alt=""
+src="http://e1.extreme-dm.com/s10.g?login=jialiu&amp;j=n&amp;jv=n" />
+</div></noscript></div>
+                </td>
+            </tr>
+        </table>
+    </center>
+        
+	</div>
+	<!-- end #footer -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-102207232-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    
+</body>
+</html>
