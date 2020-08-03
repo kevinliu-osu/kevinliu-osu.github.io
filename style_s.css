@@ -133,13 +133,20 @@ hr.style2 {
 	padding: 22px 0 0 10px;
 	font: normal 14px Georgia, "Times New Roman", Times, serif;
 	/* font-style: italic; */
-	margin-top: -16px;
+	/* margin-top: -16px; */
 } 
 
 #logo a {
 	border: none;
 	background: none;
 	text-decoration: none;
+	color: #000000;
+}
+
+#logo2 {
+	float: right;
+	margin: 0;
+	padding-top: 16px;
 	color: #000000;
 }
 
