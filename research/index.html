@@ -1,0 +1,390 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Fireworks  
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20090905
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="google" content="notranslate">
+<meta http-equiv="Content-Language" content="en">
+<title>Jia Liu</title>
+<link href="../style_s.css" rel="stylesheet" type="text/css" media="screen" />
+<link rel="shortcut icon" href="https://www.osu.edu/assets/site-dev/osu_navbar/images/favicon.ico">
+<style>
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #BC1B32;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+</head>
+
+<body>
+<div id="wrapper">
+      <div id="header">
+        <div id="logo">
+          <h1>Jia (Kevin) Liu,</h1>
+          <p>Assistant Professor of Electrical and Computer Engineering</p>
+        </div>
+        <div id="logo2"><img src="../images/osu-logo-eng.png" width="100"></div>
+      </div>
+	<!-- end #header -->
+	<div id="menu">
+		<ul>
+			<li><a href="../index.html">Home</a></li>
+			<li class="current_page_item"><a href="#">Research</a></li>
+			<li><a href="../publications/index.html">Publications</a></li>
+			<li><a href="../awards/index.html">Awards</a></li>
+			<li><a href="../grants/index.html">Grants</a></li>
+			<li><a href="../activities/index.html">Activities</a></li>
+			<li><a href="../teaching/index.html">Teaching</a></li>
+			<li><a href="../group/index.html">My Group</a></li>
+		</ul>
+	</div>
+	<!-- end #menu -->
+	<div id="page">
+	<div id="page-bgtop">
+	<div id="page-bgbtm">
+	</div>
+		<!-- end #content -->
+		<div id="sidebar">
+            <table>
+                <tr>
+                    <td>
+                        <p>
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr> 
+                              <td valign="bottom" width="100%"><a name="overview"></a><font size="6"><b><font face="Arial, Helvetica, sans-serif"><center>Research</center></font></b></font></td>
+                            </tr>
+                          </table>
+                    </td>
+                    </tr>
+                    <tr> 
+                        <td> 
+                          <hr noshade>
+                        </td>
+                    </tr>
+                    <tr> 
+                        <td valign="top">
+                            <p>
+                                My research focuses on convex/non-convex optimization, algorithm designs, applied probability, stochastic control, and their applications in many real-world complex systems and networks, such as <font color="red">Cyber-Physical Systems (CPS)</font>, <font color="red">Internet-of-Things (IoT)</font>, <font color="red">Data Analytics</font>, <font color="red">Communication Networks</font>, <font color="red">Cloud Computing</font>, <font color="red">Network Economy</font>, etc. These systems can all be modeled as stochastic networks of many interacting agents sharing and competing limited resources at different time-scales and stochastic dynamics. My goal is to understand fundamental performance limits of such systems, and develop efficient, adaptive, low-complexity, and scalable algorithms for diverse applications in these systems. To that end, I am taking an interdisciplinary effort spanning cutting-edge topics in computer science, electrical engineering, and operations research. In particular, my research utilizes and contributes to network science, stochastic control theory, queueing theory, optimization theory, and low-complexity algorithm design. In what follows, I first give an overview of my research contributions in recent years (with representative publications), and then discuss several future research directions. <a href="RS/Liu_Research_Statement.pdf"><b><font face="Arial, Helvetica, sans-serif">[Research Statement]</font></b></a>
+                            </p>
+                        </td>
+                      </tr>
+
+                      
+                      <tr> 
+                        <td>
+                            <center><h1>I. Main Contributions and Research Achievements</h1></center>
+                        </td>
+                      </tr>
+                      
+                      <tr> 
+                        <td> 
+                          <hr noshade>
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td valign="top"> 
+                          <br>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td valign="top">
+                            <h2>1) Momentum-Based Stochastic Network Optimization [1, 2, 3]</h2>
+                            <img src="../images/ThreeWay.jpg" width="210" align="right">
+                            <p>
+                                The growing scale and complexity in modern cyber-physical systems and networks necessitate the designs of distributed scheduling and control algorithms that can operate based on locally observable information. To date, most of the standard distributed approaches are based on the Lagrangian dual decomposition framework and the (sub)gradient descent method, which suffer large queueing delay and slow convergence. To address this problem, I have developed a general theory and a series of momentum-based fast-converging and low-delay distributed control and optimization algorithms that leverage momentum information to offer orders of magnitudes of improvements in both queueing delay and convergence speed. Moreover, my momentum-based approach reveals an elegant and fundamental <b>three-way performance control</b> relationship between throughput, delay, and convergence speed, which is governed by <b>two control degrees of freedom</b>. This new momentum-based stochastic control and optimization theory includes two related approaches: i) Heavy-Ball approach [1], and ii) Nesterovian approach [2], which have been published top venues <font color="red">IEEE INFOCOM 2016</font> and <font color="red">ACM SIGMETRICS 2016</font>, respectively. Moreover, the Heavy-Ball approach won the <font color="red">IEEE INFOCOM 2016 Best Paper Award</font>. Based on the results in [1, 2], I have received a <font color="red">three-year NSF grant</font> from the CIF program [3] as the <font color="red">Sole PI</font>. This research has also been supported in part by AFRL 2015 Visiting Faculty Research Program at the Information Directorate (AFRL/RI) and 2016 AFOSR Summer Faculty Fellowship Program (<font color="red">SFFP</font>) award.
+                            </p>
+                            <center>
+                                <img src="../images/HB_vs_BP.jpg" width="80%" align="center">
+                            </center>
+                            <br>
+                            <ol start="1">
+                                <li><b>Jia Liu</b>, "<a href='../publications/tbd.pdf'>High-Order Momentum: Improving Latency and Convergence for Wireless Network Optimization</a>," in Proc. <b>IEEE INFOCOM</b>, Honolulu, HI, Apr. 2018 (acceptance rate: 19%).</li>
+
+                                <li><b>Jia Liu</b>, Atilla Eryilmaz, Ness B. Shroff, and Elizabeth S. Bentley, "<a href='../publications/HeavyBall_INFOCOM.pdf'>Heavy-Ball: A New Approach for Taming Delay and Convergence in Wireless Network Optimization</a>," in Proc. <b>IEEE INFOCOM</b>, San Francisco, CA, Apr. 2016 (<b><font color=red>Best Paper Award, </font></b>, acceptance rate: 17%).</li>
+                                
+                                <li><b>Jia Liu</b>, "<a href='../publications/NesterovNet_Sigmetrics_Final.pdf'>Achieving Low-Delay and Fast-Convergence in Stochastic Network Optimization: A Nesterovian Approach</a>," in Proc. <b>ACM SIGMETRICS</b>, Antibes Juan-les-Pins, Jun. 2016 (acceptance rate: 13%).</li>
+                                
+                                <li><b>PI: Jia Liu</b>, "(<a href="http://www.nsf.gov/awardsearch/showAward?AWD_ID=1618318&HistoricalAwards=false">CIF: Small: Taming convergence and delay in stochastic network optimization with hessian information</a>," <b>NSF CCF-1618318</b>, 07/2016-08/2019, Amount: $317,896 (<font color="red"><b>Sole PI</b></font>).</li>
+                            </ol>
+                            
+                            <hr class="style2">
+                            <br>
+                            
+                            <h2>2) Second-Order Distributed Stochastic Network Optimization [4, 5, 6, 7]</h2>
+                            
+                            <p>
+                                Encouraged by the promising results in the momentum-based distributed stochastic control and optimization, I went one step further to ask the following questions: i) Can we further increase the convergence speed and reduce delay? ii) Is it possible to do better than the three-way performance trade-off? It turns out that both answers are "yes" and the key in answering these questions is to exploit full <b>second-order Hessian information</b> (SOHI). The basic philosophy of my SOHI-based approaches is to exploit not only first-order gradient information but, more importantly, second-order Hessian information in designing distributed optimization algorithms. So far, results in this direction have appeared in <font color="red">IEEE/ACM Transactions on Networking</font> [6], <font color="red">ACM Sigmetrics Performance Evaluation Review</font> [7], <font color="red">IEEE INFOCOM'12</font> [4], and <font color="red">IEEE INFOCOM'13 (Best Paper Runner-up Award, 1600+ submissions, acceptance rate 17%)</font>  [5]. Preliminary results in this direction have also played a key role in helping me to receive my sole-PI'ed NSF grant from the CIF program [3]. My work contributes to a new and exciting paradigm shift in cross-layer network design that is evolving from first-order to second-order methods. I expect the outcomes of this research to provide a much needed comprehensive analytical foundation, new theoretical insights, novel control and optimization algorithms, as well as practical network protocol designs that will significantly advance our understanding of tomorrow's complex systems.
+                            </p>
+                            
+                            <center>
+                                <img src="../images/2nd_vs_1st.jpg" width="80%" align="center">
+                            </center>
+                            <br>
+                            
+                            <ol start="4">
+                                <li><b>Jia Liu</b> and H. D. Sherali, "<a href='../publications/DNewton_JFR_INFOCOM_Final.pdf'>A Distributed Newton's Method for Joint Multi-Hop Routing and Flow Control: Theory and Algorithm</a>," in Proc. <b>IEEE INFOCOM</b>, Orlando, FL, Mar 25-30, 2012 (acceptance rate: 18%).</li>
+                                
+                                <li><b>Jia Liu</b>, Cathy H. Xia, Ness B. Shroff, and H. D. Sherali, "<a href='../publications/DNewton_Wireless_INFOCOM_Final.pdf'>Distributed Cross-Layer Optimization in Wireless Networks: A Second-Order Approach</a>," in Proc. <b>IEEE INFOCOM</b>, Turin, Italy, Apr. 14-19, 2013 (<b><font color=red>Best Paper Runner-up Award</font></b>, acceptance rate: 17%).</li>
+                                
+                                <li><b>Jia Liu</b>, Ness B. Shroff, Cathy H. Xia, Hanif D. Sherali, "<a href='../publications/DSecondOrder_JCCR_Final.pdf'>Joint Congestion Control and Routing Optimization: An Efficient Second-Order Distributed Approach</a>,'' <b>IEEE/ACM Transactions on Networking</b>, vol. 24, no. 3, pp. 1404-1420, Jun. 2016.</li>
+                                
+                                <li><b>Jia Liu</b>, Cathy H. Xia, Ness B. Shroff, Xiaodong Zhang, "On Distributed Computation Rate Optimization for Deploying Cloud Computing Programming Frameworks,'' <b>ACM SIGMETRICS Performance Evaluation Review (PER)</b>, vol. 40, no. 4, pp. 63-72, Mar. 2013.</li>
+                            </ol>
+                            
+                            <hr class="style2">
+                            <br>
+                            
+                            <h2>3) Stochastic Network Optimization with Imperfect System Information [8, 9, 10]</h2>
+                            <p>
+                                For most complex cyber-physical systems and networks in the real-world, the observable system state information (e.g., network topology, queueing buffer states, channel state information in wireless networks, etc.) based on which distributed control/optimization decisions are made is usually noisy and prone to errors. In this research, I strive to understand the impacts of imperfect (e.g., delayed, erroneous, incomplete, etc.) system information on stochastic distributed network optimization and control. With such a fundamental understanding, we could develop effective distributed stochastic network control and optimization schemes to mitigate these negative impacts. Toward this end, in the context of joint congestion control and scheduling in 5G wireless network optimization, I showed that all existing queue-length-based approaches exhibit a pair of phase transition phenomena in queueing delay and throughput with respect to the accuracy of channel state information. Collectively, these discoveries on queueing delay and congestion control phase transition effects advance our understanding of the trade-offs between delay, throughput, and the accuracy/complexity of channel state information acquisition. Also, our results suggest that delay and throughput scalings could potentially be employed as useful proxies to control channel state information quality and acquisition complexity. Results of this research has appeared in <font color="red">ACM MobiHoc'09</font> [8] and <font color="red">ACM MobiHoc'16</font> [9]. Based on the preliminary results in [9], I won a three-year <font color="red">NSF grant</font> from the <font color="red">NeTS</font> program as the <font color="red">Sole PI</font> [10].
+                            </p>
+                            
+                            <ol start="8">
+                                <li><b>Jia Liu</b>, Y. Thomas Hou, Yi Shi, and H. D. Sherali, "<a href='../publications/hoc05_liu.pdf'>On Performance Optimization for Multi-Carrier MIMO Ad Hoc Networks</a>," in Proc. <b>ACM MobiHoc</b>, New Orleans, LA, May 19-21, 2009 (acceptance rate: 18%).</li>
+                                
+                                <li><b>Jia Liu</b>, Atilla Eryilmaz, Ness B. Shroff, and Elizabeth S. Bentley, "<a href='../publications/M-MIMO_Delay_MobiHoc_Final.pdf'>Understanding the Impact of Limited Channel State Information on Massive MIMO Network Performances</a>," in Proc. <b>ACM MobiHoc</b>, Paderborn, Germany, July 2016 (acceptance rate: 18%).</li>
+                                
+                                <li><b>PI: Jia Liu</b>, "<a href="http://www.nsf.gov/awardsearch/showAward?AWD_ID=1527078&HistoricalAwards=false">NeTS: Small: Toward optimal, efficient, and holistic networking design for massive-MIMO wireless networks</a>," <b>NSF CNS-1527078</b>, 10/2015-09/2018, Amount: $300,000 (<b><font color="red">Sole PI</font></b>).</li>
+                            
+                            </ol>
+                            
+                            <hr class="style2">
+                            <br>
+                            
+                            <h2>4) Topology Design and Deployment Optimization for Internet-of-Things (IoT) [11, 12, 13]</h2>
+                            <p>
+                                Today, most cyber-physical Internet-of-Things (IoT) require a wired- or wireless-based indoor network infrastructure for sensing, communication, and actuation. In the world of such cyber-physical IoT, the energy expenditure and hence battery lifetime of the network infrastructure depend heavily upon the topology design and deployment optimization. However, in many indoor environments, IoT deployment is particularly challenging due to the impacts of building structures and floors/walls separations. In this inter-disciplinary research, we considered the problem of jointly optimizing network deployment and power control in buildings to prolong the battery lifetime of sensors in cyber-physical IoT network infrastructure under harsh indoor wireless environments. We showed that the problem can be formulated as a mixed-integer non-convex program (MINCP), which is NP-hard and difficult to solve especially when the network size is large. To address this difficulty, in our research, we proposed both global optimization and novel efficient algorithms that target at large-sized network infrastructures in buildings. Results in this research have appeared in <font color="red">IEEE Journal on Selected Areas in Communications</font> [12], <font color="red">ASHRAE Transaction</font> [13], and <font color="red">IEEE INFOCOM</font> [11]. Results in this research have also contributed to the award of a three-year <font color="red">NSF grant</font> from the <font color="red">CPS</font> program.
+                            </p>
+                            
+                            <center>
+                                <img src="../images/BCIoT.jpg" width="80%" align="center">
+                            </center><br>			                        
+
+                            <ol start="11">
+                                <li><b>Jia Liu</b>, Qian Chen, and H. D. Sherali, "<a href='../publications/OPT_AP_LOC_V2_INFOCOM.pdf'>Algorithm Design for Femtocell Base Station Placement in Commercial Building Environments</a>," in Proc. <b>IEEE INFOCOM</b>, Orlando, FL, Mar 25-30, 2012 (acceptance rate: 18%).</li>
+                                
+                                <li><b>Jia Liu</b>, Tianyou Kou, Qian Chen, and H. D. Sherali, "<a href='../publications/OPT_FBS_LOC_JSAC_Final.pdf'>Femtocell Base Station Placement in Commercial Buildings: A Global Optimization Approach</a>," <b>IEEE Journal on Selected Areas in Communications (JSAC)</b>, vol. 30, no. 3, pp. 652-663, Apr. 2012.</li>
+                                
+                                <li>Hui Li, Lingying Zhao, Peter Ling, and <b>Jia Liu</b>, "A Model for Predicting Wireless Signal Transmission Performance of ZigBee-Based Sensor Networks in Residential Houses,'' in Transactions of ASHRAE, vol. 118, no. 1, pp. 994-1007, Jan. 2012.</li>
+                            </ol>
+                          </td>
+                      </tr>
+                      
+                      <tr> 
+                        <td height="19">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td height="19">
+                          <hr noshade>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td height="2"> 
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr> 
+                                <td><center><h1>II. Ongoing and Future Directions</h1></center></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      
+                      <tr> 
+                        <td> 
+                          <hr noshade>
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td width="77%" class="BodyText_Home" valign="top">
+                            <p>
+                                My current research has opened up many interesting possibilities to the development of efficient and low-complexity algorithms for complex network systems, and made contributions to the fields of networking, control, optimization, and queueing analysis. In what follows, I will outline three areas, among others, that I am passionate about:
+                            </p>
+                        </td>
+                      </tr>
+
+                      <tr> 
+                        <td>
+                            <h2>1) Learning-Based Adaptive Resource Allocation in Complex Large-Scale Systems</h2>
+                            <p>
+                                With the rapid integration of massive amounts of data and proliferation of new devices  (e.g., smart mobile devices, robotic swarms, Internet-of-things, etc.), today's network system infrastructures (e.g., data centers, cellular networks, etc.) are being stretched to their limits. To design highly efficient and resilient network infrastructures, a key aspect is to <b>rapidly</b>, <b>jointly</b>, and <b>optimally</b> deal with the cross-interactions between congestion control, routing, and various resource allocations and scheduling schemes, all within stack and across users. As a result, there is an urgent need for developing fast-converging distributed cross-layer congestion control and multi-path routing optimization algorithms to maximize network throughput and reduce end-to-end delay. Moreover, the need for joint congestion control and routing optimization is not only arising from big-data network design, but also a fundamental problem that lies at the heart of many complex large-scale system operations, such as supply chain management, transportation network traffic control, smart grid demand response, just to name a few. My momentum-based network optimization approaches can be viewed as a simple <b>learning-based</b> approach where we exploit the memory/history information to perform network control and optimization. I would like to generalize this approach to incorporate other advanced and sophisticated learning algorithms for stochastic network control and optimization.
+                            </p>
+                            <p>
+                                <b>Applications:</b> Data Centers, Big Data Analytics Infrastructure, Internet-of-Things, Network Economy
+                            </p>
+                        
+                            <h2>2) Delay and Age-of-Information Minimization for Crowd Sensing in Complex Networks</h2>
+                            
+                            <p>
+                                Many modern complex networks tightly integrate physical/biological entities and cyber systems of computing and communications (e.g., network/sharing economy, smart electric power grid, transportation networks, online social networks, supply-chain management, etc.). The applications of such complex networks span manufacturing, transportation, infrastructure, health care, emergency response, and defense, etc. The performances of these complex networks typically rely on accurate, prompt, and consistent sensing and feedback from the physical and biological systems, which typically include a large number of distributed and crowd-sourced sensors sharing limited network resources. This calls for efficient and distributed delay-sensitive scheduling design that not only optimizes system throughput, but, more importantly, provides timely and consistent service and minimizes age-of-information (AoI) that measures data freshness. Existing modeling and algorithm designs are either not suitable in the crowd-sensing settings or fail to meet these stringent requirements. This motivates me to explore a new theoretical foundation for efficient and distributed scheduling design that optimizes both throughput, delay, and AoI-oriented metrics in various complex networks.
+                            </p>
+                            
+                            <p>
+                                <b>Applications:</b> Network/Sharing Economy, Crowd Sensing/Sourcing, Cyber-Physical Systems.
+                            </p>
+                            
+                            <h2>3) Joint Congestion Control and Scheduling Optimization with Directional Networking</h2>
+                            <p>
+                                To alleviate the rapidly increasing mobile data demands, in recent years, directional networking and communications (e.g., millimeter wave technology, massive MIMO systems, etc.) have emerged as enabling technologies for building the next generation mobile data networks and beyond. The excitements of directional networking are primarily due to: i) the rich unlicensed spectrum resources in millimeter wave bands; ii) the ease of packing large antenna arrays into small form factors; and iii) a much simplified interference management thanks to the highly directional signals. However, in spite of all of these promising progresses, the existing research efforts on directional are mostly concerned with problems at the physical layer or signal processing aspects. The understanding of how directional networking could affect the performance of network control, scheduling, and resource allocation algorithms remains limited in the literature. In this research, my goal is to fill this gap by conducting an in-depth theoretical study on the interactions between directional wireless communications technologies at the physical layer and network control and optimization algorithms at higher layers, as well as their impacts on queueing delay and throughput performances.
+                            </p>
+                            
+                            <p>
+                                <b>Applications:</b> Millimeter Wave/Massive MIMO Networking, Visible Light Networking, 5G Wireless Networks
+                            </p>
+                        </td>
+                      </tr>
+
+                     <tr>
+                        <td height="19">
+                          <hr noshade>
+                        </td>
+                      </tr>
+
+                      <tr> 
+                        <td height="2"> 
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr> 
+                                <center><h1>Acknowledgement</h1></center>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      
+                      <tr> 
+                        <td width="23%"> 
+                          <hr noshade>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td width="77%" class="BodyText_Home" valign="top">
+                        <p>
+                        I gratefully acknowledge the ongoing support from NSF (<a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1943226&HistoricalAwards=false">CAREER CNS-1943226</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1731649&HistoricalAwards=false">ECCS-1818791</a>, <a href="http://www.nsf.gov/awardsearch/showAward?AWD_ID=1618318&HistoricalAwards=false">CCF-1758736</a>, <a href="http://www.nsf.gov/awardsearch/showAward?AWD_ID=1527078&HistoricalAwards=false">CNS-1758757</a>), ONR, and AFOSR / AFRL (FA8750-18-1-0107, SFFP, VFRP awards, and the associated extension grants), and Google Faculty Research Award for my research.
+                        </p>
+                        <center>
+                        <img src="../images/sponsors.jpg" width="66%" align="center">
+                        </center>
+                        </td>
+                      </tr>
+            </table>
+            
+		</div>
+		<!-- end #sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	</div>
+	</div>
+	<!-- end #page -->
+</div>
+	<div id="footer">
+        <center>
+        <table>
+              <tr>
+              <td valign="middle">
+                  Copyright © 2004-<script>var today = new Date(); year = today.getFullYear(); document.write(year);</script>
+                <a href="mailto:jialiu@iastate.edu">Jia (Kevin) Liu</a>. All
+                rights reserved.<br />
+                Updated: <script> var date = document.lastModified; document.write(date.substr(0,10));</script>. Design adapted from <a href="http://templated.co"
+                  rel="nofollow">TEMPLATED</a>.
+              </td>
+                <!----------Place for the extreme tracking icon----------------------------------------->
+                <!----------Old Image Link: http://t1.extreme-dm.com/i.gif-------------->
+                <td valign="bottom">
+                <!-- extreme_jialiu_b782d478f8f780aa94e2c07df5dd86c1 -->
+<div id="eXTReMe"><a href="http://extremetracking.com/open?login=jialiu">
+<img src="http://t1.extreme-dm.com/i.gif" style="border: 0;"
+height="38" width="41" id="EXim" alt="eXTReMe Tracker" /></a>
+<script type="text/javascript"><!--
+var EXlogin='jialiu' // Login
+var EXvsrv='s10' // VServer
+EXs=screen;EXw=EXs.width;navigator.appName!="Netscape"?
+EXb=EXs.colorDepth:EXb=EXs.pixelDepth;EXsrc="src";
+navigator.javaEnabled()==1?EXjv="y":EXjv="n";
+EXd=document;EXw?"":EXw="na";EXb?"":EXb="na";
+EXd.write("<img "+EXsrc+"=http://e1.extreme-dm.com",
+"/"+EXvsrv+".g?login="+EXlogin+"&amp;",
+"jv="+EXjv+"&amp;j=y&amp;srw="+EXw+"&amp;srb="+EXb+"&amp;",
+"l="+escape(EXd.referrer)+" height=1 width=1>");//-->
+</script><noscript><div id="neXTReMe"><img height="1" width="1" alt=""
+src="http://e1.extreme-dm.com/s10.g?login=jialiu&amp;j=n&amp;jv=n" />
+</div></noscript></div>
+                </td>
+            </tr>
+        </table>
+    </center>
+        
+	</div>
+	<!-- end #footer -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-102207232-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+var menubar = document.getElementById("menu");
+var stickyPos = menubar.offsetTop;
+
+function scrollFunction() {
+    if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+        
+  if (window.pageYOffset >= stickyPos) {
+    menubar.classList.add("sticky_menu");
+    document.body.style.backgroundImage = "url('../images/img03.png')";
+    document.body.style.backgroundAttachment = "fixed";
+  } else {
+    menubar.classList.remove("sticky_menu");
+    document.body.style.backgroundImage = "url('../images/img01.jpg')";
+    document.body.style.backgroundAttachment = "initial";
+  }
+    
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Chrome, Safari and Opera 
+    document.documentElement.scrollTop = 0; // For IE and Firefox
+}
+</script> 
+
+</body>
+</html>
