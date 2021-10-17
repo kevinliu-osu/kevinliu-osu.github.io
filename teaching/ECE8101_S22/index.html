@@ -93,7 +93,7 @@ Released   : 20090905
                           <td width="100%" valign="bottom"><a name="overview"></a><font
                               size="5"><b><font
                                   face="Arial, Helvetica, sans-serif">
-                                  <center>ECE 8101: Non-Convex Optimization for Machine Learning <br />
+                                  <center>ECE 8101: Nonconvex Optimization for Machine Learning <br />
                                     <sub><sup>(Spring 2022)</sup></sub></center>
                                 </font></b></font></td>
                         </tr>
@@ -117,27 +117,17 @@ Released   : 20090905
                       <b>Contact:</b> 420 Dreese Labs, <a href="mailto:jialiu@iastate.edu">liu@ece.osu.edu</a><br />
                       <b>Time &amp; Location: </b> TBD <br />
                       <b>Office Hours:</b> TBD <br />
+<!--
                       <b>TA:</b> TBD <br />
                       <b>TA Hours:</b> TBD </p>
-                    <h2>Course Description <a href="COMS578_F19_Syllabus.pdf">[Syllabus]</a></h2>
+-->
+                    <h2>Course Description</h2> 
+<!--                      <a href="COMS578_F19_Syllabus.pdf">[Syllabus]</a></h2>-->
                     <p>This course will introduce algorithm design and convergence analysis in nonconvex optimization theory as well as their applications in solving modern machine learning and data science problems. The goal of this course is to prepare graduate students with a solid theoretical and mathematical foundation at the intersection of optimization and machine learning so that they will be able to use optimization to solve advanced machine learning problems and/or conduct advanced research in the related fields. This course will take the traditional linear, nonlinear, and convex optimization taught in operation research or related engineering fields (e.g., ECE, CSE) as a prerequisite, and focus on topics in nonconvex optimization that are of special interest in the machine learning community.</p>
                     <h2>Course Materials</h2>
                     <p>There is no required textbook. Most of the materials covered in the class will be based on classical books and recently published papers and monographs. A list of historically important and/or trending papers on ML optimization theory will be provided on the course website.</p>
-                    <h2>Homework</h2>
-                    <ul>
-                      <li>
-                        <ul>
-                          <li>There will be estimated 5 homework assignments, assigned
-                            roughly biweekly. Homework must be typeset in LaTeX
-                            (see the <a href="COMS578X_HW_Template.zip">homework
-                              LaTeX template</a> here)</li>
-                        </ul>
-                      </li>
-                    </ul>
-                    <h2>Midterm</h2>
-                    <p>The in-class midterm exam will be closed-book and
-                      closed-notes. But you are allowed to bring a 1-page cheat
-                      sheet. The midterm covers up to finished lectures.</p>
+                    <h2>Paper Reading Assignment</h2>
+                      <p>There will be estimated 6 paper reading assignments, assigned roughly after finishing each topic set. Reading assignment must be typeset in <b>NeurIPS</b> format. Each student reads one paper per week before class and writes a short review. The paper may be one of the papers lectured in that week. The reviews may include the followings: 1) A summary of the paper; 2) Strengths/weaknesses of the paper from the following aspects: soundness of assumptions/theorems, empirical evaluation, novelty, and significance, etc.; 3) Which parts are difficult to understand? The questions about proofs/results/experiments (if there are any); and 4) How can the paper be improved and extended?</p>
                     <h2>Final Project</h2>
                     <p>You could choose to finish a project individually or by a
                       team of no more than two persons. Project proposals will
@@ -156,12 +146,12 @@ Released   : 20090905
                     <ul>
                       <li>
                         <ul>
-                          <li>Homework: 30%; Midterm: 30%; Final project: 40%.</li>
+                          <li>Class Participation: 10%; Paper Reading Assignments: 60%; Final project: 30%.</li>
                         </ul>
                       </li>
                     </ul>
                     <h2>Late Policy</h2>
-                    <p>Without the consent of the instructor, late homework
+                    <p>Without the consent of the instructor, late paper reading
                       assignments or final report will not be accepted and will
                       result in a grade of zero. In the case of a conference
                       deadline or something of the like, a <b>5-day</b> written
@@ -175,7 +165,7 @@ Released   : 20090905
                       interests. Please check for latest adjustments.</p>
                     <center> <tb rowspan="3"></tb><tb></tb><tb></tb><tb rowspan="3"></tb>
                       <tb rowspan="2"></tb>
-                      <table class="SchTable" style="width: 856px; height: 592px;">
+                      <table class="SchTable" style="width: 856px;">
                         <tbody>
                           <tr>
                             <td style="width: 39.9997px; text-align: center; background-color: gainsboro;"><b>Class<br />
@@ -203,8 +193,7 @@ Released   : 20090905
                             </td>
                             <td style="text-align: center; margin-left: -38px;">Course
                               Info &amp; Introduction</td>
-                            <td style="text-align: center;"><a href="Lectures/LN1-annotated.pdf">Lecture
-                                1</a><br />
+                            <td style="text-align: center;">Lecture1<br />
                             </td>
                             <td style="margin-left: -14px;"><br />
                             </td>
@@ -214,18 +203,13 @@ Released   : 20090905
                             </td>
                             <td style="text-align: center;">1/13<br />
                             </td>
-                            <td rowspan="2" colspan="1">
-                              <div style="text-align: center;">Math Background
-                                Review</div>
+                            <td rowspan="6" colspan="1">
+                              <div style="text-align: center;">I. Stochastic Nonconvex Optimization</div>
                             </td>
-                            <td rowspan="2" colspan="1" style="text-align: center;">Basic
-                              Analysis and Linear Algebra</td>
-                            <td rowspan="2" colspan="1" style="width: 102.6px; text-align: center;"><a
-                                href="Lectures/LN2.pdf">Lecture
-                                2</a><br />
+                            <td rowspan="6" colspan="1" style="text-align: center;">Fundamental of SGD; Varaince-Reduced Algorithms (SVRG, SAGA, SPIDER); Accelerated Algorithms (STORM, Hybrid)</td>
+                            <td rowspan="6" colspan="1" style="width: 102.6px; text-align: center;">Lecture 2<br />
                             </td>
-                            <td style="text-align: center;">Appendices in
-                              [BV,BSS]<br />
+                            <td style="text-align: center;"><br />
                             </td>
                           </tr>
                           <tr>
@@ -241,29 +225,15 @@ Released   : 20090905
                             </td>
                             <td style="text-align: center;">1/20<br />
                             </td>
-                            <td rowspan="5" colspan="1">
-                              <div style="text-align: center;">I. Foundations of
-                                Convex Analysis</div>
-                            </td>
-                            <td style="text-align: center;">Convex Sets and
-                              Convex Functions</td>
-                            <td style="width: 102.6px; text-align: center;"><a href="Lectures/LN3-annotated.pdf">Lecture
-                                3</a><br />
-                            </td>
-                            <td style="text-align: center;"> <span style="color: rgb(54, 54, 54); font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;"></span>
-                              [BV, Ch.2, 3]<br />
+                            <td style="text-align: center;"> <br />
                             </td>
                           </tr>
                           <tr>
                             <td style="text-align: center;">5<br />
                             </td>
-                            <td style="width: 78.2px; text-align: center;">1/25<br />
+                            <td style="text-align: center;">1/25<br />
                             </td>
-                            <td rowspan="2" style="text-align: center;">Duality</td>
-                            <td rowspan="2" style="text-align: center;"><a href="Lectures/LN4-annotated.pdf">Lecture
-                                4</a><br />
-                            </td>
-                            <td style="text-align: center;">[BV,Ch.5]<br />
+                            <td style="text-align: center;"> <br />
                             </td>
                           </tr>
                           <tr>
@@ -271,7 +241,7 @@ Released   : 20090905
                             </td>
                             <td style="text-align: center;">1/27<br />
                             </td>
-                            <td style="text-align: center;"><br />
+                            <td style="text-align: center;"> <br />
                             </td>
                           </tr>
                           <tr>
@@ -279,20 +249,19 @@ Released   : 20090905
                             </td>
                             <td style="text-align: center;">2/1<br />
                             </td>
-                            <td style="text-align: center; height: 14.4px;" rowspan="2"
-                              colspan="1">Optimality
-                              Conditions<br />
-                            </td>
-                            <td style="text-align: center;" rowspan="2" colspan="1"><a
-                                href="Lectures/LN5-annotated.pdf">Lecture
-                                5 </a></td>
-                            <td style="text-align: center;">[BSS,Ch.4,5]<br />
+                            <td style="text-align: center;"> <br />
                             </td>
                           </tr>
                           <tr>
                             <td style="text-align: center;">8<br />
                             </td>
                             <td style="text-align: center;">2/3<br />
+                            </td>
+                            <td rowspan="4" colspan="1">
+                              <div style="text-align: center;">II. Proximal and Operator Splitting</div>
+                            </td>
+                            <td rowspan="4" colspan="1" style="text-align: center;">Proximal Operators and Proximal Methods; Mirror Descent; Bregman Distance</td>
+                            <td rowspan="4" colspan="1" style="width: 102.6px; text-align: center;">Lecture 3<br />
                             </td>
                             <td style="text-align: center;"><br />
                             </td>
@@ -302,17 +271,7 @@ Released   : 20090905
                             </td>
                             <td style="text-align: center;">2/8<br />
                             </td>
-                            <td rowspan="9" style="text-align: center;" colspan="1">II.
-                              First-Order Methods<br />
-                            </td>
-                            <td style="text-align: center;" rowspan="3" colspan="1">Gradient
-                              Descent<br />
-                            </td>
-                            <td style="text-align: center;" rowspan="3" colspan="1"><a
-                                href="Lectures/LN6-annotated.pdf">Lecture
-                                6</a><br />
-                            </td>
-                            <td style="text-align: center;">[Nesterov, Ch.1]<br />
+                            <td style="text-align: center;"> <br />
                             </td>
                           </tr>
                           <tr>
@@ -320,7 +279,7 @@ Released   : 20090905
                             </td>
                             <td style="text-align: center;">2/10<br />
                             </td>
-                            <td style="text-align: center;"><br />
+                            <td style="text-align: center;"> <br />
                             </td>
                           </tr>
                           <tr>
@@ -328,7 +287,7 @@ Released   : 20090905
                             </td>
                             <td style="text-align: center;">2/15<br />
                             </td>
-                            <td style="text-align: center;">[Nesterov, Ch.2]<br />
+                            <td style="text-align: center;"> <br />
                             </td>
                           </tr>
                           <tr>
@@ -336,13 +295,13 @@ Released   : 20090905
                             </td>
                             <td style="text-align: center;">2/17<br />
                             </td>
-                            <td style="text-align: center;" rowspan="6" colspan="1">Accelerated
-                              First-Order Methods</td>
-                            <td style="text-align: center;" rowspan="6" colspan="1"><a
-                                href="Lectures/LN7-annotated.pdf">Lecture
-                                7</a><br />
+                            <td rowspan="5" colspan="1">
+                              <div style="text-align: center;">III. Zeroth-Order Optimization</div>
                             </td>
-                            <td style="text-align: center;">[BSS Ch.8.8]<br />
+                            <td rowspan="5" colspan="1" style="text-align: center;">One-Point and Two-Point Gradient Estimator; Zeroth-Order SGD; Zeroth-Order Variance-Reduced Optimization Methods; Applications to Adversarial Training</td>
+                            <td rowspan="5" colspan="1" style="width: 102.6px; text-align: center;">Lecture 3<br />
+                            </td>
+                            <td style="text-align: center;"><br />
                             </td>
                           </tr>
                           <tr>
@@ -350,7 +309,7 @@ Released   : 20090905
                             </td>
                             <td style="text-align: center;">2/22<br />
                             </td>
-                            <td style="text-align: center;"><br />
+                            <td style="text-align: center;"> <br />
                             </td>
                           </tr>
                           <tr>
@@ -358,7 +317,7 @@ Released   : 20090905
                             </td>
                             <td style="text-align: center;">2/24<br />
                             </td>
-                            <td style="text-align: center;"><br />
+                            <td style="text-align: center;"> <br />
                             </td>
                           </tr>
                           <tr>
@@ -366,198 +325,160 @@ Released   : 20090905
                             </td>
                             <td style="text-align: center;">3/1<br />
                             </td>
-                            <td style="text-align: center;">[Nesterov Ch.2.2]<br />
+                            <td style="text-align: center;"> <br />
                             </td>
                           </tr>
                           <tr>
-                            <td style="text-align: center;">16</td>
+                            <td style="text-align: center;">16<br />
+                            </td>
                             <td style="text-align: center;">3/3<br />
                             </td>
-                            <td style="text-align: center;"><br />
+                            <td style="text-align: center;"> <br />
                             </td>
                           </tr>
                           <tr>
-                            <td style="text-align: center;">17</td>
+                            <td style="text-align: center;">17<br />
+                            </td>
                             <td style="text-align: center;">3/8<br />
+                            </td>
+                            <td rowspan="2" colspan="1">
+                              <div style="text-align: center;">IV. Stationary and Saddle Points</div>
+                            </td>
+                            <td rowspan="2" colspan="1" style="text-align: center;">Stationary Points; Convergence to Stationary Points</td>
+                            <td rowspan="2" colspan="1" style="width: 102.6px; text-align: center;">Lecture 4<br />
                             </td>
                             <td style="text-align: center;"><br />
                             </td>
-                          </tr>
-                          <tr align="center">
-                            <td colspan="6" rowspan="1"><b><font color="red">Midterm
-                                  Exam: Oct. 24 8:00am-9:20pm<br />
-                                </font></b></td>
                           </tr>
                           <tr>
                             <td style="text-align: center;">18<br />
                             </td>
                             <td style="text-align: center;">3/10<br />
                             </td>
-                            <td rowspan="2" style="text-align: center;" colspan="1">
-                              <br />
-                            </td>
-                            <td style="text-align: center;" rowspan="2" colspan="1">Subgradient
-                              Method<br />
-                            </td>
-                            <td style="text-align: center;" rowspan="2" colspan="1"><a
-                                href="Lectures/LN8_annotated.pdf">Lecture
-                                8</a><br />
-                            </td>
-                            <td style="text-align: center;"><br />
+                            <td style="text-align: center;"> <br />
                             </td>
                           </tr>
-                          <tr>
-                            <td style="text-align: center;" rowspan="1" colspan="1">19<span
-                                style="color: red;"></span></td>
-                            <td style="text-align: center;" colspan="1">3/15<br />
-                            </td>
-                            <td style="text-align: center;"><br />
-                            </td>
+                          <tr align="center">
+                            <td style="background-color: lime;" colspan="6" rowspan="1"><b>Spring
+                                Break</b></td>
                           </tr>
                           <tr>
-                            <td style="text-align: center;">20</td>
-                            <td style="text-align: center;">3/17<br />
+                            <td style="text-align: center;">19<br />
                             </td>
-                            <td style="text-align: center;" rowspan="4" colspan="1">
-                              III. Stochastic First-Order Methods<br />
-                            </td>
-                            <td style="text-align: center;" rowspan="4" colspan="1">Stochastic
-                              (Sub) Gradient Method</td>
-                            <td style="text-align: center;" rowspan="4" colspan="1"><a
-                                href="Lectures/LN9_annotated.pdf">Lecture
-                                9</a></td>
-                            <td style="text-align: center;"><br />
-                            </td>
-                          </tr>
-                          <tr>
-                            <td style="text-align: center;">21</td>
                             <td style="text-align: center;">3/22<br />
                             </td>
-                            <td><br />
+                            <td rowspan="2" colspan="1">
+                              <div style="text-align: center;">IV. Stationary and Saddle Points</div>
+                            </td>
+                            <td rowspan="2" colspan="1" style="text-align: center;">Saddle Points; Convergence to Saddle Points</td>
+                            <td rowspan="2" colspan="1" style="width: 102.6px; text-align: center;">Lecture 4<br />
+                            </td>
+                            <td style="text-align: center;"><br />
                             </td>
                           </tr>
+                            
                           <tr>
-                            <td style="text-align: center;">22</td>
+                            <td style="text-align: center;">20<br />
+                            </td>
                             <td style="text-align: center;">3/24<br />
                             </td>
-                            <td><br />
+                            <td style="text-align: center;"> <br />
                             </td>
                           </tr>
                           <tr>
-                            <td style="text-align: center;">23</td>
+                            <td style="text-align: center;">21<br />
+                            </td>
                             <td style="text-align: center;">3/29<br />
                             </td>
-                            <td><br />
+                            <td rowspan="4" colspan="1">
+                              <div style="text-align: center;">V. Geometry of Nonconvex Optimization</div>
+                            </td>
+                            <td rowspan="4" colspan="1" style="text-align: center;">Landscape of Learning Models; PL Conditions; Overparameterized Neural Networks (NTK)</td>
+                            <td rowspan="4" colspan="1" style="width: 102.6px; text-align: center;">Lecture 5<br />
+                            </td>
+                            <td style="text-align: center;"><br />
                             </td>
                           </tr>
                           <tr>
-                            <td style="text-align: center;">24</td>
+                            <td style="text-align: center;">22<br />
+                            </td>
                             <td style="text-align: center;">3/31<br />
                             </td>
-                            <td style="text-align: center;" rowspan="2" colspan="1">IV.
-                              Sparse/Regularized Optimization<br />
-                            </td>
-                            <td style="text-align: center;" rowspan="2" colspan="1">Compressed
-                              Sensing, Matrix Completion</td>
-                            <td style="text-align: center;" rowspan="2" colspan="1"><a
-                                href="Lectures/LN10_annotated.pdf">Lecture
-                                10</a></td>
-                            <td style="text-align: center;"><br />
+                            <td style="text-align: center;"> <br />
                             </td>
                           </tr>
                           <tr>
-                            <td style="text-align: center;">25</td>
+                            <td style="text-align: center;">23<br />
+                            </td>
                             <td style="text-align: center;">4/5<br />
                             </td>
-                            <td style="text-align: center;"><br />
+                            <td style="text-align: center;"> <br />
                             </td>
                           </tr>
                           <tr>
-                            <td style="text-align: center;">26</td>
+                            <td style="text-align: center;">24<br />
+                            </td>
                             <td style="text-align: center;">4/7<br />
                             </td>
-                            <td style="text-align: center;" rowspan="2" colspan="1">V.
-                              Proximal and Operator Splitting<br />
+                            <td style="text-align: center;"> <br />
                             </td>
-                            <td style="text-align: center;" rowspan="2" colspan="1">ADMM,
-                              Coordinate Descent </td>
-                            <td style="text-align: center;" rowspan="2" colspan="1"><a
-                                href="Lectures/LN11.pdf">Lecture
-                                11</a></td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">25<br />
+                            </td>
+                            <td style="text-align: center;">4/12<br />
+                            </td>
+                            <td rowspan="5" colspan="1">
+                              <div style="text-align: center;">VI. Other Nonconex Optimization Problems in Machine Learning</div>
+                            </td>
+                            <td rowspan="5" colspan="1" style="text-align: center;">Minimax Optimization; Bilevel Optimization; Compositional Optimization (Meta Learning)</td>
+                            <td rowspan="5" colspan="1" style="width: 102.6px; text-align: center;">Lecture 6<br />
+                            </td>
                             <td style="text-align: center;"><br />
                             </td>
                           </tr>
                           <tr>
-                            <td style="text-align: center;">27</td>
-                            <td style="text-align: center;">4/12<br />
+                            <td style="text-align: center;">26<br />
                             </td>
-                            <td style="text-align: center;"><br />
+                            <td style="text-align: center;">4/14<br />
+                            </td>
+                            <td style="text-align: center;"> <br />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">27<br />
+                            </td>
+                            <td style="text-align: center;">4/19<br />
+                            </td>
+                            <td style="text-align: center;"> <br />
                             </td>
                           </tr>
                           <tr>
                             <td style="text-align: center;">28<br />
                             </td>
-                            <td style="text-align: center;">4/14<br />
+                            <td style="text-align: center;">4/21<br />
                             </td>
-                            <td style="text-align: center;" rowspan="2" colspan="1">In-Class
-                              Project Presentation<br />
-                            </td>
-                            <td><br />
-                            </td>
-                            <td><br />
-                            </td>
-                            <td><br />
+                            <td style="text-align: center;"> <br />
                             </td>
                           </tr>
                           <tr>
                             <td style="text-align: center;">29<br />
                             </td>
-                            <td style="text-align: center;">4/19<br />
-                            </td>
-                            <td style="text-align: center;"><br />
-                            </td>
-                            <td style="text-align: center;"><br />
-                            </td>
-                            <td><br />
-                            </td>
-                          </tr>
-                          <tr>
-                            <td style="text-align: center;">30<br />
-                            </td>
-                            <td style="text-align: center;">4/21<br />
-                            </td>
-                            <td style="text-align: center;" rowspan="2" colspan="1">In-Class
-                              Project Presentation<br />
-                            </td>
-                            <td><br />
-                            </td>
-                            <td><br />
-                            </td>
-                            <td><br />
-                            </td>
-                          </tr>
-                          <tr>
-                            <td style="text-align: center;">31<br />
-                            </td>
                             <td style="text-align: center;">4/26<br />
                             </td>
-                            <td style="text-align: center;"><br />
-                            </td>
-                            <td style="text-align: center;"><br />
-                            </td>
-                            <td><br />
+                            <td style="text-align: center;"> <br />
                             </td>
                           </tr>
                           <tr align="center">
                             <td style="background-color: lime;" colspan="6" rowspan="1"><b>Final
-                                Exam Week</b></td>
+                                Exam Week (Project Presentations)</b></td>
                           </tr>
                         </tbody>
                       </table>
                     </center>
                     <p></p>
                     <h2>Academic Integrity</h2>
-                    <p>This course will follow ISU's <a href="http://www.policy.iastate.edu/policy/SDR">Code
+                    <p>This course will follow OSU's <a href="https://trustees.osu.edu/bylaws-and-rules/code">Code
                         of Academic Conduct</a>. Discussions of homework
                       assignments and final projects are encouraged. However,
                       what you turn in must be your own. You should not directly
