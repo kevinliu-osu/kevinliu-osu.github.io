@@ -18,8 +18,8 @@ Released   : 20090905
 <meta name="google" content="notranslate">
 <meta http-equiv="Content-Language" content="en">
 <title>Jia Liu</title>
-<link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
-<link rel="shortcut icon" href="http://www.cs.iastate.edu/sites/all/themes/suitcase_interim/images/favicon.ico" type="image/vnd.microsoft.icon" />
+<link href="../style_s.css" rel="stylesheet" type="text/css" media="screen" />
+<link rel="shortcut icon" href="https://www.osu.edu/assets/site-dev/osu_navbar/images/favicon.ico">
 <style>
 #myBtn {
   display: none;
@@ -41,47 +41,39 @@ Released   : 20090905
 }
 </style>
 <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-102207232-2"></script>
 <script>
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn").style.display = "block";
-    } else {
-        document.getElementById("myBtn").style.display = "none";
-    }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0; // For Chrome, Safari and Opera 
-    document.documentElement.scrollTop = 0; // For IE and Firefox
-}
+  gtag('config', 'UA-102207232-2');
 </script>
+    
 </head>
 
-    
 <body>
 <div id="wrapper">
-	<div id="header">
-		<div id="logo">
-			<h1>Jia (Kevin) Liu,</h1>
-          <p>Assistant Professor, Depts. of CS and ECE (Courtesy), Iowa State
-            University </p>
-		</div>
-	</div>
+      <div id="header">
+        <div id="logo">
+          <h1>Jia (Kevin) Liu,</h1>
+          <p>Assistant Professor of Electrical and Computer Engineering, The Ohio State University</p>
+        </div>
+        <div id="logo2"><img src="../images/osu-logo.png" width="100"></div>
+      </div>
 	<!-- end #header -->
 	<div id="menu">
 		<ul>
-			<li><a href="../">Home</a></li>
-			<li><a href="../research/">Research</a></li>
-			<li><a href="../publications/">Publications</a></li>
-			<li><a href="../">Awards</a></li>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="../research/index.html">Research</a></li>
+			<li><a href="../publications/index.html">Publications</a></li>
+			<li><a href="../awards/index.html">Awards</a></li>
 			<li  class="current_page_item"><a href="#">Grants</a></li>
-			<li><a href="../activities/">Activities</a></li>
-			<li><a href="../teaching/">Teaching</a></li>
-			<li><a href="../group/">My Group</a></li>
+			<li><a href="../activities/index.html">Activities</a></li>
+			<li><a href="../teaching/index.html">Teaching</a></li>
+			<li><a href="../group/index.html">My Group</a></li>
 		</ul>
 	</div>
 	<!-- end #menu -->
@@ -113,7 +105,7 @@ function topFunction() {
                             <tr>
                                 <td>
                                     <br>
-                                    <center><b><font size=4>NSF CNS-1758757</font></b></center>
+                                    <center><b><font size=4>NSF CNS-2102233</font></b></center>
                                 </td>
                             </tr>
                             <tr> 
@@ -136,7 +128,7 @@ function topFunction() {
                           <table width="100%" border="0" cellspacing="0" cellpadding="0">
                       			<tr> 
                               <td valign="top"> 
-                                <p><b><font size="3">Intellectual Merits</font></b></p>
+                                <p><b><font size="3">Synopsis</font></b></p>
                                 <p>The potential of Massive MIMO technologies to make a significant impact on the next generation multi-Gigabit wireless communication networks is immense. The proposed research will not only advance the knowledge in the design of Massive MIMO wireless networks but will also serve a critical need in the general networking research community by exploring a network-level understanding of Massive MIMO networks through a unified research program that consists of the development of tractable cross-layer theoretical models, exploration of theoretical performance bounds and capacity limits, and the development of distributed algorithms. The proposed research aims to close the gap between advances in physical layer Massive MIMO communications technologies and wireless networking research. The proposed research will support the networking community and the general public by facilitating the development of Massive MIMO networks with substantially increased network performance.
                                 </p>
                               </td>
@@ -151,6 +143,31 @@ function topFunction() {
                         </td>
                       </tr>
                       
+                     <tr> 
+                        <td valign="top"> 
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      			<tr> 
+                              <td valign="top"> 
+                                <p><b><font size="3">Personnel</font></b></p>
+                    <ul>
+                      <li>
+                        <ul>
+                            <li><b>Principle Investigator:</b> Jia (Kevin) Liu</li>
+                            <li><b>Graduate Research Assistants:</b> Wenbo Ren, Xin Zhang, Tianchen Zhou, Zhuqing Liu, and Minghong Fang.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                
+                      <tr>
+                        <td width="77%" class="BodyText" valign="top"> 
+                          <hr noshade>
+                        </td>
+                      </tr>
                      <tr> 
                         <td width="77%" class="BodyText_Home" valign="top"> 
                           <table width="100%" border="0" cellspacing="0" cellpadding="0" height="131">
@@ -187,13 +204,78 @@ function topFunction() {
                           <hr noshade>
                         </td>
                       </tr>
+                
+                     <tr> 
+                        <td width="77%" class="BodyText_Home" valign="top"> 
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0" height="131">
+                      			<tr> 
+                              <td width="84%" class="BodyText_Home" valign="top"> 
+                                <p><b><font size="3">Education Opportunities</font></b></p>
+                                  
+                                <p>At ISU and OSU, several Ph.D. students have been supported on this project. The students on this project have been trained on a variety of cross-disciplinary topics, which include wireless networking, wireless communications, 5G technologies, machine learning, artificial intelligence, etc. Such an academic and engineering training helps prepare the student’s future career in academic and industry.</p>  
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                
+                      <tr>
+                        <td width="77%" class="BodyText" valign="top"> 
+                          <hr noshade>
+                        </td>
+                      </tr>
+                
+                     <tr> 
+                        <td width="77%" class="BodyText_Home" valign="top"> 
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0" height="131">
+                      			<tr> 
+                              <td width="84%" class="BodyText_Home" valign="top"> 
+                                <p><b><font size="3">Outreach Activities</font></b></p>
+                                <ol>
+                                    <li><b>2016</b>
+                                        <p>The research results have been published in highly selective peer-reviewed conferences (IEEE INFOCOM, ACM SIGMETRICS, and ACM MOBIHOC). PI Liu has also given talks at Air Force Research Labs Information Institute, 2016 Information Theory and Applications Workshop at UC San Diego, University of Delaware, and Rensselaer Polytechnic Instittue, which highlighted the key approaches and contributions of the project.               </p>
+                                    </li>
+                      
+                                    <li><b>2017</b>
+                                        <p>
+                                            The research results have been published in highly selective peer-reviewed conferences (IEEE INFOCOM, ACM SIGMETRICS, ACM MOBIHOC, IFIP Networking, IEEE/IFIP WiOpt). PI Liu has also given talks at Air Force Research Labs Information Institute, 2017 Information Theory and Applications Workshop at UC San Diego, University of Delaware, and Rensselaer Polytechnic Institute, University of Kansas, North Carolina State University, University of Tennessee, University of North Carolina at Charlotte, University of Arizona, Virginia Commonwealth University, Wichita State University, Tulane University, Mississippi State University, Iowa State University, The Ohio State University, Northwestern University, Purdue University, which highlighted the key approaches and contributions of the project.
+                                        </p>
+                                    </li>			
+                                    
+                                    <li><b>2018</b>
+                                        <p>Research findings have been published in highly selective peer-reviewed conferences (IEEE INFOCOM, ACM SIGMETRICS, ACM MOBIHOC, IFIP Networking, IEEE/IFIP WiOpt, ACM e-Energy). In this reporting period, PI Liu has given talks at 2018 Information Theory and Applications Workshop at UC San Diego, Northwestern University, Purdue University, University of Victoria, Sun Yat-Sen University, and South China University of Technology, which highlighted the key approaches and contributions of the project. PI Liu was also invited as a keynote speaker for the 2018 International Workshop on Fog and Edge Computing for Intelligent IoT Applications (EFC-IoT) and the 2018 International Workshop on Resource Allocation, Cooperation and Competition in Wireless Networks (RAWNET), both in Shanghai, China. PI Liu was also invited to give a tutorial at the 2018 Midwest Big Data Summer School at Iowa State University.                                        
+                                        </p>
+                                    <li><b>2019</b>
+                                        <p>Research findings have been published in highly selective peer-reviewed conferences (IEEE INFOCOM, IEEE/IFIP WiOpt, AISTATS, NeurIPS, ACM ACSAC). In this reporting period, PI Liu has given talks at 2019 Information Theory and Applications Workshop at UC San Diego, Sun Yat-Sen University, Tsinghua University, Shanghai Jiao Tong University, and ShanghaiTech University.   
+                                        </p>
+                                    </li>						
+                                    <li><b>2020</b>
+                                        <p>Research findings have been published in highly selective peer-reviewed conferences in networking, communications, and machine learning (IEEE JSAC, IEEE TMC, IEEE TNSE, NeurIPS, ICML, etc.). In this reporting period, PI Liu has given talks at 2020 Information Theory and Applications Workshop at UC San Diego, The Ohio State University, University of Michigan, Chinese University of Hong Kong at Shenzhen, and Sun Yat-Sen University, Tech Talks at Google, TADS Lunch-and-Learn Seminar Series at Iowa State University, CAM-MDL Joint Seminar Series at Iowa State University, which highlighted the key approaches and contributions of the project. 
+                                        </p>
+                                    </li>						
+                                    <li><b>2021</b>
+                                        <p>Research findings have been published in highly selective peer-reviewed conferences in networking, communications, and machine learning (IEEE JSAC, IEEE TMC, IEEE TNSE, NeurIPS, ICML, etc.). In this reporting period, PI Liu has given talks at the 3rd Buffalo Day and Wireless Internet-of-Things,Tech Talks at Amazon, Texas Tech University, which highlighted the key approaches and contributions of the project.
+                                        </p>
+                                    </li>						
+                                </ol>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                
+                      <tr>
+                        <td width="77%" class="BodyText" valign="top"> 
+                          <hr noshade>
+                        </td>
+                      </tr>
                       
                      <tr> 
                         <td width="77%" class="BodyText_Home" valign="top"> 
                           <table width="100%" border="0" cellspacing="0" cellpadding="0" height="131">
                       			<tr> 
                               <td width="84%" class="BodyText_Home" valign="top"> 
-                                <p><b><font size="3">Products</font></b></p>
+                                <p><b><font size="3">Publications</font></b></p>
                                 <ol>
                                     <li>J. Liu, A. Eryilmaz, N. B. Shroff, and E. S. Bentley, "Heavy-Ball: A New Approach for Taming Delay and Convergence in Wireless Network Optimization," in Proc. IEEE INFOCOM, San Francisco, CA, Apr. 2016 (<b><font color=red>Best Paper Award</font></b>, acceptance rate: 17%).</li><br>
                                     
@@ -232,6 +314,93 @@ function topFunction() {
                                     
                                     <li>X. Zhang, J. Liu, Z. Zhu, and E. Bentley, "Compressed Distributed Gradient Descent: Communication-Efficient Consensus over Networks," in Proc. IEEE INFOCOM, Paris, France, Apr. 2019</li><br>                                                         
                                     <li>F. Li, J. Liu, and B. Ji, "Combinatorial Sleeping Bandits with Fairness Constraints," in Proc. IEEE INFOCOM, Paris, France, Apr. 2019.</li><br>
+                                    
+                        <li><u>Wenbo Ren</u>, <b>Jia Liu</b>, and Ness B. Shroff, "<a href="https://arxiv.org/pdf/1909.03194.pdf">On
+                          Sample Complexity Upper and Lower Bounds for Exact
+                          Ranking from Noisy Comparisons</a>," in Proc. <b>NeurIPS</b>,
+                        Vancouver, Canada, Dec. 2019 (acceptance rate: 21%).</li>
+                      <br />
+                                    
+                      <li>Zhida Qin, Xiaoying Gan, <b>Jia Liu</b>, Hongqiu Wu, Haimin Jin, and Luoyi Fu, "<a href="MAB_Ratio.pdf">Exploring Best Arm with Top Reward-Cost Ratio in Stochastic Bandits</a>," in Proc. <b>IEEE INFOCOM</b>,
+                        Toronto, Canada, Jul. 2020 (acceptance rate: 19.8%).</li>
+                      <br />
+                                    
+                        <li><u>Xin Zhang</u>, <b>Jia Liu</b>, Zhengyuan Zhu, and Elizabeth Bentley, "<a href="DC_DGD_E.pdf">Communication-Efficient Network-Distributed Optimization with Differential-Coded Compressors</a>," in Proc. <b>IEEE INFOCOM</b>,
+                        Toronto, Canada, Jul. 2020 (acceptance rate: 19.8%).</li>
+                      <br />
+                                    
+                      <li>Xuxi Yang, Lisen Deng, <b>Jia Liu</b>, Peng Wei, and Husheng Li, "<a href="https://cpb-us-w2.wpmucdn.com/web.seas.gwu.edu/dist/9/15/files/2019/12/scitech20-xuxi.pdf">Multi-Agent Autonomous Operations in Urban Air Mobility with Communication Constraints</a>," in Proc. <b>AIAA SciTech</b>,
+                        Orlando, Florida, Jan. 2020.</li>
+                      <br />
+                                    
+                        <li><u>Xin Zhang</u>, <u>Minghong Fang</u>, <b>Jia Liu</b>, and Zhengyuan Zhu, "<a href="SDM_DSGD_TR.pdf">Private and Communication-Efficient Edge Learning: A Sparse Differential Gaussian-Masking Distributed SGD Approach</a>," in Proc. <b>ACM MobiHoc</b>,
+                        Shanghai, China, Oct. 2020 (acceptance rate: 15%).</li>
+                      <br />
+                                    
+                        <li><u>Haibo Yang</u>, <u>Xin Zhang</u>, <u>Minghong Fang</u>, and <b>Jia Liu</b>, "<a href="sign2SGD.pdf">Adaptive Multi-Hierarchical signSGD for Communication-Efficient Distributed Optimization</a>," in Proc. <b>IEEE SPAWC</b>, Special Session on Distributed Signal Processing for Coding and Communications, Atlanta, GA, May 2020 (<b><font color="red">Invited Paper</font></b>).</li>
+                      <br />
+                                    
+                        <li><u>Wenbo Ren</u>, <b>Jia Liu</b>, and Ness B. Shroff, "<a href="https://arxiv.org/pdf/2007.03133.pdf">The Sample Complexity of Best-K Items Selection from Pairwise Comparisons</a>," in Proc. <b>ICML</b>, Vienna, Austria, July 2020 (acceptance rate: 21.8%).</li>
+                      <br />
+
+                        <li><u>Xin Zhang</u>, <b>Jia Liu</b>, and Zhengyuan Zhu, "<a href="https://arxiv.org/pdf/1805.09470.pdf">Taming Convergence for Asynchronous Stochastic Gradient Descent with Unbounded Delay in Non-Convex Learning</a>," in Proc. <b>IEEE CDC</b>, Jeju Island, Korea, December 2020.</li>
+                      <br />
+
+                      <li>Peizhong Ju, Xiaojun Lin, <b>Jia Liu</b>, "<a href="https://arxiv.org/pdf/2002.00492.pdf">Overfitting Can Be Harmless for Basis Pursuit, But Only to a Degree</a>," in Proc. <b>NeurIPS</b>, Vancouver, Canada, December 2020 (<b><font color="red">Spotlight Presentation</font></b>, spotlight rate: 3% acceptance rate: 20%).</li>
+                      <br />
+
+                        <li><u>Menglu Yu</u>, Chuan Wu, Bo Ji, and <b>Jia Liu</b>, "<a href="ML_Networking_INFOCOM'20.pdf">A Sum-of-Ratios Multi-Dimensional-Knapsack Decomposition for DNN Resource Scheduling</a>," in Proc. <b>IEEE INFOCOM</b>, Virtual Event, May 2021 (acceptance rate: 19.9%).</li>
+                      <br />    
+
+                        <li><u>Xin Zhang</u>, <b>Jia Liu</b>, Zhengyuan Zhu, and Elizabeth S. Bentley, "<a href="Hybrid_DGD.pdf">Low Sample and Communication Complexities in Decentralized Learning: A Triple Hybrid Approach</a>," in Proc. <b>IEEE INFOCOM</b>, Virtual Event, May 2021 (acceptance rate: 19.9%).</li>
+                      <br />    
+
+                        <li>Xiaoyu Cao*, <u>Minghong Fang</u>*, <b>Jia Liu</b>, and Neil Gong, "<a href="https://arxiv.org/pdf/2012.13995.pdf">FLTrust: Byzantine-robust Federated Learning via Trust Bootstrapping</a>," in Proc. <b>NDSS</b>, Virtual Event, Feb. 2021 (*co-primary authors, acceptance rate: 16%).</li>
+                      <br />
+
+                        <li><u>Wenbo Ren</u>, <b>Jia Liu</b>, and Ness Shroff, "<a href="BwK.pdf">On Logarithmic Regret for Bandits with Knapsacks</a>," in Proc. <b>IEEE CISS</b>, Special Session on Online Optimization and Learning, Virtual Event, March 2021 (<b><font color="red">Invited Paper</font></b>).</li>
+                      <br />
+
+                        <li><u>Minghong Fang</u>, Minghao Sun, Qi Li, Neil Zhenqiang Gong, Jin Tian and <b>Jia Liu</b>, "<a href="https://arxiv.org/pdf/2102.09171.pdf">Data Poisoning Attacks and Defenses to Crowdsourcing Systems</a>," in Proc. <b>ACM WWW (TheWebConf)</b>, Virtual Event, Apr. 2021 (acceptance rate: 20.6%).</li>
+                      <br />
+                                    
+                        <li><u>Haibo Yang</u>, <u>Minghong Fang</u>, and <b>Jia Liu</b>, "<a href="https://arxiv.org/pdf/2101.11203.pdf">Achieving Linear Speedup with Partial Worker Participation in Non-IID Federated Learning</a>," in Proc. <b>ICLR</b>, Virtual Event, May 2021 (acceptance rate: 28.6%).</li>
+                      <br />
+                                    
+                        <li><u>Xin Zhang</u>, <b>Jia Liu</b>, Zhengyuan Zhu, and Elizabeth S. Bentley, "<a href="https://arxiv.org/pdf/2105.01231.pdf">GT-STORM: Taming Sample, Communication, and Memory Complexities in Decentralized Non-Convex Learning</a>," in Proc. <b>ACM MobiHoc</b>, Shanghai, China, Jul. 2021 (acceptance rate: 20.1%).</li>
+                      <br />
+
+                        <li><u>Tianchen Zhou</u>, <b>Jia Liu</b>, Chaosheng Dong, and Jingyuan Deng, "<a href="https://arxiv.org/pdf/2105.08869.pdf">Incentivized Bandit Learning with Self-Reinforcing User Preferences</a>," in Proc. <b>ICML</b>, Virtual Event, Jul. 2021 (acceptance rate: 20.4%).</li>
+                      <br />
+
+                        <li>Fengjiao Li, <b>Jia Liu</b>, and Bo Ji, "<a href="https://arxiv.org/pdf/2107.11728.pdf">Federated Learning with Fair Worker Selection: A Multi-Round Submodular Maximization Approach</a>," in Proc. <b>IEEE MASS</b>, Virtual Event, Oct. 2021 (acceptance rate: 28.3%).</li>
+                      <br />
+
+                        <li><u>Prashant Khanduri</u>, Pranay Sharma, <u>Haibo Yang</u>, Mingyi Hong, <b>Jia Liu</b>, Ketan Rajawat and Pramod K. Varshney,"<a href="https://arxiv.org/pdf/2106.10435.pdf">Achieving Optimal Sample and Communication Complexities for Non-IID Federated Learning</a>," in Proc. ICML Workshop on Federated Learning for User Privacy and Data Confidentiality <b>(FL-ICML'21)</b>, Virtual Event, Jul. 2021.</li>
+                      <br />
+
+                        <li><u>Haibo Yang</u>, <b>Jia Liu</b>, and Elizabeth S. Bentley,"<a href="https://arxiv.org/pdf/2106.07155.pdf">CFedAvg: Achieving Efficient Communication and Fast Convergence in Non-IID Federated Learning</a>," in Proc. <b>IEEE/IFIP WiOpt</b>, Virtual Event, Oct. 2021.</li>
+                      <br />
+
+                        <li>Hongwei Zhang, Yong Guan, Ahmed Kamal, Daji Qiao, Mai Zheng, Anish Arora, Ozdal Boyraz, Brian Cox, Thomas Daniels, Matthew Darr, Doug Jacobson, Ashfaq Khokhar, Sang Kim, James Koltes, <b>Jia Liu</b>, Mike Luby, Larysa Nadolny, Joshua Peschel, Patrick Schnable, Anuj Sharma, Arun Somani, and Lie Tang,"<a href="ARA_WiNTECH.pdf">ARA: A Wireless Living Lab Vision for Smart and Connected Rural Communities</a>," in Proc. Workshop on Wireless Network Testbeds, Experimental Evaluation and Characterization <b>(ACM WiNTECH)</b>, Virtual Event, Oct. 2021.</li>
+                      <br />
+
+                        <li><u>Wenbo Ren</u>, <b>Jia Liu</b>, and Ness B. Shroff, "<a href="https://proceedings.neurips.cc/paper/2021/file/22508552d3fc22f867e33e6c56b30b16-Paper.pdf">Sample Complexity Bounds for Active Ranking from Multi-wise Comparisons</a>," in Proc. <b>NeurIPS</b>, Virtual Event, Dec. 2021  (acceptance rate: 26%).</li>
+                      <br />
+                                    
+                        <li><u>Prashant Khanduri</u>, Pranay Sharma, <u>Haibo Yang</u>, Mingyi Hong, <b>Jia Liu</b>, Ketan Rajawat, and Pramod Varshney, "<a href="https://proceedings.neurips.cc/paper/2021/file/3016a447172f3045b65f5fc83e04b554-Paper.pdf">STEM: A Stochastic Two-Sided Momentum Algorithm Achieving Near-Optimal Sample and Communication Complexities for Federated Learning</a>," in Proc. <b>NeurIPS</b>, Virtual Event, Dec. 2021  (acceptance rate: 26%).</li>
+                      <br />
+                                    
+                        <li><u>Xin Zhang</u>, <u>Zhuqing Liu</u>, <b>Jia Liu</b>, Zhengyuan Zhu, and Songtao Lu, "<a href="https://proceedings.neurips.cc/paper/2021/file/9c51a13764ca629f439f6accbb4ec413-Paper.pdf">Taming Communication and Sample Complexities in Decentralized Policy Evaluation for Cooperative Multi-Agent Reinforcement Learning</a>," in Proc. <b>NeurIPS</b>, Virtual Event, Dec. 2021 (acceptance rate: 26%).</li>
+                      <br />
+                                    
+                      <li>Bin Li* and <b>Jia Liu*</b>, "<a href="CrowdLearning_AoI_JSAC.pdf">Achieving Information Freshness with Selfish and Rational Users in Mobile Crowd-Learning</a>,'' <b>IEEE Journal on Selected Areas in Communications (JSAC)</b>, vol. 39, no. 5, pp. 1266-1276, May 2021 (*Co-primary authors).</li>
+                      <br />
+                                    
+                      <li>Bin Li, <b>Jia Liu</b>, and Bo Ji, "<a href="https://www.ele.uri.edu/faculty/binli/papers/TMC19_IoT.pdf">Low-Overhead Wireless Uplink Scheduling for Large-Scale Internet-of-Things</a>,'' <b>IEEE Transactions on
+                          Mobile Computing (TMC)</b>, vol. 20, no. 2, pp. 577-587, Feb. 2021.</li>
+                      <br />
+                                    
                                     
                                 </ol>
                               </td>
