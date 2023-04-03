@@ -43,6 +43,17 @@ Design by TEMPLATEDhttp://templated.coReleased for free under the Creative Commo
 
   gtag('config', 'UA-102207232-2');
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function () {
+    $('span').click(function () {
+        $('#datalist li:hidden').slice(0, 10).show();
+        if ($('#datalist li').length == $('#datalist li:visible').length) {
+            $('span ').hide();
+        }
+    });
+});      
+</script>
     
 </head>
 
@@ -110,16 +121,7 @@ Design by TEMPLATEDhttp://templated.coReleased for free under the Creative Commo
 -->
                         His research is supported by NSF, AFOSR, AFRL, ONR, Google, and Cisco. <a href="CV/Liu_CV.pdf"><b>[Full
                         CV]</b></a></p>
-                    <!--
-				<li>					<h2>Research Interests</h2>					<ul>						<li>Complex Large-Scale Networked Systems</li>						<li>Cyber-Physical Systems, Internet-of-Things</li>						<li>Data Analytics, Machine Learning</li>						<li>Mathematical Optimization Theory</li>						<li>Network Economy</li>					</ul>				</li>--><!--
-				<li>					<h2>To Prospective Students</h2>					<p>                        I am always looking for students who are self-motivated in research and have solid mathematical background. Please send me your CV/Resume, transcripts, and GRE/Toefl scores (if available) for consideration. I may not be able to respond to every inquiry. But that doesn't mean I'm not reading.                     </p>				</li>-->
                   </td>
-<!--
-                  <td align="left" width="30%" valign="bottom"> <img src="images/kevin_web.jpg"
-                      alt="Jia Liu"
-                      width="246" />
-                  </td>
--->
                 </tr>
                 <tr>
                   <td colspan="2">
@@ -159,7 +161,7 @@ Design by TEMPLATEDhttp://templated.coReleased for free under the Creative Commo
                     <h2>News:</h2> 
                     <ul>
                       <li>
-                        <ul>
+                        <ul id="datalist">
                             <li>My Ph.D. student <b><font color="#BC1B32">Haibo Yang</font></b> has accepted a faculty position offer from <b><font color="#BC1B32">Rochester Institute of Technology</font></b> (RIT) and will officially start as a tenure-track Assistant Professor in the <b><font color="#BC1B32">Golisano College of Computing and Information Sciences</font></b> at RIT in August 2023! Big Congrats to Haibo! RIT is ranked 62 on csrankings.org, tied with Notre Dame. Haibo is one of my first batch of Ph.D. students, who started at <b><font color="#BC1B32">Iowa State University</font></b> in 2018 and then moved to <b><font color="#BC1B32">The Ohio State University</font></b> with me in 2020. As his Ph.D. advisor in the last five years, I have witnessed Haibo's entire growing process from a junior Ph.D. student, to a blossoming outstanding researcher, and now to a professor-soon-to-be. So proud! <b><font color="#BC1B32">#OhioState</font></b> <b><font color="#BC1B32">#IowaState</font></b> <b><font color="#BC1B32">#RochesterIT</font></b></li>
 
                             <li>I am invited to serve as an Associate Editor of <b><font color="#BC1B32">IEEE Transactions on Cognitive Communications and Networking (TCCN)</font></b></font></b>.</li>
@@ -485,6 +487,7 @@ Design by TEMPLATEDhttp://templated.coReleased for free under the Creative Commo
                           <li><font class="BodyText_News">One of my papers won <b><font
                                   color="#BC1B32">Best
                                   Paper Award</font></b> at IEEE ICC 2008.</font></li>
+<span><b>+ Next 10 News Items ...</b></span>
                         </ul>
                       </li>
                     </ul>
@@ -523,7 +526,7 @@ Design by TEMPLATEDhttp://templated.coReleased for free under the Creative Commo
       </center>
     </div>
     <!-- end #footer -->
-    
+
 <script>
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};

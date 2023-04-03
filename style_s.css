@@ -5,7 +5,7 @@ http://templated.co
 Released for free under the Creative Commons Attribution License
 */
 
-/* @media screen and (max-device-width: 480px){
+/*@media screen and (max-device-width: 480px){
   body{
     -webkit-text-size-adjust: none;
   }
@@ -401,6 +401,20 @@ hr.style2 {
 	/* color: #8A8A8A; */
     /* color: #BC1B32 */
 }
+
+span {
+    cursor: pointer;
+    color: #BC1B32;
+/*    line-height: 2.8em;*/
+    position: relative; 
+    top: 8px; 
+    left: 33px;
+}
+
+ul li:nth-child(n+21) {
+    display:none;
+}
+
 
 /* Calendar */
 
