@@ -49,7 +49,17 @@ $(function () {
     $('span').click(function () {
         $('#datalist li:hidden').slice(0, 10).show();
         if ($('#datalist li').length == $('#datalist li:visible').length) {
-            $('span ').hide();
+            //$('span').hide(); // The original code
+            if(document.getElementById("myspan").innerHTML == '<b>- Back to the short news list ...</b>') {
+                for (var i = 20; i < $('#datalist li').length; i++) {
+                    //$('#datalist').children('li').eq(i).css('visibility', 'invisible');
+                    $('span').html('<b>+ Next 10 News Items ...</b>');
+                    document.getElementById("datalist").children[i].style.display = 'none';
+                }
+            }
+            else {
+                $('span').html('<b>- Back to the short news list ...</b>');
+            }
         }
     });
 });      
@@ -149,13 +159,6 @@ $(function () {
             </table>
             <table>
               <tbody>
-<!--
-                <tr>
-                  <td>
-                      <h2>Social Media: <img src="images/linkedin.png" width="20px"> <img src="images/twitter.png" width="20px"> <img src="images/facebook.png" width="20px"></h2>
-                  </td>
-                </tr>
--->
                 <tr>
                   <td>
                     <h2>News:</h2> 
@@ -164,83 +167,83 @@ $(function () {
                         <ul id="datalist">
                             <li>My Ph.D. student <b><font color="#BC1B32">Haibo Yang</font></b> has accepted a faculty position offer from <b><font color="#BC1B32">Rochester Institute of Technology</font></b> (RIT) and will officially start as a tenure-track Assistant Professor in the <b><font color="#BC1B32">Golisano College of Computing and Information Sciences</font></b> at RIT in August 2023! Big Congrats to Haibo! RIT is ranked 62 on csrankings.org, tied with Notre Dame. Haibo is one of my first batch of Ph.D. students, who started at <b><font color="#BC1B32">Iowa State University</font></b> in 2018 and then moved to <b><font color="#BC1B32">The Ohio State University</font></b> with me in 2020. As his Ph.D. advisor in the last five years, I have witnessed Haibo's entire growing process from a junior Ph.D. student, to a blossoming outstanding researcher, and now to a professor-soon-to-be. So proud! <b><font color="#BC1B32">#OhioState</font></b> <b><font color="#BC1B32">#IowaState</font></b> <b><font color="#BC1B32">#RochesterIT</font></b></li>
 
-                            <li>I am invited to serve as an Associate Editor of <b><font color="#BC1B32">IEEE Transactions on Cognitive Communications and Networking (TCCN)</font></b></font></b>.</li>
+                            <li>I am invited to serve as an Associate Editor of <b><font color="#BC1B32">IEEE Transactions on Cognitive Communications and Networking (TCCN)</font></b>.</li>
 
-                            <li>A paper on STORM-type momentum-based stochastic decentralized bilevel optimization is accepted by <b><font color="#BC1B32">IEEE INFOCOM 2023</font></b></font></b> (acceptance rate: 19.2%).</li>
+                            <li>A paper on STORM-type momentum-based stochastic decentralized bilevel optimization is accepted by <b><font color="#BC1B32">IEEE INFOCOM 2023</font></b> (acceptance rate: 19.2%).</li>
 
-                            <li>A paper on the PAC non-learnability of federated learning under partial client participation and the mitigation by using server-aided federated learning is accepted by NeurIPS Workshop on Recent Advances and New Challenges in Federated Learning <b><font color="#BC1B32">(FL-NeurIPS'22)</font></b></font></b>.</li>
+                            <li>A paper on the PAC non-learnability of federated learning under partial client participation and the mitigation by using server-aided federated learning is accepted by NeurIPS Workshop on Recent Advances and New Challenges in Federated Learning <b><font color="#BC1B32">(FL-NeurIPS'22)</font></b>.</li>
                             
                             <li>My Ph.D. student Haibo Yang received the <b><font color="#BC1B32">NeurIPS 2022 Scholar Award</font></b>, with full travel support to attend NeurIPS 2022 in New Orleans. Congratulations!</li>
                             
-                            <li>A paper on Byzantine-resilient asynchronous federated learning algorithm design is accepted by <b><font color="#BC1B32">ACM ACSAC 2022</font></b></font></b> (acceptance rate: 24.1%).</li>
+                            <li>A paper on Byzantine-resilient asynchronous federated learning algorithm design is accepted by <b><font color="#BC1B32">ACM ACSAC 2022</font></b> (acceptance rate: 24.1%).</li>
                             
-                            <li>A paper on a distributed spanning-tree-based fused-lasso regression for learning coefficient heterogeneity over networks is accepted by the highly prestigious <b><font color="#BC1B32">Journal of the American Statistical Association (JASA)</font></b></font></b> (JASA is referred to as one of the "Big-4" journals in the areas of statistics).</li>
+                            <li>A paper on a distributed spanning-tree-based fused-lasso regression for learning coefficient heterogeneity over networks is accepted by the highly prestigious <b><font color="#BC1B32">Journal of the American Statistical Association (JASA)</font></b> (JASA is referred to as one of the "Big-4" journals in the areas of statistics).</li>
                             
-                            <li>A paper on mitigating fat-tailed noise (with potentially infinite variance) in federated learning is accepted by <b><font color="#BC1B32">NeurIPS 2022</font></b></font></b> (acceptance rate: 25.6%).</li>
+                            <li>A paper on mitigating fat-tailed noise (with potentially infinite variance) in federated learning is accepted by <b><font color="#BC1B32">NeurIPS 2022</font></b> (acceptance rate: 25.6%).</li>
                             
-                            <li>A paper on achieving O(&epsilon;<sup>-2</sup>) communication complexity in federated min-max learning is accepted by <b><font color="#BC1B32">NeurIPS 2022</font></b></font></b> (acceptance rate: 25.6%).</li>
+                            <li>A paper on achieving O(&epsilon;<sup>-2</sup>) communication complexity in federated min-max learning is accepted by <b><font color="#BC1B32">NeurIPS 2022</font></b> (acceptance rate: 25.6%).</li>
                             
-                            <li>A paper on stochastic linearized augmented Lagrangian method for decentralized bilevel optimization is accepted by <b><font color="#BC1B32">NeurIPS 2022</font></b></font></b> (acceptance rate: 25.6%).</li>
+                            <li>A paper on stochastic linearized augmented Lagrangian method for decentralized bilevel optimization is accepted by <b><font color="#BC1B32">NeurIPS 2022</font></b> (acceptance rate: 25.6%).</li>
                             
                             <li>I am thrilled to be a <b><font color="#BC1B32">Winner of the 2022 AFRL/RI and Griffiss Institute Poster Competition</font></b> among the summer visiting faculty in 2022.</li>
                             
-                            <li>A paper on scheduling ring-all-reduce learning jobs with communication contention is accepted by <b><font color="#BC1B32">ACM MobiHoc 2022</font></b></font></b> (acceptance rate: 19.8%).</li>
+                            <li>A paper on scheduling ring-all-reduce learning jobs with communication contention is accepted by <b><font color="#BC1B32">ACM MobiHoc 2022</font></b> (acceptance rate: 19.8%).</li>
                             
-                            <li>A paper on decentralized bilevel optimization with low sample and communication complexities is accepted by <b><font color="#BC1B32">ACM MobiHoc 2022</font></b></font></b> (acceptance rate: 19.8%).</li>
+                            <li>A paper on decentralized bilevel optimization with low sample and communication complexities is accepted by <b><font color="#BC1B32">ACM MobiHoc 2022</font></b> (acceptance rate: 19.8%).</li>
                             
-                            <li>A paper on semi-asynchronous optimization algorithm for distributed learning is accepted by <b><font color="#BC1B32">ACM MobiHoc 2022</font></b></font></b> (acceptance rate: 19.8%).</li>
+                            <li>A paper on semi-asynchronous optimization algorithm for distributed learning is accepted by <b><font color="#BC1B32">ACM MobiHoc 2022</font></b> (acceptance rate: 19.8%).</li>
                             
-                            <li>A paper on achieving linear convergence speedup for fully decentralized federated learning is accepted by <b><font color="#BC1B32">ACM MobiHoc 2022</font></b></font></b> (acceptance rate: 19.8%).</li>
+                            <li>A paper on achieving linear convergence speedup for fully decentralized federated learning is accepted by <b><font color="#BC1B32">ACM MobiHoc 2022</font></b> (acceptance rate: 19.8%).</li>
                             
-                            <li>A paper titled "Anarchic Federated Learning" has been accepted by <b><font color="#BC1B32">ICML 2022</font></b></font></b> as a <b><font color="#BC1B32">long oral presentation</font></b></font></b> (long oral presentation rate: 2%, acceptance rate: 21.9%). Big congrats to my students Haibo Yang, Xin Zhang, as well as my PostDoc Prashant Khanduri! Great Job!</li>
+                            <li>A paper titled "Anarchic Federated Learning" has been accepted by <b><font color="#BC1B32">ICML 2022</font></b> as a <b><font color="#BC1B32">long oral presentation</font></b> (long oral presentation rate: 2%, acceptance rate: 21.9%). Big congrats to my students Haibo Yang, Xin Zhang, as well as my PostDoc Prashant Khanduri! Great Job!</li>
                             
-                            <li>A joint paper with Amazon on multi-objective optimization (MOO) and multi-task learning (MTL) is accepted by <b><font color="#BC1B32">ICML 2022</font></b></font></b> (acceptance rate: 21.9%).</li>
+                            <li>A joint paper with Amazon on multi-objective optimization (MOO) and multi-task learning (MTL) is accepted by <b><font color="#BC1B32">ICML 2022</font></b> (acceptance rate: 21.9%).</li>
                             
                             <li>I received a one-year research grant of $200K from <b><font color="#BC1B32">Cisco Systems, Inc.</font></b> as the Lead PI (Prof. Ness Shroff being the co-PI). The project is titled <b><font color="#BC1B32">"Low-Latency Computing Resource Scheduling and Allocation Algorithms for Distributed Deep Learning: A Spatial-Temporal Approach."</font></b></li>
                             
-                            <li>An invited paper on channel-quality-adaptive over-the-air federated learning over wireless networks has been accepted by <b><font color="#BC1B32">IEEE SPAWC 2022</font></b></font></b>.</li>
+                            <li>An invited paper on channel-quality-adaptive over-the-air federated learning over wireless networks has been accepted by <b><font color="#BC1B32">IEEE SPAWC 2022</font></b>.</li>
                             
-                            <li>A paper on over-the-air federated learning with joint adaptive computation and power control under noisy wireless channels is accepted by <b><font color="#BC1B32">IEEE ISIT 2022</font></b></font></b>.</li>
+                            <li>A paper on over-the-air federated learning with joint adaptive computation and power control under noisy wireless channels is accepted by <b><font color="#BC1B32">IEEE ISIT 2022</font></b>.</li>
                             
                             <li>My Ph.D. student Menglu Yu recieved the <b><font color="#BC1B32">IEEE INFOCOM 2022 Student Conference Grant</font></b> award sponsored by <b><font color="#BC1B32">IEEE ComSoc</font></b>. Big Congratulations!</li>
                             
-                            <li>A paper on improving multiple fairness performances for recommender systems with optimized antidote data is accepted by <b><font color="#BC1B32">ACM SACMAT 2022</font></b></font></b>.</li>
+                            <li>A paper on improving multiple fairness performances for recommender systems with optimized antidote data is accepted by <b><font color="#BC1B32">ACM SACMAT 2022</font></b>.</li>
                   
-                            <li>A paper on finite-time convergence and sample complexity of multi-agent actor-critic reinforcement learning with average reward is accepted by <b><font color="#BC1B32">ICLR 2022</font></b></font></b> for a <b><font color="#BC1B32">spotlight presentation</font></b></font></b> (acceptance rate: 32%, spotlight rate: 5%). Big congrats to my PostDoc Hairi and my collaborator Songtao Lu at IBM!</li>
+                            <li>A paper on finite-time convergence and sample complexity of multi-agent actor-critic reinforcement learning with average reward is accepted by <b><font color="#BC1B32">ICLR 2022</font></b> for a <b><font color="#BC1B32">spotlight presentation</font></b> (acceptance rate: 32%, spotlight rate: 5%). Big congrats to my PostDoc Hairi and my collaborator Songtao Lu at IBM!</li>
                   
-                            <li>A paper on incentivized bandit learning with delayed feedback and self-reinforcing user preferences is accepted by <b><font color="#BC1B32">ICLR 2022</font></b></font></b> (acceptance rate: 32%).</li>
+                            <li>A paper on incentivized bandit learning with delayed feedback and self-reinforcing user preferences is accepted by <b><font color="#BC1B32">ICLR 2022</font></b> (acceptance rate: 32%).</li>
                   
-                            <li>A paper on a multi-agent kernel approximation approach for overparameterized decentralized learning is accepted by <b><font color="#BC1B32">ICLR 2022</font></b></font></b> (acceptance rate: 32%).</li>
+                            <li>A paper on a multi-agent kernel approximation approach for overparameterized decentralized learning is accepted by <b><font color="#BC1B32">ICLR 2022</font></b> (acceptance rate: 32%).</li>
                   
-                            <li>A paper on a global convergence theory for deep ReLU implicit networks via overparameterization is accepted by <b><font color="#BC1B32">ICLR 2022</font></b></font></b> (acceptance rate: 32%).</li>
+                            <li>A paper on a global convergence theory for deep ReLU implicit networks via overparameterization is accepted by <b><font color="#BC1B32">ICLR 2022</font></b> (acceptance rate: 32%).</li>
                   
-                            <li>A paper on online scheduling and resource allocation for ring-all-reduce based learning jobs is accepted by <b><font color="#BC1B32">IEEE INFOCOM 2022</font></b></font></b> (acceptance rate: 19.9%).</li>
+                            <li>A paper on online scheduling and resource allocation for ring-all-reduce based learning jobs is accepted by <b><font color="#BC1B32">IEEE INFOCOM 2022</font></b> (acceptance rate: 19.9%).</li>
                   
                             <li>I'm thrilled and honored to join <b><font color="#BC1B32">Amazon.com</font></b> as an <b><font color="#BC1B32">Amazon Visiting Academics (AVA)</font></b> starting November 2021, while continuing to conduct research and teach at <b><font color="#BC1B32">The Ohio State University</font></b>! I'm so looking forward to applying my theoretical expertise to tackle complex real-world technical challenges in machine learning (ML) and artificial intelligence (AI), by splitting my time between academia and the industry! <b><font color="#BC1B32">#GoAmazon</font></b>! <b><font color="#BC1B32">#GoBucks</font></b>!</li>
                   
-                            <li>A paper on sample complexity bounds for active ranking from noisy multi-wise comparisons is accepted by <b><font color="#BC1B32">NeurIPS 2021</font></b></font></b> (acceptance rate: 26%).</li>
+                            <li>A paper on sample complexity bounds for active ranking from noisy multi-wise comparisons is accepted by <b><font color="#BC1B32">NeurIPS 2021</font></b> (acceptance rate: 26%).</li>
                   
-                            <li>A paper on sample- and communication-efficient policy evaluation for multi-agent reinforcement learning is accepted by <b><font color="#BC1B32">NeurIPS 2021</font></b></font></b> (acceptance rate: 26%).</li>
+                            <li>A paper on sample- and communication-efficient policy evaluation for multi-agent reinforcement learning is accepted by <b><font color="#BC1B32">NeurIPS 2021</font></b> (acceptance rate: 26%).</li>
                   
-                            <li>A paper on achieving near-optimal sample and communication complexities in federated learning is accepted by <b><font color="#BC1B32">NeurIPS 2021</font></b></font></b> (acceptance rate: 26%).</li>
+                            <li>A paper on achieving near-optimal sample and communication complexities in federated learning is accepted by <b><font color="#BC1B32">NeurIPS 2021</font></b> (acceptance rate: 26%).</li>
                   
                             <li>The <b><font color="#BC1B32">NSF AI Institute for Future Edge Networks and Distributed Intelligence (<a href="https://aiedge.osu.edu"><u>AI-EDGE</u></a>)</font></b> is officially announced! A <b><font color="#BC1B32">$20M</font></b> AI Institute funded by <b><font color="#BC1B32">NSF</font></b>, AI-EDGE is led by <b><font color="#BC1B32">OSU</font></b> (PI: Prof. Ness Shroff), with <b><font color="#BC1B32">29 investigators</font></b> coming from <b><font color="#BC1B32">11 leading research universities</font></b> (OSU, Michigan, Wisconsin, Univ. Washington, UIC, UIUC, Purdue, Texas Austin, CMU, UMASS, and Northeastern) and <b><font color="#BC1B32">10 collaborators</font></b> coming from <b><font color="#BC1B32">three DOD Research Labs</font></b> (ARL, AFRL, and NRL) and <b><font color="#BC1B32">four leading companies</font></b> in the industry (Microsoft, IBM, Qualcomm, and AT&T). Big Congrats to the <b><font color="#BC1B32"><a href="https://live-aiedge-program.pantheonsite.io/organization-and-key-personnel"><u>AI-EDGE Team</u></a></font></b>!</li>
                             
-                            <li>A paper on primal-dual online computing resource allocation and scheduling algorithm design for distributed deep learning system control and optimization has been accepted for publication in <b><font color="#BC1B32">IEEE Transactions on Network Science and Engineering</font></b></font></b> in 2021.</li>
+                            <li>A paper on primal-dual online computing resource allocation and scheduling algorithm design for distributed deep learning system control and optimization has been accepted for publication in <b><font color="#BC1B32">IEEE Transactions on Network Science and Engineering</font></b> in 2021.</li>
 
-                            <li>A paper on the compressed FedAvg algorithm for federated learning with non-i.i.d. datasets has been accepted by <b><font color="#BC1B32">IEEE/IFIP WiOpt 2021</font></b></font></b>.</li>
+                            <li>A paper on the compressed FedAvg algorithm for federated learning with non-i.i.d. datasets has been accepted by <b><font color="#BC1B32">IEEE/IFIP WiOpt 2021</font></b>.</li>
 
-                            <li>A paper on achieving optimal sample and communication complexities for non-i.i.d. Federated Learning is accepted by ICML Workshop on Federated Learning for User Privacy and Data Confidentiality <b><font color="#BC1B32">(FL-ICML'21)</font></b></font></b>.</li>
+                            <li>A paper on achieving optimal sample and communication complexities for non-i.i.d. Federated Learning is accepted by ICML Workshop on Federated Learning for User Privacy and Data Confidentiality <b><font color="#BC1B32">(FL-ICML'21)</font></b>.</li>
                   
-                            <li>A paper on multi-round submodular maximization for Federated Learning with fair worker selection is accepted by <b><font color="#BC1B32">IEEE MASS 2021</font></b></font></b> (acceptance rate: 28.3%).</li>
+                            <li>A paper on multi-round submodular maximization for Federated Learning with fair worker selection is accepted by <b><font color="#BC1B32">IEEE MASS 2021</font></b> (acceptance rate: 28.3%).</li>
                   
                             <li>Our <b><font color="#BC1B32">ARA Wireless Living Lab</font></b> is officially announced [<a href="https://advancedwireless.org/the-platforms-for-advanced-wireless-research-pawr-program-announces-fourth-wireless-research-platform-in-central-iowa-to-drive-innovation-in-rural-broadband-connectivity/"><u>news link</u></a>] [<a href="https://arawireless.org/"><u>project web</u></a>]. An <b><font color="#BC1B32">$8 million</font></b> project with reserachers coming from <b><font color="#BC1B32">ISU</font></b>, <b><font color="#BC1B32">OSU</font></b>, and <b><font color="#BC1B32">UCI</font></b>, ARA is one of the four <b><font color="#BC1B32">NSF-funded</font></b> Platforms for Advanced Wireless Research (<b><font color="#BC1B32">PAWR</font></b>) located in Central Iowa. Big Congrats to the <b><font color="#BC1B32"><a href="https://arawireless.org/ara-project-team/"><u>ARA Project Team</u></a></font></b>!</li>
                   
-                            <li>A paper on incentivized multi-armed bandit learning policy designs with self-reinforcing user prefernces is accepted by <b><font color="#BC1B32">ICML 2021</font></b></font></b> (acceptance rate: 20.4%).</li>
+                            <li>A paper on incentivized multi-armed bandit learning policy designs with self-reinforcing user prefernces is accepted by <b><font color="#BC1B32">ICML 2021</font></b> (acceptance rate: 20.4%).</li>
                   
-                            <li>A paper on taming sample, communication, and memory complexities in decentralized learning is accepted by <b><font color="#BC1B32">ACM MobiHoc 2021</font></b></font></b> (acceptance rate: 20.1%).</li>
+                            <li>A paper on taming sample, communication, and memory complexities in decentralized learning is accepted by <b><font color="#BC1B32">ACM MobiHoc 2021</font></b> (acceptance rate: 20.1%).</li>
                   
-                            <li>An invited paper on logarithmic regrets for multi-armed bandit problems with knapsack-type constraints has been accepted by <b><font color="#BC1B32">IEEE CISS 2021</font></b></font></b>.</li>
+                            <li>An invited paper on logarithmic regrets for multi-armed bandit problems with knapsack-type constraints has been accepted by <b><font color="#BC1B32">IEEE CISS 2021</font></b>.</li>
                   
                             <li>My Ph.D. student Minghong Fang received the <b><font color="#BC1B32">ACM TheWebConf (WWW) 2021 Student Scholarship Award</font></b>. My Ph.D. student Menglu Yu recieved the <b><font color="#BC1B32">IEEE INFOCOM 2021 NSF Student Conference Award</font></b>. Big Congratulations!</li>
                             
@@ -260,40 +263,40 @@ $(function () {
 
                             <li>A joint paper with colleagues at Purdue (Peizhong Ju and Prof. Xiaojun Lin) on investigating the <b><font color="#BC1B32">double-descent phenomenon</font></b> of basis pursuit has been accepted by <b><font color="#BC1B32">NeurIPS 2020</font></b> for a <b><font color="#BC1B32">spotlight presentation</font></b> (acceptance rate: 20%, spotlight presentations: 3%). Big congrats to the team!</li>
                   
-                            <li>After working in the <b><font color="#BC1B32">CS</font></b> department at <b><font color="#BC1B32">Iowa State University</font></b> for three years, I will join the <b><font color="#BC1B32">ECE</font></b> department at <b><font color="#BC1B32">The Ohio State University</font></b></font></b> in <b><font color="#BC1B32">Fall 2020</font></b>!</li>
+                            <li>After working in the <b><font color="#BC1B32">CS</font></b> department at <b><font color="#BC1B32">Iowa State University</font></b> for three years, I will join the <b><font color="#BC1B32">ECE</font></b> department at <b><font color="#BC1B32">The Ohio State University</font></b> in <b><font color="#BC1B32">Fall 2020</font></b>!</li>
 
-                            <li>A paper on the convergence of distributed asynchronous stochastic gradient descent with unbounded delay has been accepted by <b><font color="#BC1B32">IEEE CDC 2020</font></b></font></b>.</li>
+                            <li>A paper on the convergence of distributed asynchronous stochastic gradient descent with unbounded delay has been accepted by <b><font color="#BC1B32">IEEE CDC 2020</font></b>.</li>
 
-                            <li>I'm invited to be a panelist and give a talk in the <b><font color="#BC1B32"><a href="https://sites.google.com/tamu.edu/nsf-nets-resource-site/career-webinar">NSF NeTS CAREER Webinar for Aspiring PIs</a></font></b></font></b> on 6/17/20 <a href="https://www.dropbox.com/s/nopukd0c4zg0g31/NeTS_CAREER_Wrkshp%2720_Liu_Slides.pdf?dl=0">[Slides]</a> <a href="https://www.youtube.com/watch?v=B-2dOysNFqI&t=5275s">[Video]</a>. Delighted to serve our community!</li>
+                            <li>I'm invited to be a panelist and give a talk in the <b><font color="#BC1B32"><a href="https://sites.google.com/tamu.edu/nsf-nets-resource-site/career-webinar">NSF NeTS CAREER Webinar for Aspiring PIs</a></font></b> on 6/17/20 <a href="https://www.dropbox.com/s/nopukd0c4zg0g31/NeTS_CAREER_Wrkshp%2720_Liu_Slides.pdf?dl=0">[Slides]</a> <a href="https://www.youtube.com/watch?v=B-2dOysNFqI&t=5275s">[Video]</a>. Delighted to serve our community!</li>
                   
-                            <li>I'm invited to serve as a TPC member for <b><font color="#BC1B32"><a href="http://sigmetrics.org/sigmetrics2021/">ACM SIGMETRICS 2021</a></font></b></font></b>, which will be held in Beijing, China, June 14--18, 2021.</li>
+                            <li>I'm invited to serve as a TPC member for <b><font color="#BC1B32"><a href="http://sigmetrics.org/sigmetrics2021/">ACM SIGMETRICS 2021</a></font></b>, which will be held in Beijing, China, June 14--18, 2021.</li>
                   
-                            <li>A paper on low-sample-complexity top-k selection from noisy pairwise comparisons has been accepted by <b><font color="#BC1B32">ICML 2020</font></b></font></b> (acceptance rate: 21.8%).</li>
+                            <li>A paper on low-sample-complexity top-k selection from noisy pairwise comparisons has been accepted by <b><font color="#BC1B32">ICML 2020</font></b> (acceptance rate: 21.8%).</li>
                   
-                            <li>I received the <b><font color="#BC1B32">2020 LAS Award for Early Achievement in Research</font></b></font></b> from the College of Liberal Arts and Sciences at ISU! See LAS annoucement <a href="https://news.las.iastate.edu/2020/06/03/faculty-and-staff-honored-with-2020-las-awards/"><b><u>here</u></b></a>.</li>
+                            <li>I received the <b><font color="#BC1B32">2020 LAS Award for Early Achievement in Research</font></b> from the College of Liberal Arts and Sciences at ISU! See LAS annoucement <a href="https://news.las.iastate.edu/2020/06/03/faculty-and-staff-honored-with-2020-las-awards/"><b><u>here</u></b></a>.</li>
                   
-                            <li>My students Minghong Fang and Menglu Yu received the <b><font color="#BC1B32">Research Excellence Award</font></b></font></b> and <b><font color="#BC1B32">Teaching Excellence Award</font></b></font></b>, respectively, at ISU in 2020!</li>
+                            <li>My students Minghong Fang and Menglu Yu received the <b><font color="#BC1B32">Research Excellence Award</font></b> and <b><font color="#BC1B32">Teaching Excellence Award</font></b>, respectively, at ISU in 2020!</li>
                   
-                            <li>An invited paper on adaptive multi-hierarchical signSGD for communication-efficient distributed optimization has been accepted by <b><font color="#BC1B32">IEEE SPAWC 2020</font></b></font></b>.</li>
+                            <li>An invited paper on adaptive multi-hierarchical signSGD for communication-efficient distributed optimization has been accepted by <b><font color="#BC1B32">IEEE SPAWC 2020</font></b>.</li>
                   
-                            <li>A paper on efficient trip-vehicle matching and routes optimization for Uber-like ride-sharing is accepted by <b><font color="#BC1B32">ACM e-Energy 2020</font></b></font></b> (acceptance rate: 23%).</li>
+                            <li>A paper on efficient trip-vehicle matching and routes optimization for Uber-like ride-sharing is accepted by <b><font color="#BC1B32">ACM e-Energy 2020</font></b> (acceptance rate: 23%).</li>
                   
-                            <li>A paper on privacy-preserving and communication-efficient distributed SGD for edge learning is accepted by <b><font color="#BC1B32">ACM MobiHoc 2020</font></b></font></b> (acceptance rate: 15%).</li>
+                            <li>A paper on privacy-preserving and communication-efficient distributed SGD for edge learning is accepted by <b><font color="#BC1B32">ACM MobiHoc 2020</font></b> (acceptance rate: 15%).</li>
                   
-                            <li>I received the prestigious <b><font color="#BC1B32">NSF CAREER Award</font></b></font></b> (<em>first attempt</em>) in 2020! The awarded project is titled "<b><font color="#BC1B32"><a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1943226&HistoricalAwards=false">CAREER: Computing-Aware Network Optimization for Efficient Distributed Data Analytics at the Wireless Edge</a></font></b>," which spans a five-year period from 10/2020 to 09/2025 with $524,125 in total.</li>
+                            <li>I received the prestigious <b><font color="#BC1B32">NSF CAREER Award</font></b> (<em>first attempt</em>) in 2020! The awarded project is titled "<b><font color="#BC1B32"><a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1943226&HistoricalAwards=false">CAREER: Computing-Aware Network Optimization for Efficient Distributed Data Analytics at the Wireless Edge</a></font></b>," which spans a five-year period from 10/2020 to 09/2025 with $524,125 in total.</li>
             
-                            <li>A paper on predictive arrival reshaping policy for crowd-learning data freshness has been accepted by <b><font color="#BC1B32">IEEE INFOCOM'20 Age of Information Workshop</font></b></font></b>.</li>
+                            <li>A paper on predictive arrival reshaping policy for crowd-learning data freshness has been accepted by <b><font color="#BC1B32">IEEE INFOCOM'20 Age of Information Workshop</font></b>.</li>
 
-                            <li>I received the prestigious <b><font color="#BC1B32">Google Faculty Research Award</font></b></font></b> in 2020! See the Google news announcement <a href="https://docs.google.com/document/d/e/2PACX-1vRYagtwX_MRJUCc_3KMWhmBNnKz2ZHh0vM63B7OxLWWEfghrWjySPoVYtYum9BBVnrlx-wLi0q6KGAP/pub"><b><u>here</u></b></a> and the ISU CS department news <a href="https://www.cs.iastate.edu/announcements/dr-jia-kevin-liu-receives-google-faculty-research-award-1"><b><u>here</u></b></a>.</li>
+                            <li>I received the prestigious <b><font color="#BC1B32">Google Faculty Research Award</font></b> in 2020! See the Google news announcement <a href="https://docs.google.com/document/d/e/2PACX-1vRYagtwX_MRJUCc_3KMWhmBNnKz2ZHh0vM63B7OxLWWEfghrWjySPoVYtYum9BBVnrlx-wLi0q6KGAP/pub"><b><u>here</u></b></a> and the ISU CS department news <a href="https://www.cs.iastate.edu/announcements/dr-jia-kevin-liu-receives-google-faculty-research-award-1"><b><u>here</u></b></a>.</li>
                   
-                            <li>A paper on distributed traffic consolidation for data center network energy optimization has been accepted by <b><font color="#BC1B32">IEEE Transactions on Cloud Computing</font></b></font></b>.</li>
+                            <li>A paper on distributed traffic consolidation for data center network energy optimization has been accepted by <b><font color="#BC1B32">IEEE Transactions on Cloud Computing</font></b>.</li>
 
-                            <li>A paper on resource allocation and scheduling for mining energy cost minimization in distributed Blockchain networks has been accepted by <b><font color="#BC1B32">IEEE ICC 2020</font></b></font></b>.</li>
+                            <li>A paper on resource allocation and scheduling for mining energy cost minimization in distributed Blockchain networks has been accepted by <b><font color="#BC1B32">IEEE ICC 2020</font></b>.</li>
                   
                             <li>A paper on influence-function-based data poisoning attacks to recommender systems has been accepted by <b><font color="#BC1B32">ACM WWW 2020</font></b> (acceptance rate: 25%).</li>
                             
                             <li>A paper on network-distributed learning with differential-coded compressors has been accepted by <b><font color="#BC1B32">IEEE
-                                INFOCOM 2020</font></b> (acceptance rate: 19.8%)</font></b>.</li>
+                                INFOCOM 2020</font></b> (acceptance rate: 19.8%).</li>
                             
                             <li>A paper on exploring best arm with top reward-cost ratio in multi-armed bandits has been accepted by <b><font color="#BC1B32">IEEE INFOCOM 2020</font></b> (acceptance rate: 19.8%).</li>
             
@@ -487,7 +490,7 @@ $(function () {
                           <li><font class="BodyText_News">One of my papers won <b><font
                                   color="#BC1B32">Best
                                   Paper Award</font></b> at IEEE ICC 2008.</font></li>
-<span><b>+ Next 10 News Items ...</b></span>
+<span id="myspan"><b>+ Next 10 News Items ...</b></span>
                         </ul>
                       </li>
                     </ul>
