@@ -50,14 +50,14 @@ $(function () {
         $('#datalist li:hidden').slice(0, 10).show();
         if ($('#datalist li').length == $('#datalist li:visible').length) {
             //$('span').hide(); // The original code
-            if(document.getElementById("myspan").innerHTML == '<b>- Click to Close and Get Back to the Short News List ...</b>') {
+            if(document.getElementById("myspan").innerHTML == '<b>- Click to Get Back to the Short News List ...</b>') {
                 for (var i = 20; i < $('#datalist li').length; i++) {
                     $('span').html('<b>+ Click for the Next 10 News Items ...</b>');
                     document.getElementById("datalist").children[i].style.display = 'none';
                 }
             }
             else {
-                $('span').html('<b>- Click to Close and Get Back to the Short News List ...</b>');
+                $('span').html('<b>- Click to Get Back to the Short News List ...</b>');
             }
         }
     });
