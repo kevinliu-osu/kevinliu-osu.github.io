@@ -50,15 +50,14 @@ $(function () {
         $('#datalist li:hidden').slice(0, 10).show();
         if ($('#datalist li').length == $('#datalist li:visible').length) {
             //$('span').hide(); // The original code
-            if(document.getElementById("myspan").innerHTML == '<b>- Back to the short news list ...</b>') {
+            if(document.getElementById("myspan").innerHTML == '<b>- Click to Close and Get Back to the Short News List ...</b>') {
                 for (var i = 20; i < $('#datalist li').length; i++) {
-                    //$('#datalist').children('li').eq(i).css('visibility', 'invisible');
-                    $('span').html('<b>+ Next 10 News Items ...</b>');
+                    $('span').html('<b>+ Click for the Next 10 News Items ...</b>');
                     document.getElementById("datalist").children[i].style.display = 'none';
                 }
             }
             else {
-                $('span').html('<b>- Back to the short news list ...</b>');
+                $('span').html('<b>- Click to Close and Get Back to the Short News List ...</b>');
             }
         }
     });
@@ -494,7 +493,7 @@ $(function () {
                           <li><font class="BodyText_News">One of my papers won <b><font
                                   color="#BC1B32">Best
                                   Paper Award</font></b> at IEEE ICC 2008.</font></li>
-<span id="myspan"><b>+ Next 10 News Items ...</b></span>
+                            <center><span id="myspan"><b>+ Click for the Next 10 News Items ...</b></span></center>
                         </ul>
                       </li>
                     </ul>
