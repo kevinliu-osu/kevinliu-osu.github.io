@@ -1,0 +1,547 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Fireworks  
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20090905
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="google" content="notranslate">
+<meta http-equiv="Content-Language" content="en">
+<title>Jia Liu</title>
+<link href="../../style_s.css" rel="stylesheet" type="text/css" media="screen" />
+<link rel="shortcut icon" href="https://www.osu.edu/assets/site-dev/osu_navbar/images/favicon.ico">
+<style>
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #BC1B32;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-102207232-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-102207232-2');
+</script>
+    
+</head>
+
+<body>
+    <div id="wrapper">
+      <div id="header">
+        <div id="logo">
+          <h1>Jia (Kevin) Liu,</h1>
+          <p>Assistant Professor of Electrical and Computer Engineering, The Ohio State University</p>
+        </div>
+        <div id="logo2"><img src="../../images/osu-logo.png" width="100"></div>
+      </div>
+      <!-- end #header -->
+      <div id="menu">
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../research/index.html">Research</a></li>
+          <li><a href="../../publications/index.html">Publications</a></li>
+          <li><a href="../../awards/index.html">Awards</a></li>
+          <li><a href="../../grants/index.html">Grants</a></li>
+          <li><a href="../../activities/index.html">Activities</a></li>
+          <li class="current_page_item"><a href="../index.html">Teaching</a></li>
+          <li><a href="../../group/index.html">My Group</a></li>
+        </ul>
+      </div>
+      <!-- end #menu -->
+      <div id="page">
+        <div id="page-bgtop">
+          <div id="page-bgbtm"> </div>
+          <!-- end #content -->
+          <div id="sidebar">
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <p> </p>
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tbody>
+                        <tr>
+                          <td width="100%" valign="bottom"><a name="overview"></a><font
+                              size="5"><b><font
+                                  face="Arial, Helvetica, sans-serif">
+                                  <center>ECE 8101: Nonconvex Optimization for Machine Learning <br />
+                                    <sub><sup>(Spring 2022)</sup></sub></center>
+                                </font></b></font></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <hr noshade="noshade" /> </td>
+                </tr>
+                <tr>
+                  <td><br />
+                  </td>
+                </tr>
+                <tr>
+                  <td noshade="noshade" valign="top">
+                    <h2> Personnel</h2>
+                    <p> <b>Instructor</b>: Jia (Kevin) Liu, Assistant
+                      Professor, Dept. of Electrical and Computer Engineering<br />
+                      <b>Contact:</b> 420 Dreese Labs, <a href="mailto:jialiu@iastate.edu">liu@ece.osu.edu</a><br />
+                      <b>Time &amp; Location: </b> TuTh 11:10AM - 12:30PM, Knowlton Hall 190 <br />
+                      <b>Office Hours:</b> Wed 5:00PM - 6:00PM <br />
+<!--
+                      <b>TA:</b> TBD <br />
+                      <b>TA Hours:</b> TBD </p>
+-->
+                    <h2>Course Description</h2> 
+<!--                      <a href="COMS578_F19_Syllabus.pdf">[Syllabus]</a></h2>-->
+                    <p>This course will introduce algorithm design and convergence analysis in nonconvex optimization theory as well as their applications in solving modern machine learning and data science problems. The goal of this course is to prepare graduate students with a solid theoretical and mathematical foundation at the intersection of optimization and machine learning so that they will be able to use optimization to solve advanced machine learning problems and/or conduct advanced research in the related fields. This course will take the traditional linear, nonlinear, and convex optimization taught in operation research or related engineering fields (e.g., ECE, CSE) as a prerequisite, and focus on topics in nonconvex optimization that are of special interest in the machine learning community.</p>
+                    <h2>Course Materials</h2>
+                    <p>There is no required textbook. Most of the materials covered in the class will be based on classical books and recently published papers and monographs. A list of historically important and/or trending papers on ML optimization theory will be provided on the course website.</p>
+                    <h2>Paper Reading Assignments</h2>
+                      <p>There will be estimated six paper reading assignments, each of which will be assigned during each topic set. Reading assignment must be typeset in <b>NeurIPS</b> format. In each reading assignment, each student writes a review of a set of related papers in a topic set published in recent major machine learning venues (e.g., ICML, NeurIPS, ICLR, AAAI) or on arXiv. Some papers may be from the papers lectured in class. The reviews may include the followings: 1) a summary of the papers and their connections; 2) strengths/weaknesses of the papers from the following aspects: soundness of assumptions/theorems, empirical evaluation, novelty, and significance, etc.; 3) which parts are difficult to understand, questions about proofs/results/experiments (if there are any); and 4) how the papers can be improved and extended.</p>
+                    <h2>Final Project</h2>
+                    <p>You could choose to finish a project individually or by a
+                      team of no more than two persons. Final reports will be due after project presentations in the final week. Final reports
+                      should follow the <b>NeurIPS format</b>. Each project is required to have a 20-minute presentation in the final week. Attendance to your fellow students' presentations is required. Potential project ideas include but are not limited to: i) nontrivial extension of the results introduced in class; ii) novel applications in your own research area; iii) new theoretical analysis of an
+                      existing algorithm, etc. Each project should contain something new. It is important that you justify its novelty.</p>
+                    <h2>Grading Policy</h2>
+                    <ul>
+                      <li>
+                        <ul>
+                          <li>Class Participation: 10%; Paper Reading Assignments: 60%; Final project: 30%.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <h2>Late Policy</h2>
+                    <p>Without the consent of the instructor, late paper reading
+                      assignments or final report will not be accepted and will
+                      result in a grade of zero. In the case of a conference
+                      deadline or something of the like, a <b>5-day</b> written
+                      notice of extension is required. In the case of an
+                      emergency (sudden sickness, family problems, etc.), an
+                      after-the-fact notice is acceptable. But we emphasize that
+                      this is reserved for true emergencies. </p>
+                    <h2>Schedule</h2>
+                    <p>Here is the full class schedule, which follows the lecture progress and class
+                      interests, with some adjustments in the syllabus.</p>
+                    <center> <tb rowspan="3"></tb><tb></tb><tb></tb><tb rowspan="3"></tb>
+                      <tb rowspan="2"></tb>
+                      <table class="SchTable" style="width: 856px;">
+                        <tbody>
+                          <tr>
+                            <td style="width: 39.9997px; text-align: center; background-color: gainsboro;"><b>Class<br />
+                              </b> </td>
+                            <td style="text-align: center; width: 39.9997px; background-color: gainsboro;"><b>Date<br />
+                              </b> </td>
+                            <td style="text-align: center; width: 234.483px; background-color: gainsboro;"><b>Topics<br />
+                              </b> </td>
+                            <td style="text-align: center; width: 243.25px; background-color: gainsboro;"><b>Lecture
+                                Topics</b></td>
+                            <td style="text-align: center; background-color: gainsboro; margin-left: 17px;"><b>Lecture
+                                Notes<br />
+                              </b> </td>
+                            <td style="text-align: center; width: 145px; background-color: gainsboro; margin-left: -26px;"><b>Lecture Recordings<br />
+                              </b> </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">1<br />
+                            </td>
+                            <td style="text-align: center; background-color: white;">1/11<br />
+                            </td>
+                            <td style="text-align: center; margin-left: -38px;">1. Course
+                              Info &amp; Introduction<br />
+                            </td>
+                            <td style="text-align: center; margin-left: -38px;">1. Course
+                              Info &amp; Introduction</td>
+                              <td style="text-align: center;"><a href="Lectures/LN1.pdf">Lecture 1</a><br />
+                            </td>
+                              <td style="text-align: center;"><a href="https://mediasite.osu.edu/Mediasite/Play/1706a36b073e4a3384e1725a239d6bd31d">Video 01-01</a><br />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">2<br />
+                            </td>
+                            <td style="text-align: center;">1/13<br />
+                            </td>
+                            <td rowspan="14" colspan="1">
+                              <div style="text-align: center;">2. First-Order Methods for Nonconvex Optimization</div>
+                            </td>
+                            <td rowspan="2" colspan="1" style="text-align: center;">2-1. Math Background Review</td>
+                              <td rowspan="2" colspan="1" style="width: 102.6px; text-align: center;"><a href="Lectures/LN2-1.pdf">Lecture 2-1</a><br />
+                            </td>
+                              <td style="text-align: center;"><a href="https://mediasite.osu.edu/Mediasite/Play/8ef4813715844207b14f2bae7da460101d">Video 01-02</a><br />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">3<br />
+                            </td>
+                            <td style="text-align: center;">1/18<br />
+                            </td>
+                              <td style="text-align: center;"><a href="https://mediasite.osu.edu/Mediasite/Play/cfeb8e17ffd84ddfab1a6e4c3ca187611d">Video 02-01</a><br />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">4<br />
+                            </td>
+                            <td style="text-align: center;">1/20<br />
+                            </td>
+                            <td style="text-align: center;"> 2-2. Convexity <br />
+                            </td>
+                              <td style="text-align: center;"><a href="Lectures/LN2-2.pdf">Lecture 2-2<br />
+                            </td>
+                              <td style="text-align: center;"><a href="https://mediasite.osu.edu/Mediasite/Play/4908ec55693447bfbf7da23ddbe8da8e1d">Video 02-02</a><br />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">5<br />
+                            </td>
+                            <td style="text-align: center;">1/25<br />
+                            </td>
+                            <td rowspan="2" colspan="1" style="text-align: center;"> 2-3. Gradient Descent <br />
+                            </td>
+                              <td rowspan="2" colspan="1" style="text-align: center;"><a href="Lectures/LN2-3.pdf">Lecture 2-3</a><br />
+                            </td>
+                              <td style="text-align: center;"><a href="https://mediasite.osu.edu/Mediasite/Play/adfc01c9a6c245b5802fea124ebf372f1d">Video 03-01</a><br />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">6<br />
+                            </td>
+                            <td style="text-align: center;">1/27<br />
+                            </td>
+                              <td style="text-align: center;"><a href="https://mediasite.osu.edu/Mediasite/Play/8bdfad2fc53347fcb90b02baf070241b1d">Video 03-02</a><br />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">7<br />
+                            </td>
+                            <td style="text-align: center;">2/1<br />
+                            </td>
+                            <td rowspan="3" colspan="1" style="text-align: center;"> 2-4. Stochastic Gradient Descent <br> (General Expectation Minimization,<br> Finite-Sum Minimization)<br />
+                            </td>
+                              <td rowspan="3" colspan="1" style="text-align: center;"><a href="Lectures/LN2-4.pdf">Lecture 2-4</a><br />
+                            </td>
+                              <td style="text-align: center;"><a href="https://mediasite.osu.edu/Mediasite/Play/e3c44a35db0749eaa4fadabf839b4ab91d">Video 04-01</a><br />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">8<br />
+                            </td>
+                            <td style="text-align: center;">2/3<br />
+                            </td>
+                              <td style="text-align: center;"><a href="https://mediasite.osu.edu/Mediasite/Play/0769921f35814f09860fd3f1d6420f5c1d">Video 04-02</a><br />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">9<br />
+                            </td>
+                            <td style="text-align: center;">2/8<br />
+                            </td>
+                              <td style="text-align: center;"><a href="https://mediasite.osu.edu/Mediasite/Play/050b9d08a4354ff2a22eb896cffd5bb71d">Video 05-01</a><br />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">10<br />
+                            </td>
+                            <td style="text-align: center;">2/10<br />
+                            </td>
+                            <td rowspan="3" colspan="1" style="text-align: center;"> 2-5. Variance-Reduced Methods<br> (SAG, SVRG, SAGA, SPIDER, PAGE)<br />
+                            </td>
+                              <td rowspan="3" colspan="1" style="text-align: center;"><a href="Lectures/LN2-5.pdf">Lecture 2-5</a><br />
+                            </td>
+                              <td style="text-align: center;"><a href="https://mediasite.osu.edu/Mediasite/Play/2dc3d59285f44857a35cdaf3469076991d">Video 05-02</a><br />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">11<br />
+                            </td>
+                            <td style="text-align: center;">2/15<br />
+                            </td>
+                              <td style="text-align: center;"><a href="https://mediasite.osu.edu/Mediasite/Play/3f3d6c1432084506a511a81da8ae005b1d">Video 06-01</a><br />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">12<br />
+                            </td>
+                            <td style="text-align: center;">2/17<br />
+                            </td>
+                              <td style="text-align: center;"><a href="https://mediasite.osu.edu/Mediasite/Play/d460b783943548148845c2d3a10dc9a31d">Video 06-02</a><br />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">13<br />
+                            </td>
+                            <td style="text-align: center;">2/22<br />
+                            </td>
+                            <td rowspan="3" colspan="1" style="text-align: center;"> 2-6. Adaptive Methods<br> (AdaGrad, RMSProp, Adam) <br />
+                            </td>
+                              <td rowspan="3" colspan="1" style="text-align: center;"><a href="Lectures/LN2-6.pdf">Lecture 2-6</a><br />
+                            </td>
+                              <td style="text-align: center;"><a href="https://mediasite.osu.edu/Mediasite/Play/abcc71e35abf4e94b1a1b1dfd88a9e921d">Video 07-01</a><br />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">14<br />
+                            </td>
+                            <td style="text-align: center;">2/24<br />
+                            </td>
+                              <td style="text-align: center;"><a href="https://mediasite.osu.edu/Mediasite/Play/7d681e0aecda424b9ee65a91b113d3ca1d">Video 07-02</a><br />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">15<br />
+                            </td>
+                            <td style="text-align: center;">3/1<br />
+                            </td>
+                              <td style="text-align: center;"><a href="https://mediasite.osu.edu/Mediasite/Play/7c698aaf9f664c7981bd80d0f30fe6211d">Video 08-01</a><br />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">16<br />
+                            </td>
+                            <td style="text-align: center;">3/3<br />
+                            </td>
+                            <td rowspan="3" colspan="1" style="text-align: center;"> 3. Federated and Decentralized Learning <br />
+                            </td>
+                            <td rowspan="3" colspan="1" style="text-align: center;"> 3-1. Federated Learning <br> (Distributed Learning, FedAvg) <br />
+                            </td>
+                              <td rowspan="3" colspan="1" style="text-align: center;"><a href="Lectures/LN3-1.pdf">Lecture 3-1</a><br />
+                            </td>
+                              <td style="text-align: center;"><a href="https://mediasite.osu.edu/Mediasite/Play/2bc80420e0984408ab5bcb80d270a6fb1d">Video 08-02</a><br />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">17<br />
+                            </td>
+                            <td style="text-align: center;">3/8<br />
+                            </td>
+                              <td style="text-align: center;"><a href="https://mediasite.osu.edu/Mediasite/Play/73d530df9a1a486993555efb3ea05bee1d">Video 09-01</a><br />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">18<br />
+                            </td>
+                            <td style="text-align: center;">3/10<br />
+                            </td>
+                              <td style="text-align: center;"><a href="https://mediasite.osu.edu/Mediasite/Play/f02cd076150342419ad76c80fb3fc1b41d">Video 09-02</a><br />
+                            </td>
+                          </tr>
+                          <tr align="center">
+                            <td style="background-color: lime;" colspan="6" rowspan="1"><b>Spring
+                                Break</b></td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">19<br />
+                            </td>
+                            <td style="text-align: center;">3/22<br />
+                            </td>
+                            <td rowspan="5" colspan="1">
+                              <div style="text-align: center;">3. Federated and Decentralized Learning</div>
+                            </td>
+                            <td rowspan="5" colspan="1" style="text-align: center;">3-2. Decentralized Learning <br> (Decentralized SGD, Gradient Tracking)</td>
+                              <td rowspan="5" colspan="1" style="width: 102.6px; text-align: center;"><a href="Lectures/LN3-2.pdf">Lecture 3-2</a><br />
+                            </td>
+                              <td style="text-align: center;"><a href="https://mediasite.osu.edu/Mediasite/Play/0f39dedd144a4673ae9184082a7653b61d">Video 11-01</a><br />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">20<br />
+                            </td>
+                            <td style="text-align: center;">3/24<br />
+                            </td>
+                              <td style="text-align: center;"><a href="https://mediasite.osu.edu/Mediasite/Play/401904f2921a4d9d9f96ccc06b28e9ae1d">Video 11-02</a><br />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">21<br />
+                            </td>
+                            <td style="text-align: center;">3/29<br />
+                            </td>
+                              <td style="text-align: center;"><a href="https://mediasite.osu.edu/Mediasite/Play/f5a26f1913634f49942a8cb0a9fd40db1d">Video 12-01</a><br />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">22<br />
+                            </td>
+                            <td style="text-align: center;">3/31<br />
+                              <td style="text-align: center;"><a href="https://mediasite.osu.edu/Mediasite/Play/7ea2fca3386845f19646e2fdf734c1481d">Video 12-02</a><br />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">23<br />
+                            </td>
+                            <td style="text-align: center;">4/5<br />
+                            </td>
+                              <td style="text-align: center;"><a href="https://mediasite.osu.edu/Mediasite/Play/38dd752dd7d24badacac6ceeaeb140631d">Video 13-01</a><br />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">24<br />
+                            </td>
+                            <td style="text-align: center;">4/7<br />
+                            </td>
+                            <td rowspan="3" colspan="1" style="text-align: center;">4. Zeroth-Order Methods for Nonconvex Optimization<br />
+                            </td>
+                            <td rowspan="2" colspan="1" style="text-align: center;">4-1. ZO Methods with Random Directions of Gradient Estimation</td>
+                              <td rowspan="2" colspan="1" style="width: 102.6px; text-align: center;"><a href="Lectures/LN4-1.pdf">Lecture 4-1</a><br />
+                              <td style="text-align: center;"><a href="https://mediasite.osu.edu/Mediasite/Play/9b00e545f4d9446aae2722f8dda0ea991d">Video 13-02</a><br />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">25<br />
+                            </td>
+                            <td style="text-align: center;">4/12<br />
+                            </td>
+                              <td style="text-align: center;"><a href="https://mediasite.osu.edu/Mediasite/Play/3f798b700c144dc19092a47340d41a111d">Video 14-01</a><br />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">26<br />
+                            </td>
+                            <td style="text-align: center;">4/14<br />
+                            </td>
+                            <td style="text-align: center;">4-2. Variance-Reduced Zeroth-Order Methods <br />
+                            </td>
+                              <td style="width: 102.6px; text-align: center;"><a href="Lectures/LN4-2.pdf">Lecture 4-2</a><br />
+                              <td style="text-align: center;"><a href="https://mediasite.osu.edu/Mediasite/Play/0d6c158bb5264170a8733df7ce3eb3451d">Video 14-02</a><br />
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">27<br />
+                            </td>
+                            <td style="text-align: center;">4/19<br />
+                            </td>
+                            <td rowspan="2" colspan="1" style="text-align: center;">5. First-Order Nonconvex Optimization with Special Geometric Structure <br />
+                            </td>
+                            <td style="text-align: center;">5-1. The PL Condition and NTK</td>
+                              <td style="width: 102.6px; text-align: center;"><a href="Lectures/LN5-1.pdf">Lecture 5-1</a><br />
+                              <td style="text-align: center;"><a href="https://mediasite.osu.edu/Mediasite/Play/67f061ad49e0483aa7ec1d8b3b3622da1d">Video 15-01</a><br />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: center;">28<br />
+                            </td>
+                            <td style="text-align: center;">4/21<br />
+                            </td>
+                            <td style="text-align: center;">5-2. NTK and Weak-Quasi-Convexity</td>
+                              <td style="width: 102.6px; text-align: center;"><a href="Lectures/LN5-2.pdf">Lecture 5-2</a><br />
+                              <td style="text-align: center;"><a href="https://mediasite.osu.edu/Mediasite/Play/7c414e4013114755b2dc831143aa6f3c1d">Video 15-02</a><br />
+                          </tr>
+                          <tr align="center">
+                            <td style="background-color: lime;" colspan="6" rowspan="1"><b>Final
+                                Exam Week (Project Presentations)</b></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </center>
+                    <p></p>
+                    <h2>Academic Integrity</h2>
+                    <p>This course will follow OSU's <a href="https://trustees.osu.edu/bylaws-and-rules/code">Code
+                        of Academic Conduct</a>. Discussions of homework
+                      assignments and final projects are encouraged. However,
+                      what you turn in must be your own. You should not directly
+                      copy solutions from others. Any reference (including
+                      online resources) used in your solution must be clearly
+                      cited.</p>
+                    <!--
+                    <p><b>6) Stochastic Optimization</b></p>                    <ul>                      <li>                        <ul>                          <li style="margin-top: -13px;">Coming soon...</li>                        </ul>                      </li>                    </ul>                    <p><b>7) Bandit Problems, Reinforcement Learning, Markov                        Decision Processes</b></p>                    <ul>                      <li>                        <ul>                          <li style="margin-top: -13px;">Coming soon...</li>                        </ul>                      </li>                    </ul>-->
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- end #sidebar -->
+          <div style="clear: both;"> </div>
+        </div>
+      </div>
+    </div>
+    <!-- end #page -->
+    <div id="footer">
+      <center>
+        <table>
+          <tbody>
+            <tr>
+              <td valign="middle">
+                  Copyright © 2004-<script>var today = new Date(); year = today.getFullYear(); document.write(year);</script>
+                <a href="mailto:liu@ece.osu.edu">Jia (Kevin) Liu</a>. All
+                rights reserved.<br />
+                Updated: <script> var date = document.lastModified; document.write(date.substr(0,10));</script>. Design adapted from <a href="http://templated.co"
+                  rel="nofollow">TEMPLATED</a>.
+              </td>
+              <!----------Place for the extreme tracking icon----------------------------------------->
+              <!----------Old Image Link: http://t1.extreme-dm.com/i.gif-------------->
+              <td>
+                <!-- extreme_jialiu_b782d478f8f780aa94e2c07df5dd86c1 -->
+                  <script src="//t1.extreme-dm.com/f.js" id="eXF-jialiu-1" async defer></script>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </center>
+    </div>
+    <!-- end #footer -->
+    
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+var menubar = document.getElementById("menu");
+var stickyPos = menubar.offsetTop;
+
+function scrollFunction() {
+    if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+        
+  if (window.pageYOffset >= stickyPos) {
+    menubar.classList.add("sticky_menu");
+    document.body.style.backgroundImage = "url('../../images/img03.png')";
+    document.body.style.backgroundAttachment = "fixed";
+  } else {
+    menubar.classList.remove("sticky_menu");
+    document.body.style.backgroundImage = "url('../../images/img01.jpg')";
+    document.body.style.backgroundAttachment = "initial";
+  }
+    
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Chrome, Safari and Opera 
+    document.documentElement.scrollTop = 0; // For IE and Firefox
+}
+</script> 
+
+    
+</body>
+</html>
