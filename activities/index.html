@@ -51,6 +51,26 @@ Released   : 20090905
 
   gtag('config', 'UA-102207232-2');
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function () {
+    $('span').click(function () {
+        $('#talklist li:hidden').slice(0, 10).show();
+        if ($('#talklist li').length == $('#talklist li:visible').length) {
+            //$('span').hide(); // The original code
+            if(document.getElementById("myspan1").innerHTML == '<b>- Click to Get Back to the Short List ...</b>') {
+                for (var i = 20; i < $('#talklist li').length; i++) {
+                    $('span').html('<b>+ Click for the Next 10 Invited Talks, Keynotes, Tutorials, or Lectures ...</b>');
+                    document.getElementById("talklist").children[i].style.display = 'none';
+                }
+            }
+            else {
+                $('span').html('<b>- Click to Get Back to the Short List ...</b>');
+            }
+        }
+    });
+});      
+</script>
     
 </head>
     
@@ -296,7 +316,7 @@ Released   : 20090905
                     <h2>Invited Talks / Keynotes / Tutorials / Lectures </h2>
                     <ul>
                       <li>
-                        <ul>
+                        <ul id="talklist">
                           <li>"Finite-Time Convergence and Sample Complexity of Actor-Critic Multi-Objective Reinforcement Learning," ACM MobiHoc'24 Workshop on Stochastic Control, RL, and Decision Making, 10/14/2024.</li>
                           <li>"Federated Multi-Objective Learning," ACM MobiHoc'24 Workshop on Machine Learning for Next Generation Communication and Edge Networks (ML4NxtGNet), 10/14/2024.</li>
                           <li>"Federated Multi-Objective Learning," Departmental Seminar, University of Louisville, 9/6/2024.</li>
@@ -424,6 +444,7 @@ Released   : 20090905
                           <li>"Fast Converging Distributed Optimization for
                             Networked Systems: A Second-Order Approach," IIIS,
                             Tsinghua University, 05/11/2015</li>
+                          <center><span id="myspan1"><b>+ Click for the Next 10 Invited Talks, Keynotes, Tutorials, or Lectures ...</b></span></center>
                         </ul>
                       </li>
                     </ul>
@@ -573,5 +594,6 @@ function topFunction() {
 }
 </script> 
     
+
 </body>
 </html>

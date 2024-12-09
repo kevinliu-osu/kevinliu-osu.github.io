@@ -411,7 +411,7 @@ span {
     left: 33px;
 }
 
-ul li:nth-child(n+2000) {
+ul li:nth-child(n+20) {
     display:none;
 }
 
