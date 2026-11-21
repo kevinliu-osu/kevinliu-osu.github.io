@@ -1,668 +1,410 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <!--
-Design by TEMPLATEDhttp://templated.coReleased for free under the Creative Commons Attribution LicenseName       : Fireworks  Description: A two-column, fixed-width design with dark color scheme.Version    : 1.0Released   : 20090905-->
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta name="google" content="notranslate" />
-    <meta http-equiv="Content-Language" content="en" />
-    <title>Jia Liu</title>
-    <link href="style_s.css" rel="stylesheet" type="text/css" media="screen" />
-    <link rel="shortcut icon" href="https://www.osu.edu/assets/site-dev/osu_navbar/images/favicon.ico">
-<style>
-#myBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  border: none;
-  outline: none;
-  background-color: #BC1B32;
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 10px;
-}
+  Homepage of Jia (Kevin) Liu. Shared styles: style_s.css. Shared script: site.js.
 
-#myBtn:hover {
-  background-color: #555;
-}
-</style>
-<button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>      
-<div id="preloader" style="display: none;"><img src="images/img03.png"></div>      
+  To add a news item: copy one <li>...</li> line in the News list below and edit it.
+  Anything wrapped in <b>...</b> inside News is shown in scarlet automatically.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jia (Kevin) Liu | Electrical and Computer Engineering, The Ohio State University</title>
+  <meta name="description" content="Jia (Kevin) Liu is an Associate Professor of Electrical and Computer Engineering at The Ohio State University. His research covers theoretical machine learning, stochastic network optimization and control, and performance analysis for data analytics infrastructure and cyber-physical systems." />
+  <meta name="author" content="Jia (Kevin) Liu" />
+  <meta name="google" content="notranslate" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="canonical" href="https://kevinliu-osu.github.io/" />
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-102207232-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Jia (Kevin) Liu, The Ohio State University" />
+  <meta property="og:description" content="Associate Professor of Electrical and Computer Engineering at The Ohio State University: theoretical machine learning, stochastic network optimization, and distributed learning systems." />
+  <meta property="og:url" content="https://kevinliu-osu.github.io/" />
+  <meta property="og:image" content="https://kevinliu-osu.github.io/images/kevin_web.jpg" />
 
-  gtag('config', 'UA-102207232-2');
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-$(function () {
-    $('span').click(function () {
-        $('#datalist li:hidden').slice(0, 10).show();
-        if ($('#datalist li').length == $('#datalist li:visible').length) {
-            //$('span').hide(); // The original code
-            if(document.getElementById("myspan").innerHTML == '<b>- Click to Get Back to the Short News List ...</b>') {
-                for (var i = 20; i < $('#datalist li').length; i++) {
-                    $('span').html('<b>+ Click for the Next 10 News Items ...</b>');
-                    document.getElementById("datalist").children[i].style.display = 'none';
-                }
-            }
-            else {
-                $('span').html('<b>- Click to Get Back to the Short News List ...</b>');
-            }
-        }
-    });
-});      
-</script>
-    
+  <link rel="preload" href="fonts/source-serif-4-400.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/ibm-plex-sans-400.woff2" as="font" type="font/woff2" crossorigin />
+  <link href="style_s.css?v=41" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <script src="site.js?v=24"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jia (Kevin) Liu",
+    "alternateName": ["Jia Liu", "Kevin Liu"],
+    "jobTitle": "Associate Professor of Electrical and Computer Engineering",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "The Ohio State University" },
+    "email": "mailto:liu@ece.osu.edu",
+    "url": "https://kevinliu-osu.github.io/",
+    "image": "https://kevinliu-osu.github.io/images/kevin_web.jpg",
+    "sameAs": [
+      "https://www.linkedin.com/in/jia-kevin-liu/",
+      "https://scholar.google.com/citations?user=Ofx3dScAAAAJ&hl=en",
+      "https://twitter.com/kevinlauka",
+      "https://www.facebook.com/Jia.Kevin.Liu"
+    ]
+  }
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102207232-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-102207232-2');
+  </script>
 </head>
 
-<body>
-    <div id="wrapper">
-      <div id="header">
-        <div id="logo">
-          <h1>Jia (Kevin) Liu,</h1>
-          <p>Associate Professor of Electrical and Computer Engineering, The Ohio State University</p>
-        </div>
-        <div id="logo2"><img src="./images/osu-logo.png" width="100"></div>
+<body class="home">
+  <div id="wrapper">
+    <header id="header">
+      <div id="logo">
+        <h1>Jia (Kevin) Liu</h1>
+        <p>Associate Professor of Electrical and Computer Engineering, The Ohio State University</p>
       </div>
-      <!-- end #header -->
-      <div id="menu">
-        <ul>
-          <li class="current_page_item"><a href="#">Home</a></li>
-          <li><a href="./research/index.html">Research</a></li>
-          <li><a href="./publications/index.html">Publications</a></li>
-          <li><a href="./awards/index.html">Awards</a></li>
-          <li><a href="./grants/index.html">Grants</a></li>
-          <li><a href="./activities/index.html">Activities</a></li>
-          <li><a href="./teaching/index.html">Teaching</a></li>
-          <li><a href="./group/index.html">My Group</a></li>
-        </ul>
-      </div>
-      <!-- end #menu -->
-      <div id="page">
-        <div id="page-bgtop">
-          <div id="page-bgbtm"> </div>
-          <!-- end #content -->
-          <div id="sidebar">
-            <table border="0">
-              <tbody>
-                <tr>
-                  <td width="100%">
-                    <img src="images/kevin_web.jpg" alt="Jia Liu" width="246" align="right" style="margin: 29px 32px 21px 28px;"/>
-                    <p></p>
-                      <h2>Contact Information</h2>
-                    <p> 620 Dreese Laboratories, 2015 Neil Ave, Columbus, OH
-                      43210 U.S.A. 
-                        <a href="https://www.linkedin.com/in/jia-kevin-liu/" target="_blank"><img src="images/linkedin_red.png" style="position: absolute; margin-top:5px; margin-left:10px;" width="26px"></a>
-                        <a href="https://scholar.google.com/citations?user=Ofx3dScAAAAJ&hl=en"  target="_blank"><img src="images/googlescholar_red.png" style="position: absolute; margin-top:5px; margin-left:42px;" width="26px"></a> 
-                        <a href="https://twitter.com/kevinlauka" target="_blank" target="_blank"><img src="images/twitter_red.png" style="position: absolute; margin-top:5px; margin-left:74px;" width="26px"></a>                        
-                        <a href="https://www.facebook.com/Jia.Kevin.Liu" target="_blank"><img src="images/facebook_red.png" style="position: absolute; margin-top:5px; margin-left:106px;" width="26px"></a>
-                        <br />
-                      Email: <a href="mailto:liu@ece.osu.edu">liu@ece.osu.edu</a>,
-                      Phone: 614-247-4588, Fax: 614-292-7596
-                    </p> 
-                    <h2>Short Biography</h2>
-                    <p>Jia (Kevin) Liu is an Associate Professor in the <a href="http://www.ece.osu.edu/">Dept. of Electrical and Computer Engineering</a> at <a href="http://www.osu.edu">The Ohio State University</a> (OSU) and an <font color="#BC1B32">Amazon Scholar</font> with Amazon.com. 
-                        He received his Ph.D. degree from the <a href="http://www.ece.vt.edu">Dept. of Electrical and Computer Engineering</a> at <a href="http://www.vt.edu">Virginia Tech</a> in 2010. 
-                        From Aug. 2017 to Aug. 2020, he was an Assistant Professor in the <a href="http://web.cs.iastate.edu">Dept. of Computer Science</a> at <a href="http://www.iastate.edu">Iowa State University</a> (ISU).
-<!--
-                        Prior to that, he was a Postdoctoral Researcher and subsequently a Research Assistant Professor from Feb. 2010 to Jul. 2017, both in the ECE department at OSU.
--->
-                        He currently serves as the Managing Director of the <a href="https://aiedge.osu.edu/">NSF AI Institute for Future Edge Networks and Distributed Intelligence (AI-EDGE)</a> at OSU. He is a Co-Principal Investigator of the <a href="https://tads.research.iastate.edu/people/leadership">NSF TRIPODS D4 (Dependable Data-Driven Discovery) Institute</a> at ISU. He is also a faculty investigator affiliated with the <a href="https://arawireless.org/">NSF ARA Wireless Living Lab PAWR Platform</a> between ISU and OSU, and the <a href="https://icdt.osu.edu/">Institute of Cybersecurity and Digital Trust (ICDT)</a> at OSU.
-                        Dr. Liu's research areas include theoretical machine learning, stochastic network optimization and control, and performance analysis for data analytics infrastructure and cyber-physical systems. Dr. Liu is a senior member of IEEE and a member of ACM. 
-                        He has received numerous best paper awards at top  venues, including IEEE INFOCOM'19 Best Paper Award, IEEE INFOCOM'16 Best Paper Award, IEEE INFOCOM'13 Best Paper Runner-up Award, IEEE INFOCOM'11 Best Paper Runner-up Award, and IEEE ICC'08 Best Paper Award.
-                        He has also received multiple honors of long/spotlight presentations at top machine learning conferences, including ICML, NeurIPS, and ICLR.
-                        His joint work with IBM Research was selected to receive the IBM Pat Goldberg Memorial Best Paper Award Distinction of Honorable Mention in 2024.
-                        Dr. Liu is an <font color="#BC1B32"><a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1943226&HistoricalAwards=false">NSF CAREER Award</a></font> recipient in 2020, 
-                        a winner of the <font color="#BC1B32"><a href="https://ece.osu.edu/news/2024/08/professor-jia-kevin-liu-wins-2024-darpa-young-faculty-award-yfa">DARPA Young Faculty Award (YFA)</a></font> in 2024, 
-                        and a winner of the <font color="#BC1B32"><a href="https://docs.google.com/document/d/e/2PACX-1vRYagtwX_MRJUCc_3KMWhmBNnKz2ZHh0vM63B7OxLWWEfghrWjySPoVYtYum9BBVnrlx-wLi0q6KGAP/pub">Google Faculty Research Award</a></font> in 2020. 
-                        He received the <font color="#BC1B32">College of Engineering Lumley Research Award</font> at The Ohio State University in 2026, the <a a href="https://news.las.iastate.edu/2020/06/03/faculty-and-staff-honored-with-2020-las-awards/">College of Liberal Arts and Sciences Award for Early Achievement in Research</a> at Iowa State University in 2020, and the Bell Labs President Gold Award from Bell Labs, Lucent Technologies. 
-                        Dr. Liu is the Lead Editor of the Special Issue on AI and Networking of IEEE/ACM Transactions on Networking in 2025. He is an Associate Editor for IEEE Transactions on Cognitive Communications and Networking.
-                        He has served the TPC for numerous top conferences, including ICML, NeurIPS, ICLR, ACM SIGMETRICS, IEEE INFOCOM, and ACM MobiHoc. 
-<!--
-                        He has served as the conference submission and publication chairs for ACM MobiHoc 2020 and IEEE/IFIP WiOpt 2021, conference workshop chair for ACM MobiHoc 2021, and the conference publication chair for IEEE/IFIP WiOpt 2023.
--->
-                        His research is supported by NSF, DARPA, AFOSR, AFRL, ONR, Google, Meta, and Cisco. <a href="CV/Liu_CV.pdf"><b>[Full
-                        CV]</b></a></p>
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan="2">
-                    <h2><font color="#BC1B32"><b><u>Immediate Openings for Ph.D.
-                            Students &amp; PostDocs:</u></b></font></h2>
-                    <p> Openings for Ph.D. students and PostDoc are available
-                      and expected to be filled as early as Spring 2025 or in
-                      Fall 2025. Detailed descriptions of the opennings can be
-                      found <a href="Liu_PhD_PostDoc_Flyer.pdf"><b><u>here</u></b></a>.
-                      Please also see the "<a href="research/">Research</a>"
-                      section on this web to learn about my research areas and
-                      interests. If you are interested, please send me your <font
-                        color="#BC1B32">CV/Resume</font>,
-                      <font color="#BC1B32">transcripts</font>, <font color="#BC1B32">publications</font>
-                      (if available) and <font color="#BC1B32">GRE/TOEFL scores</font>
-                      (if available) for consideration. I apologize for not
-                      being able to respond to every inquiry, but that doesn't
-                      mean I'm not considering. :-) Please also refer to the <a
-                        href="https://www.ece.osu.edu/futurestudents/graduate/application">OSU
-                        ECE Graduate Admissions Site</a> for detailed application
-                      instructions. </p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <table>
-              <tbody>
-                <tr>
-                  <td>
-                    <h2>News:</h2> 
-                    <ul>
-                      <li>
-                        <ul id="datalist">
-                            <li>A paper on variance-reduced performative optimization has been accepted by <b><font color="#BC1B32">Transactions on Machine Learning Research (TMLR)</font></b> in Oct. 2026.</li>
-                            
-                            <li>A paper on lower-level agnostic bilevel optimization has been accepted by <b><font color="#BC1B32">NeurIPS 2026</font></b> (acceptance rate: 25.7%).</li>
-                            
-                            <li>A paper on democratizing LLM training across geo-distributed heterogeneous compute has been accepted by <b><font color="#BC1B32">NeurIPS 2026 Workshop on Collaborative, Open, and Decentralized Training of Foundation Models</font></b>.</li>
-                            
-                            <li>A paper on holistic evaluation of formal specification generation has been accepted by <b><font color="#BC1B32">NeurIPS 2026 Workshop on AI for Verifiable Coding</font></b>.</li>
-                            
-                            <li>A paper on a kinetic theory of controlled emergence and meta-cognition is accepted by <b><font color="#BC1B32">AAAI 2026 Symposium on Artificial Metacognition</font></b>  (Metacog-26).</li>
-                            
-                            <li>Together with Dr. Chaosheng Dogn (Pinterest) and Prof. Lisha Chen (University of Rochester), we will organize a 3-hour <b><font color="#BC1B32">NeurIPS 2026 Tutorial</font></b> titled "<b><font color="#BC1B32">Multi-Objective Optimization for Modern Machine Learning: Foundations, Recent Advances, and Emerging Applications</font></b>" in Sydney. The tutorial will have a panel discussions on multi-objective optimization (MOO), featuring Prof. Tianyi Chen (Cornell Univ.) and Prof. Kaiyi Ji (U. Buffalo). See you in Sydney!</li>
-                            
-                            <li>A paper on foundation model-assisted wireless random access network optimization has been accepted by <b><font color="#BC1B32">ACM MobiHoc 2026</font></b> (acceptance rate: 23%).</li>
-                            
-                            <li>Our paper on faithful visual language reasoning in tool-aware policy optimization has received the <b><font color="#BC1B32">CVPR 2026 Compute Transparency Champion Award</font></b>.</li>
-                            
-                            <li>A paper on a generic operator-level PyTorch model transformation framework has been accepted by <b><font color="#BC1B32">ACM SIGKDD 2026</font></b> (acceptance rate: 19.6%).</li>
-                            
-                            <li>My Ph.D. student Zhiyao Zhang recieved the <b><font color="#BC1B32">Dr. Burn Lin Travel Grant Award</font></b> sponsored by <b><font color="#BC1B32">OSU ECE</font></b> endowment to attend <b><font color="#BC1B32">ICML 2026</font></b>. Big Congrats!</li>
-                            
-                            <li>A paper on multi-objective bilevel optimization with lower-level general convexity has been accepted by <b><font color="#BC1B32">ICML 2026</font></b> (acceptance rate: 26.6%).</li>
-                            
-                            <li>Our paper on faithful visual language reasoning in tool-aware policy optimization has been selected for an <b><font color="#BC1B32">Oral Presentation</font></b> at <b><font color="#BC1B32">CVPR 2026</font></b> (oral rate: 1%).</li>
-                            
-                            <li>I am humbled and honored to receive the <b><font color="#BC1B32">2026 College of Engineering Lumley Research Award</font></b> at The Ohio State University.</li>
-                            
-                            <li>A paper on faithful visual language reasoning in tool-aware policy optimization has been accepted by <b><font color="#BC1B32">CVPR 2026</font></b> (acceptance rate: 25.42%).</li>
-                            
-                            <li>A paper on a scalable lift-and-project differentiable approach for the max-cut problem has been accepted by <b><font color="#BC1B32">AISTATS 2026</font></b> (acceptance rate: 28%).</li>
-                            
-                            <li>A paper on multi-objective bilevel learning optimization theory and algorithms has been accepted by <b><font color="#BC1B32">AAAI 2026</font></b> (acceptance rate: 17.6%).</li>
-                            
-                            <li>My Ph.D. student Zhiyao Zhang recieved an <b><font color="#BC1B32">ACM MobiHoc 2025 Student Travel Grant</font></b> award sponsored by <b><font color="#BC1B32">NSF</font></b>. Big Congratutations!</li>
-                            
-                            <li>A paper on communication-efficient federated LoRA finetuning method for LLMs has been accepted by <b><font color="#BC1B32">EMNLP 2025</font></b> (acceptance rate: 22.2%).</li>
-                            
-                            <li>A paper on multi-agent reinforcement learning for random access network optimization has been accepted by <b><font color="#BC1B32">ACM MobiHoc 2025</font></b> (acceptance rate: 23%).</li>
-                            
-                            <li>My Ph.D. student Srijith Nair recieved the <b><font color="#BC1B32">Dr. Burn Lin Travel Grant Award</font></b> sponsored by <b><font color="#BC1B32">OSU ECE</font></b> endowment to attend <b><font color="#BC1B32">ICML 2025</font></b>. Big Congrats!</li>
-                            
-                            <li>My Ph.D. student Zhiyao Zhang recieved the <b><font color="#BC1B32">Dr. Burn Lin Travel Grant Award</font></b> sponsored by <b><font color="#BC1B32">OSU ECE</font></b> endowment to attend <b><font color="#BC1B32">ICML 2025</font></b>. Big Congrats!</li>
-                            
-                            <li>A paper on decentralized multi-agent reinforcement learning with nonlinear function approximation has been accepted by <b><font color="#BC1B32">ICML 2025</font></b> (acceptance rate: 26.9%).</li>
-                            
-                            <li>A paper on federated split learning via smashed activation gradient estimation has been accepted by <b><font color="#BC1B32">ICML 2025</font></b> (acceptance rate: 26.9%).</li>
-                            
-                            <li>A paper on quadratic differentiable optimization for the maximum independent set problem has been accepted by <b><font color="#BC1B32">ICML 2025</font></b> (acceptance rate: 26.9%).</li>
-                            
-                            <li>I received a <b><font color="#BC1B32">$500K</font></b> research grant as the <b><font color="#BC1B32">Sole PI</font></b> from <b><font color="#BC1B32">DARPA</font></b>  to work on <b><font color="#BC1B32">"complex-structured optimization for non-learning neural networks."</font></b></li>
-                            
-                            <li>I am honored to have been invited to serve as an <b><font color="#BC1B32">Area Chair</font></b> of the <b><font color="#BC1B32">IEEE INFOCOM 2026</font></b> Technical Program Committee.</li>
-                            
-                            <li>A paper on decentralized bilevel optimization without lower-level strong convexity has been accepted by <b><font color="#BC1B32">ICLR 2025</font></b> (acceptance rate: 32%).</li>
-                            
-                            <li>A paper on Byzantine-robust federated learning over the ring-all-reduce distributed computing architecture is accepted by <b><font color="#BC1B32">WWW 2025</font></b>.</li>
-                            
-                            <li>A paper on periodic dynamic weighting in the stochastic MGDA method for multi-objective optimization is accepted by <b><font color="#BC1B32">AAAI 2025</font></b> (acceptance rate: 23.4%).</li>
-                            
-                            <li>I received a one-year research grant of <b><font color="#BC1B32">$100K</font></b> from the <b><font color="#BC1B32">Meta Platforms, Inc.</font></b> as the <b><font color="#BC1B32">Sole PI</font></b> to conduct research on <b><font color="#BC1B32">"Taming Sample and Communication Complexities in Distributed Complex-Structured Optimization for Learning."</font></b></li>
-                            
-                            <li>A paper on online distributed large model learning workload scheduling in GPU clusters is accepted by <b><font color="#BC1B32">IEEE INFOCOM 2025</font></b> (acceptance rate: 18.6%).</li>
-                            
-                            <li>My interview titled "<b><font color="#BC1B32">Kevin Liu - The Future of Machine Learning with Creative AI and Science</font></b>" with the <b><font color="#BC1B32">Conversations on Applied AI Podcast</font></b> has been released at <a href="https://www.buzzsprout.com/1101152/episodes/15802480"><b>this link</b></a> and can also be found on most major media platforms, including <a href="https://podcasts.apple.com/us/podcast/conversations-on-applied-ai/id1515976660?i=1000671405174"><b>Apple Podcasts</b></a>, <a href="https://www.youtube.com/watch?v=faC_9LC4Tto&t=68s"><b>YouTube</b></a>, <a href="https://open.spotify.com/episode/0HXc6THNCoLF7GmG5HrUHW?si=tDE-ZIqmQU-xc_8cY04OPg"><b>Spotify</b></a>, <a href="https://music.amazon.com/podcasts/0c0f1fdb-a9c2-4c68-9e55-62590290ebdf/episodes/bf3efa1c-6a3c-4b6b-b920-cf3e694103c1/conversations-on-applied-ai-kevin-liu---the-future-of-machine-learning-with-creative-ai-and-science"><b>Amazon Music</b></a>, etc.!</li>
+      <div id="logo2"><img class="logo-osu" src="images/osu-logo-horizontal.png" width="223" height="32" alt="The Ohio State University" /><a class="logo-aiedge" href="https://aiedge.osu.edu/" target="_blank" rel="noopener" title="NSF AI Institute for Future Edge Networks and Distributed Intelligence (AI-EDGE)"><img src="images/ai-edge-logo.png" width="140" height="36" alt="AI-EDGE Institute" /></a></div>
+    </header>
+    <!-- end #header -->
 
-                            <li>A paper on transitivity-encoded graph attention networks for complementary item recommendation is accepted by <b><font color="#BC1B32">IEEE ICDM 2024</font></b> (acceptance rate: 10.9%).</li>
+    <nav id="menu" aria-label="Main">
+      <ul>
+        <li class="current_page_item"><a href="./" aria-current="page">Home</a></li>
+        <li><a href="./research/index.html">Research</a></li>
+        <li><a href="./publications/index.html">Publications</a></li>
+        <li><a href="./awards/index.html">Awards</a></li>
+        <li><a href="./grants/index.html">Grants</a></li>
+        <li><a href="./activities/index.html">Activities</a></li>
+        <li><a href="./teaching/index.html">Teaching</a></li>
+        <li><a href="./group/index.html">My Group</a></li>
+      </ul>
+    </nav>
+    <!-- end #menu -->
 
-                            <li>Our proposal on communication-computation-efficient <b><font color="#BC1B32">Federated Learning</font></b> has been funded by the <b><font color="#BC1B32">Office of Naval Research (ONR)</font></b>. This <b><font color="#BC1B32">$750K</font></b> ONR grant is in collaboration with my esteemed OSU ECE colleagues Profs. Ness Shroff and Eylem Ekici. I'm honored to serve as the <b><font color="#BC1B32">Lead PI</font></b> on this exciting project!</li>
-                            
-                            <li>I'm deeply humbled and honored to receive the <b><font color="#BC1B32">2024 Defense Advanced Research Projects Agency (DARPA) Young Faculty Award (YFA)</font></b>!</li>
-                            
-                            <li>Our joint <b><font color="#BC1B32">NeurIPS 2023</font></b> paper with IBM Research on decentralized bilevel optimization received an Honorable Mention in the <b><font color="#BC1B32">IBM Research Pat Goldberg Memorial Best Paper Award</font></b> competition for the best papers published by IBM Research in 2023. Big congrats to our colleague Songtao Lu and the team!</li>
-                            
-                            <li>My Ph.D. student Peiwen Qiu received a <b><font color="#BC1B32">Best Poster Award</font></b> from the <b><font color="#BC1B32">Midwest Machine Learning Symposium (MMLS) 2024</font></b>.</li>
-                            
-                            <li>A paper on understanding the impacts of local updates on federated learning generalization is accepted by <b><font color="#BC1B32">ACM MobiHoc 2024</font></b> (acceptance rate: 24.5%).</li>
+    <main id="page">
+      <div id="sidebar">
 
-                            <li>Our proposal on <b><font color="#BC1B32">real-time crowd-sourced geospatial digital twin</font></b> has been funded by the <b><font color="#BC1B32">Cyber-Physical Systems</font></b> program of the <b><font color="#BC1B32">National Science Foundation</font></b>! This <b><font color="#BC1B32">$1.2 million</font></b> collaborative project involves esteemed colleagues: Prof. Bin Li at Penn State University, Prof. Randall Berry at Northwestern University, and my ECE colleague Prof. Rongjun Qin at The Ohio State University. I'm honored to serve as the <b><font color="#BC1B32">Lead PI</font></b> on this exciting venture!</li>
+        <!-- Contact Information + Short Biography (photo on the right, text wraps around it) -->
+        <section class="section intro" id="contact" aria-labelledby="contact-heading">
+            <figure class="portrait image-frame">
+              <img src="images/kevin_web.jpg" width="246" height="369" alt="Portrait of Jia (Kevin) Liu" />
+            </figure>
 
-                            <li>A paper on finite-time sample complexity of actor-critic multi-objective reinforcement learning is accepted by <b><font color="#BC1B32">ICML 2024</font></b> (acceptance rate: 27.5%).</li>
-
-                            <li>A paper on understanding server-assisted federated learning under partial client participation is accepted by <b><font color="#BC1B32">ICML 2024</font></b> (acceptance rate: 27.5%).</li>
-
-                            <li>A paper on Byzantine-resilient decentralized federated learning has been accepted by <b><font color="#BC1B32">ACM CCS 2024</font></b> (a "Security Big Four," acceptance rate: 19%).</li>
-
-                            <li>A paper on queue-based continual prompt tuning method called Q-Tuning for language models in collaboration with Amazon is accepted by <b><font color="#BC1B32">NAACL 2024</font></b>.</li>
-
-                            <li>A paper on achieving O(1/T)-convergent policy evaluation for reinforcement learning with nonlinear function approximation is accepted by <b><font color="#BC1B32">ICLR 2024</font></b> for a <b><font color="#BC1B32">spotlight presentation</font></b> (acceptance rate: 31%, spotlight rate: 5%). Big congrats to my students Zhuqing Liu, Xin Zhang, and collaborator Songtao Lu at IBM!</li>
-
-                            <li>A paper on multi-agent reinforcement learning policy evaluation with local TD-learning updates is accepted by <b><font color="#BC1B32">ACM AAMAS 2024</font></b> (acceptance rate: 25%).</li>
-
-                            <li>A joint paper on federated multi-objective learning (in collaboration with Amazon) has been accepted by <b><font color="#BC1B32">NeurIPS 2023</font></b> (acceptance rate: 26.1%).</li>
-
-                            <li>My Ph.D. student Zhuqing Liu recieved the <b><font color="#BC1B32">Dr. Burn Lin Travel Grant Award</font></b> award sponsored by <b><font color="#BC1B32">OSU ECE</font></b> endowment. Big Congratulations!</li>
-                            
-                            <li>I received a one-year research grant of <b><font color="#BC1B32">$150K</font></b> from the <b><font color="#BC1B32">Cisco Systems, Inc</font></b> as the <b><font color="#BC1B32">Lead PI</font></b> (co-PI: Prof. Ness Shroff) to conduct research on <b><font color="#BC1B32">"Efficient Online Scheduling for Distributed Machine Learning Inference Jobs."</font></b></li>
-                            
-                            <li>My Ph.D. student Peiwen Qiu recieved the <b><font color="#BC1B32">IEEE INFOCOM 2023 Student Conference Grant</font></b> award sponsored by <b><font color="#BC1B32">NSF</font></b>. Big Congratulations!</li>
-                            
-
-                            <li>A paper on low sample-communication complexity decentralized constrained min-max learning is accepted by <b><font color="#BC1B32">ACM MobiHoc 2023</font></b> (acceptance rate: 21.9%).</li>
-
-                            <li>A paper on variance-reduced approach for stochastic decentralized constrained bilevel optimization is accepted by <b><font color="#BC1B32">ICML 2023</font></b> (acceptance rate: 27.9%).</li>
-
-                            <li>A paper on solving linear constrained bilevel optimization with a smoothed implicit gradient approach is accepted by <b><font color="#BC1B32">ICML 2023</font></b> (acceptance rate: 27.9%).</li>
-
-                            <li>I am co-chairing the <b><font color="#BC1B32">4th Workshop on Machine Learning in Wireless Communications</font></b> at WiOpt 2023, which will be held in Singapore Aug. 23-27, 2023. The submission deadline is May 8, 2023. Please visit the <a href="https://sites.google.com/view/wmlc/home"><b><font color="#BC1B32">workshop web here</font></b></a> for more information. Your submission to this workshop is highly appreciated!</li>
-                            
-                            <li>My Ph.D. student Peiwen Qiu recieved the <b><font color="#BC1B32">IEEE INFOCOM 2023 Student Travel Grant</font></b> award sponsored by <b><font color="#BC1B32">IEEE ComSoc</font></b>. Big Congratulations!</li>
-                            
-                            <li>My Ph.D. student <b><font color="#BC1B32">Haibo Yang</font></b> has accepted a faculty position offer from <b><font color="#BC1B32">Rochester Institute of Technology</font></b> (RIT) and will officially start as a tenure-track Assistant Professor in the <b><font color="#BC1B32">Golisano College of Computing and Information Sciences</font></b> at RIT in August 2023! Big Congrats to Haibo! RIT is ranked 62 on csrankings.org, tied with Notre Dame. Haibo is one of my first batch of Ph.D. students, who started at <b><font color="#BC1B32">Iowa State University</font></b> in 2018 and then moved to <b><font color="#BC1B32">The Ohio State University</font></b> with me in 2020. As his Ph.D. advisor in the last five years, I have witnessed Haibo's entire growing process from a junior Ph.D. student, to a blossoming outstanding researcher, and now to a professor-soon-to-be. So proud! <b><font color="#BC1B32">#OhioState</font></b> <b><font color="#BC1B32">#IowaState</font></b> <b><font color="#BC1B32">#RochesterIT</font></b></li>
-
-                            <li>I am invited to serve as an Associate Editor of <b><font color="#BC1B32">IEEE Transactions on Cognitive Communications and Networking (TCCN)</font></b>.</li>
-
-                            <li>A paper on STORM-type momentum-based stochastic decentralized bilevel optimization is accepted by <b><font color="#BC1B32">IEEE INFOCOM 2023</font></b> (acceptance rate: 19.2%).</li>
-
-                            <li>A paper on the PAC non-learnability of federated learning under partial client participation and the mitigation by using server-aided federated learning is accepted by NeurIPS Workshop on Recent Advances and New Challenges in Federated Learning <b><font color="#BC1B32">(FL-NeurIPS'22)</font></b>.</li>
-                            
-                            <li>My Ph.D. student Haibo Yang received the <b><font color="#BC1B32">NeurIPS 2022 Scholar Award</font></b>, with full travel support to attend NeurIPS 2022 in New Orleans. Congratulations!</li>
-                            
-                            <li>A paper on Byzantine-resilient asynchronous federated learning algorithm design is accepted by <b><font color="#BC1B32">ACM ACSAC 2022</font></b> (acceptance rate: 24.1%).</li>
-                            
-                            <li>A paper on a distributed spanning-tree-based fused-lasso regression for learning coefficient heterogeneity over networks is accepted by the highly prestigious <b><font color="#BC1B32">Journal of the American Statistical Association (JASA)</font></b> (JASA is referred to as one of the "Big-4" journals in the areas of statistics).</li>
-                            
-                            <li>A paper on mitigating fat-tailed noise (with potentially infinite variance) in federated learning is accepted by <b><font color="#BC1B32">NeurIPS 2022</font></b> (acceptance rate: 25.6%).</li>
-                            
-                            <li>A paper on achieving O(&epsilon;<sup>-2</sup>) communication complexity in federated min-max learning is accepted by <b><font color="#BC1B32">NeurIPS 2022</font></b> (acceptance rate: 25.6%).</li>
-                            
-                            <li>A paper on stochastic linearized augmented Lagrangian method for decentralized bilevel optimization is accepted by <b><font color="#BC1B32">NeurIPS 2022</font></b> (acceptance rate: 25.6%).</li>
-                            
-                            <li>I am thrilled to be a <b><font color="#BC1B32">Winner of the 2022 AFRL/RI and Griffiss Institute Poster Competition</font></b> among the summer visiting faculty in 2022.</li>
-                            
-                            <li>A paper on scheduling ring-all-reduce learning jobs with communication contention is accepted by <b><font color="#BC1B32">ACM MobiHoc 2022</font></b> (acceptance rate: 19.8%).</li>
-                            
-                            <li>A paper on decentralized bilevel optimization with low sample and communication complexities is accepted by <b><font color="#BC1B32">ACM MobiHoc 2022</font></b> (acceptance rate: 19.8%).</li>
-                            
-                            <li>A paper on semi-asynchronous optimization algorithm for distributed learning is accepted by <b><font color="#BC1B32">ACM MobiHoc 2022</font></b> (acceptance rate: 19.8%).</li>
-                            
-                            <li>A paper on achieving linear convergence speedup for fully decentralized federated learning is accepted by <b><font color="#BC1B32">ACM MobiHoc 2022</font></b> (acceptance rate: 19.8%).</li>
-                            
-                            <li>A paper titled "Anarchic Federated Learning" has been accepted by <b><font color="#BC1B32">ICML 2022</font></b> as a <b><font color="#BC1B32">long oral presentation</font></b> (long oral presentation rate: 2%, acceptance rate: 21.9%). Big congrats to my students Haibo Yang, Xin Zhang, as well as my PostDoc Prashant Khanduri! Great Job!</li>
-                            
-                            <li>A joint paper with Amazon on multi-objective optimization (MOO) and multi-task learning (MTL) is accepted by <b><font color="#BC1B32">ICML 2022</font></b> (acceptance rate: 21.9%).</li>
-                            
-                            <li>I received a one-year research grant of $200K from <b><font color="#BC1B32">Cisco Systems, Inc.</font></b> as the Lead PI (Prof. Ness Shroff being the co-PI). The project is titled <b><font color="#BC1B32">"Low-Latency Computing Resource Scheduling and Allocation Algorithms for Distributed Deep Learning: A Spatial-Temporal Approach."</font></b></li>
-                            
-                            <li>An invited paper on channel-quality-adaptive over-the-air federated learning over wireless networks has been accepted by <b><font color="#BC1B32">IEEE SPAWC 2022</font></b>.</li>
-                            
-                            <li>A paper on over-the-air federated learning with joint adaptive computation and power control under noisy wireless channels is accepted by <b><font color="#BC1B32">IEEE ISIT 2022</font></b>.</li>
-                            
-                            <li>My Ph.D. student Menglu Yu recieved the <b><font color="#BC1B32">IEEE INFOCOM 2022 Student Conference Grant</font></b> award sponsored by <b><font color="#BC1B32">IEEE ComSoc</font></b>. Big Congratulations!</li>
-                            
-                            <li>A paper on improving multiple fairness performances for recommender systems with optimized antidote data is accepted by <b><font color="#BC1B32">ACM SACMAT 2022</font></b>.</li>
-                  
-                            <li>A paper on finite-time convergence and sample complexity of multi-agent actor-critic reinforcement learning with average reward is accepted by <b><font color="#BC1B32">ICLR 2022</font></b> for a <b><font color="#BC1B32">spotlight presentation</font></b> (acceptance rate: 32%, spotlight rate: 5%). Big congrats to my PostDoc Hairi and my collaborator Songtao Lu at IBM!</li>
-                  
-                            <li>A paper on incentivized bandit learning with delayed feedback and self-reinforcing user preferences is accepted by <b><font color="#BC1B32">ICLR 2022</font></b> (acceptance rate: 32%).</li>
-                  
-                            <li>A paper on a multi-agent kernel approximation approach for overparameterized decentralized learning is accepted by <b><font color="#BC1B32">ICLR 2022</font></b> (acceptance rate: 32%).</li>
-                  
-                            <li>A paper on a global convergence theory for deep ReLU implicit networks via overparameterization is accepted by <b><font color="#BC1B32">ICLR 2022</font></b> (acceptance rate: 32%).</li>
-                  
-                            <li>A paper on online scheduling and resource allocation for ring-all-reduce based learning jobs is accepted by <b><font color="#BC1B32">IEEE INFOCOM 2022</font></b> (acceptance rate: 19.9%).</li>
-                  
-                            <li>I'm thrilled and honored to join <b><font color="#BC1B32">Amazon.com</font></b> as an <b><font color="#BC1B32">Amazon Visiting Academics (AVA)</font></b> starting November 2021, while continuing to conduct research and teach at <b><font color="#BC1B32">The Ohio State University</font></b>! I'm so looking forward to applying my theoretical expertise to tackle complex real-world technical challenges in machine learning (ML) and artificial intelligence (AI), by splitting my time between academia and the industry! <b><font color="#BC1B32">#GoAmazon</font></b>! <b><font color="#BC1B32">#GoBucks</font></b>!</li>
-                  
-                            <li>A paper on sample complexity bounds for active ranking from noisy multi-wise comparisons is accepted by <b><font color="#BC1B32">NeurIPS 2021</font></b> (acceptance rate: 26%).</li>
-                  
-                            <li>A paper on sample- and communication-efficient policy evaluation for multi-agent reinforcement learning is accepted by <b><font color="#BC1B32">NeurIPS 2021</font></b> (acceptance rate: 26%).</li>
-                  
-                            <li>A paper on achieving near-optimal sample and communication complexities in federated learning is accepted by <b><font color="#BC1B32">NeurIPS 2021</font></b> (acceptance rate: 26%).</li>
-                  
-                            <li>The <b><font color="#BC1B32">NSF AI Institute for Future Edge Networks and Distributed Intelligence (<a href="https://aiedge.osu.edu"><u>AI-EDGE</u></a>)</font></b> is officially announced! A <b><font color="#BC1B32">$20M</font></b> AI Institute funded by <b><font color="#BC1B32">NSF</font></b>, AI-EDGE is led by <b><font color="#BC1B32">OSU</font></b> (PI: Prof. Ness Shroff), with <b><font color="#BC1B32">29 investigators</font></b> coming from <b><font color="#BC1B32">11 leading research universities</font></b> (OSU, Michigan, Wisconsin, Univ. Washington, UIC, UIUC, Purdue, Texas Austin, CMU, UMASS, and Northeastern) and <b><font color="#BC1B32">10 collaborators</font></b> coming from <b><font color="#BC1B32">three DOD Research Labs</font></b> (ARL, AFRL, and NRL) and <b><font color="#BC1B32">four leading companies</font></b> in the industry (Microsoft, IBM, Qualcomm, and AT&T). Big Congrats to the <b><font color="#BC1B32"><a href="https://live-aiedge-program.pantheonsite.io/organization-and-key-personnel"><u>AI-EDGE Team</u></a></font></b>!</li>
-                            
-                            <li>A paper on primal-dual online computing resource allocation and scheduling algorithm design for distributed deep learning system control and optimization has been accepted for publication in <b><font color="#BC1B32">IEEE Transactions on Network Science and Engineering</font></b> in 2021.</li>
-
-                            <li>A paper on the compressed FedAvg algorithm for federated learning with non-i.i.d. datasets has been accepted by <b><font color="#BC1B32">IEEE/IFIP WiOpt 2021</font></b>.</li>
-
-                            <li>A paper on achieving optimal sample and communication complexities for non-i.i.d. Federated Learning is accepted by ICML Workshop on Federated Learning for User Privacy and Data Confidentiality <b><font color="#BC1B32">(FL-ICML'21)</font></b>.</li>
-                  
-                            <li>A paper on multi-round submodular maximization for Federated Learning with fair worker selection is accepted by <b><font color="#BC1B32">IEEE MASS 2021</font></b> (acceptance rate: 28.3%).</li>
-                  
-                            <li>Our <b><font color="#BC1B32">ARA Wireless Living Lab</font></b> is officially announced [<a href="https://advancedwireless.org/the-platforms-for-advanced-wireless-research-pawr-program-announces-fourth-wireless-research-platform-in-central-iowa-to-drive-innovation-in-rural-broadband-connectivity/"><u>news link</u></a>] [<a href="https://arawireless.org/"><u>project web</u></a>]. An <b><font color="#BC1B32">$8 million</font></b> project with reserachers coming from <b><font color="#BC1B32">ISU</font></b>, <b><font color="#BC1B32">OSU</font></b>, and <b><font color="#BC1B32">UCI</font></b>, ARA is one of the four <b><font color="#BC1B32">NSF-funded</font></b> Platforms for Advanced Wireless Research (<b><font color="#BC1B32">PAWR</font></b>) located in Central Iowa. Big Congrats to the <b><font color="#BC1B32"><a href="https://arawireless.org/ara-project-team/"><u>ARA Project Team</u></a></font></b>!</li>
-                  
-                            <li>A paper on incentivized multi-armed bandit learning policy designs with self-reinforcing user prefernces is accepted by <b><font color="#BC1B32">ICML 2021</font></b> (acceptance rate: 20.4%).</li>
-                  
-                            <li>A paper on taming sample, communication, and memory complexities in decentralized learning is accepted by <b><font color="#BC1B32">ACM MobiHoc 2021</font></b> (acceptance rate: 20.1%).</li>
-                  
-                            <li>An invited paper on logarithmic regrets for multi-armed bandit problems with knapsack-type constraints has been accepted by <b><font color="#BC1B32">IEEE CISS 2021</font></b>.</li>
-                  
-                            <li>My Ph.D. student Minghong Fang received the <b><font color="#BC1B32">ACM TheWebConf (WWW) 2021 Student Scholarship Award</font></b>. My Ph.D. student Menglu Yu recieved the <b><font color="#BC1B32">IEEE INFOCOM 2021 NSF Student Conference Award</font></b>. Big Congratulations!</li>
-                            
-                            <li>A paper on achieving <b><font color="#BC1B32">information freshness</font></b> with selfish and rational users in <b><font color="#BC1B32">mobile crowd-learning</font></b> is accepted by the Special Issue of Age of Information in Real-Time Systems and Networks, <b><font color="#BC1B32">IEEE Journal of Selected Areas in Communications (JSAC)</font></b>, to appear in the second quater of 2021.</li>
-
-                            <li>A paper on a randomized Bregman coordinate descent approach for non-Lipschtiz composite optimization problems is accepted by <b><font color="#BC1B32">IEEE ICASSP 2021</font></b>.</li>
-
-                            <li>A paper on data poisoning attacks to and defenses for aggregation algorithms in crowd-sensing is accepted by <b><font color="#BC1B32">ACM WWW 2021</font></b> (acceptance rate: 20.6%).</li>
-
-                            <li>A paper on linear convergence speedup for non-i.i.d. Federated Learning with partial worker participation is accepted by <b><font color="#BC1B32">ICLR 2021</font></b> (acceptance rate: 28.6%).</li>
-
-                            <li>A paper on server-side trust bootstrapping for Byzantine-robust Federated Learning is accepted by <b><font color="#BC1B32">NDSS 2021</font></b> (a "Security Big Four," acceptance rate: 16%).</li>
-
-                            <li>A paper on resource scheduling for training deep neural network computing jobs has been accepted by <b><font color="#BC1B32">IEEE INFOCOM 2021</font></b> (acceptance rate: 19.9%).</li>
-
-                            <li>A paper on decentralized learning with low sample and communication complexities has been accepted by <b><font color="#BC1B32">IEEE INFOCOM 2021</font></b> (acceptance rate: 19.9%).</li>
-
-                            <li>A joint paper with colleagues at Purdue (Peizhong Ju and Prof. Xiaojun Lin) on investigating the <b><font color="#BC1B32">double-descent phenomenon</font></b> of basis pursuit has been accepted by <b><font color="#BC1B32">NeurIPS 2020</font></b> for a <b><font color="#BC1B32">spotlight presentation</font></b> (acceptance rate: 20%, spotlight presentations: 3%). Big congrats to the team!</li>
-                  
-                            <li>After working in the <b><font color="#BC1B32">CS</font></b> department at <b><font color="#BC1B32">Iowa State University</font></b> for three years, I will join the <b><font color="#BC1B32">ECE</font></b> department at <b><font color="#BC1B32">The Ohio State University</font></b> in <b><font color="#BC1B32">Fall 2020</font></b>!</li>
-
-                            <li>A paper on the convergence of distributed asynchronous stochastic gradient descent with unbounded delay has been accepted by <b><font color="#BC1B32">IEEE CDC 2020</font></b>.</li>
-
-                            <li>I'm invited to be a panelist and give a talk in the <b><font color="#BC1B32"><a href="https://sites.google.com/tamu.edu/nsf-nets-resource-site/career-webinar">NSF NeTS CAREER Webinar for Aspiring PIs</a></font></b> on 6/17/20 <a href="https://www.dropbox.com/s/nopukd0c4zg0g31/NeTS_CAREER_Wrkshp%2720_Liu_Slides.pdf?dl=0">[Slides]</a> <a href="https://www.youtube.com/watch?v=B-2dOysNFqI&t=5275s">[Video]</a>. Delighted to serve our community!</li>
-                  
-                            <li>I'm invited to serve as a TPC member for <b><font color="#BC1B32"><a href="http://sigmetrics.org/sigmetrics2021/">ACM SIGMETRICS 2021</a></font></b>, which will be held in Beijing, China, June 14--18, 2021.</li>
-                  
-                            <li>A paper on low-sample-complexity top-k selection from noisy pairwise comparisons has been accepted by <b><font color="#BC1B32">ICML 2020</font></b> (acceptance rate: 21.8%).</li>
-                  
-                            <li>I received the <b><font color="#BC1B32">2020 LAS Award for Early Achievement in Research</font></b> from the College of Liberal Arts and Sciences at ISU! See LAS annoucement <a href="https://news.las.iastate.edu/2020/06/03/faculty-and-staff-honored-with-2020-las-awards/"><b><u>here</u></b></a>.</li>
-                  
-                            <li>My students Minghong Fang and Menglu Yu received the <b><font color="#BC1B32">Research Excellence Award</font></b> and <b><font color="#BC1B32">Teaching Excellence Award</font></b>, respectively, at ISU in 2020!</li>
-                  
-                            <li>An invited paper on adaptive multi-hierarchical signSGD for communication-efficient distributed optimization has been accepted by <b><font color="#BC1B32">IEEE SPAWC 2020</font></b>.</li>
-                  
-                            <li>A paper on efficient trip-vehicle matching and routes optimization for Uber-like ride-sharing is accepted by <b><font color="#BC1B32">ACM e-Energy 2020</font></b> (acceptance rate: 23%).</li>
-                  
-                            <li>A paper on privacy-preserving and communication-efficient distributed SGD for edge learning is accepted by <b><font color="#BC1B32">ACM MobiHoc 2020</font></b> (acceptance rate: 15%).</li>
-                  
-                            <li>I received the prestigious <b><font color="#BC1B32">NSF CAREER Award</font></b> (<em>first attempt</em>) in 2020! The awarded project is titled "<b><font color="#BC1B32"><a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1943226&HistoricalAwards=false">CAREER: Computing-Aware Network Optimization for Efficient Distributed Data Analytics at the Wireless Edge</a></font></b>," which spans a five-year period from 10/2020 to 09/2025 with $524,125 in total.</li>
-            
-                            <li>A paper on predictive arrival reshaping policy for crowd-learning data freshness has been accepted by <b><font color="#BC1B32">IEEE INFOCOM'20 Age of Information Workshop</font></b>.</li>
-
-                            <li>I received the prestigious <b><font color="#BC1B32">Google Faculty Research Award</font></b> in 2020! See the Google news announcement <a href="https://docs.google.com/document/d/e/2PACX-1vRYagtwX_MRJUCc_3KMWhmBNnKz2ZHh0vM63B7OxLWWEfghrWjySPoVYtYum9BBVnrlx-wLi0q6KGAP/pub"><b><u>here</u></b></a> and the ISU CS department news <a href="https://www.cs.iastate.edu/announcements/dr-jia-kevin-liu-receives-google-faculty-research-award-1"><b><u>here</u></b></a>.</li>
-                  
-                            <li>A paper on distributed traffic consolidation for data center network energy optimization has been accepted by <b><font color="#BC1B32">IEEE Transactions on Cloud Computing</font></b>.</li>
-
-                            <li>A paper on resource allocation and scheduling for mining energy cost minimization in distributed Blockchain networks has been accepted by <b><font color="#BC1B32">IEEE ICC 2020</font></b>.</li>
-                  
-                            <li>A paper on influence-function-based data poisoning attacks to recommender systems has been accepted by <b><font color="#BC1B32">ACM WWW 2020</font></b> (acceptance rate: 25%).</li>
-                            
-                            <li>A paper on network-distributed learning with differential-coded compressors has been accepted by <b><font color="#BC1B32">IEEE
-                                INFOCOM 2020</font></b> (acceptance rate: 19.8%).</li>
-                            
-                            <li>A paper on exploring best arm with top reward-cost ratio in multi-armed bandits has been accepted by <b><font color="#BC1B32">IEEE INFOCOM 2020</font></b> (acceptance rate: 19.8%).</li>
-            
-                            <li>My undergrad advisee John Wahlig received the <b><font color="#BC1B32">2020 Dean's High Impact Award for Undergraduate Research from College of Liberal Art and Sciences</font></b>.</li>
-                            
-                            <li>Our INFOCOM'19 paper on fairness-constrained MAB has been fast-tracked to and accepted by <b><font color="#BC1B32">IEEE Transactions on Network Science and Engineering</font></b>.</li>
-                            
-                            <li>I'm invited to serve the technical program committee of the 3rd <b><font color="#BC1B32">Age of Information Workshop</font></b> in conjunction with <b><font color="#BC1B32">IEEE INFOCOM 2020</font></b>.</li>                                               
-                            
-                            <li>A paper on low-overhead uplink scheduling algorithm for wireless Internet-of-Things (IoT) networks is accepted by <b><font color="#BC1B32">IEEE Transactions on Mobile Computing</font></b>.</li>                          
-                          
-                          <li>A paper on Hybrid-Beamforming-Based Millimeter Wave Cellular Networks Optimization has been accepted by the Special Issue on Millimeter-Wave (mmWave) Networking, <b><font color="#BC1B32">IEEE Journal of Selected Areas in Communications (JSAC)</font></b>, to appear in December, 2019.</li>                          
-                          <li>A paper on sample complexity bounds for recovering exact ranking from noisy comparisons has been accepted by <b><font
-                                color="#BC1B32">NeurIPS 2019</font></b> (acceptance rate: 21%).</li>
-                          <li>A paper on Byzantine-resillient stochastic gradient descent for distributed learning has been accepted by <b><font
-                                color="#BC1B32">IEEE CDC 2019</font></b>.</li>
-                            
-                            <li>I'll serve as a submission co-chair of <b><font color="#BC1B32"><a href="https://www.sigmobile.org/mobihoc/2020/">ACM MobiHoc 2020</a></font></b>. Please consider submitting your best work to MobiHoc 2020.</li>                                               
-                          <li>My joint work with Fengjiao Li and Prof. Bo Ji at
-                            Temple University received the <b><font color="#BC1B32">Best
-                                Paper Award</font></b> at <b><font color="#BC1B32">IEEE
-                                INFOCOM 2019</font></b> (acceptance rate:
-                            288/1464 = 19.6%)! Big congrats to Fengjiao and Bo!
-                            This is my <b><font color="#BC1B32">4th Best Paper
-                                or Best Paper Runner-up Awards from IEEE INFOCOM
-                              in 8 years!</font></b> This work also received an <b><font color="#BC1B32">INFOCOM Best-in-Session Presentation Award</font></b>. Kudos to Fengjiao's fantastic delivery of the presentation!</li>
-                          <li>A paper on Age-of-Information (AoI) in
-                            Crowd-Learning/Crowd-Sensing has been accepted by <b><font
-                                color="#BC1B32">IEEE/IFIP
-                                WiOpt 2019</font></b>.</li>
-                          <li>A paper on PAC pure exploration of stochastic
-                            bandits has been accepted by <b><font color="#BC1B32">AISTATS
-                                2019</font></b> (acceptance rate: 32.4%).</li>
-                          <li>A paper on compression-based distributed consensus
-                            optimization has been accepted by <b><font color="#BC1B32">IEEE
-                                INFOCOM 2019</font></b> (acceptance rate:
-                            19.7%).</li>
-                          <li>A paper on combinatorial fairness-constrained
-                            sleeping bandits has been accepted by <b><font color="#BC1B32">IEEE
-                                INFOCOM 2019</font></b> (acceptance rate:
-                            19.7%).</li>
-                          <li>My Ph.D. student Xin Zhang received the <b><font color="#BC1B32">Holly C. and E. Beth Fryer Award in Statistics</font></b> (the award for top Ph.D. student) in the Department of Statistics at Iowa State University in 2018!</li>
-                          <li>A paper on poisoning attacks to graph-based
-                            recommender systems is accepted for publication in <b><font
-                                color="#BC1B32">ACM
-                                ACSAC 2018</font></b> (acceptance rate: 20.1%).</li>
-                          <li>I received a 3-year research grant of $500K from
-                            AFRL (FA8750-18-1-0107) as the <b><font color="#BC1B32">Sole
-                                PI</font></b> to investigate <b><font color="#BC1B32">Tactical
-                                Autonomous Swarms Optimization</font></b>.</li>
-                          <li>Our <b><font color="#BC1B32">ACM e-Energy'18</font></b>
-                            paper has been fast-tracked to <b><font color="#BC1B32">IEEE
-                                Transactions on Sustainable Computing</font></b>.</li>
-                          <li>I'm invited to give a tutorial at the <a href="http://mbds.cs.iastate.edu/2018/program-foundations.shtml"><b><font
-                                  color="#BC1B32">2018
-                                  Midwest Big Data Summer School</font></b></a>
-                            held at Iowa State University.</li>
-                          <li>I'm invited to hold seminars at three universities
-                            in China in May 2018: University of Science and
-                            Technologies of China, Sun Yat-Sen University
-                            (a.k.a. Zhongshan University), and South China
-                            University of Technology.</li>
-                          <li>I'm invited as a <b><font color="#BC1B32">joint
-                                keynote speaker</font></b> for the 2018
-                            International Workshop on Edge and Fog Computing for
-                            Intelligent IoT Applications (<a href="http://www.wi-opt.org/efc_iot.html"><b><font
-                                  color="#BC1B32">EFC-IoT</font></b></a>)
-                            and the 2018 International Workshop on Resource
-                            Allocation, Cooperation and Competition in Wireless
-                            Networks (<a href="http://www.wi-opt.org/rawnet.html"><b>RAWNET</b></a>),
-                            both held in Shanghai, China.</li>
-                          <li>A paper on green building HVAC pre-cooling control
-                            and optimization has been accepted for publication
-                            in <b><font color="#BC1B32">ACM e-Energy'18</font></b>
-                            (acceptance rate: 21.9%).</li>
-                          <li>A paper on large-scale IoT uplink scheduling
-                            optimization has been accepted for publication in <b><font
-                                color="#BC1B32">WiOpt'18</font></b>.</li>
-                          <li>My paper on stochastic network optimization with
-                            high-order momentum information has been accepted
-                            for publication in <b><font color="#BC1B32">IEEE
-                                INFOCOM 2018</font></b> (acceptance rate:
-                            309/1606=19.2%).</li>
-                          <li><font class="BodyText_News">I received a 3-year
-                              (08/2017-07/2020) research grant of $549,999 from
-                              NSF as the <b><font color="#BC1B32">Lead PI</font></b>
-                              (Co-PI: John Volakis). The project is titled "<a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1731649&amp;HistoricalAwards=false"><b><font
-                                    color="#BC1B32">SpecEES:
-                                    Toward Spectral and Energy Efficient
-                                    Cross-Layer Designs for
-                                    Millimeter-Wave-Based Massive MIMO Networks</font></b></a>."</font></li>
-                          <li>I joined the Department of Computer Science at
-                            Iowa State University as a Tenure-Track Assistant
-                            Professor in Fall 2017!</li>
-                          <li><font class="BodyText_News">My paper on Massive
-                              MIMO has been accepted for publication in <b><font
-                                  color="#BC1B32">IEEE
-                                  JSAC'17</font></b> Special Issue on Deployment
-                              Issues and Performance Challenges for 5G.</font></li>
-                          <li><font class="BodyText_News">My paper on
-                              Hybrid-Beamforming-Based Millimeter-Wave Cellular
-                              Network Optimization has been accepted for
-                              publication in <b><font color="#BC1B32">WiOpt'17</font></b>.</font></li>
-                          <li><font class="BodyText_News">I received a 3-year
-                              (02/2017-02/2020) 6.2 research grant
-                              (N00014-17-1-2417) from ONR as a <b><font color="#BC1B32">Co-PI</font></b>.
-                              The project is titled "<b><font color="#BC1B32">Achieving
-                                  Low Delay and Highly Adaptive Tactical
-                                  Networking with Multi-Path TCP</font></b>."</font></li>
-                          <li><font class="BodyText_News">I received a 3-year
-                              (07/2016-06/2019) research grant of $317,896 from
-                              NSF as the <b><font color="#BC1B32">Sole PI</font></b>.
-                              The project is titled "<a href="http://www.nsf.gov/awardsearch/showAward?AWD_ID=1618318&amp;HistoricalAwards=false"><b><font color="#BC1B32">CIF: Small: Taming Convergence and Delay in Stochastic Network Optimization with Hessian
-                                    Information</font></b></a>."</font></li>
-                          <li><font class="BodyText_News">My paper titled "<a href="http://infocom2016.ieee-infocom.org/content/best-paper-award-runner"><b><font color="#BC1B32">Heavy-Ball: A New Approach to Tame Delay and Convergence in Wireless Network Optimization</font></b></a>" receives the <b><font color="#BC1B32">Best Paper Award</font></b> at <b><font color="#BC1B32">IEEE INFOCOM 2016</font></b> (acceptance rate: 300/1644=18%)! I have received <b><font color="#BC1B32">3 Best Paper or Best paper Runner-up Awards from IEEE INFOCOM in 5 years!</font></b></font></li>
-                          <li><font class="BodyText_News">My paper on Massive
-                              MIMO networking has been accepted for publication
-                              in <b><font color="#BC1B32">ACM MobiHoc 2016</font></b>
-                              (acceptance rate: 35/187=18%).</font></li>
-                          <li><font class="BodyText_News">I recently received an
-                              <b><font color="#BC1B32">AFOSR Summer Faculty
-                                  Fellowship Program (SFFP) 2016 Award</font></b>.
-                              I will be working at Air Force Research Lab -
-                              Information Directorate (AFRL/RI) again in the
-                              summer of 2016.</font></li>
-                          <li><font class="BodyText_News">One of my recent
-                              papers has been accepted for publication in <b><font
-                                  color="#BC1B32">ACM
-                                  SIGMETRICS 2016</font></b> (acceptance rate:
-                              28/208=13%).</font></li>
-                          <li><font class="BodyText_News">One of my recent
-                              papers has been accepted for publication in <b><font
-                                  color="#BC1B32">IEEE
-                                  INFOCOM 2016</font></b> (acceptance rate:
-                              300/1644=18%).</font></li>
-                          <li><font class="BodyText_News">I recently won a
-                              3-year (10/2015-09/2018) research grant of
-                              $300,000 from NSF as the <b><font color="#BC1B32">Sole
-                                  PI</font></b>. The project is titled "<a href="http://www.nsf.gov/awardsearch/showAward?AWD_ID=1527078&amp;HistoricalAwards=false"><b><font
-                                    color="#BC1B32">Toward
-                                    Optimal, Efficient, and Holistic Networking
-                                    Design for Massive MIMO Wireless Networks</font></b></a>."</font></li>
-                          <li><font class="BodyText_News">I received the <b><font
-                                  color="#BC1B32">Visiting
-                                  Faculty Research Program (VFRP) Award</font></b>
-                              from the Air Force Research Lab (AFRL) Information
-                              Institute. I will be working at AFRL in the summer
-                              of 2015.</font></li>
-                          <li><font class="BodyText_News">My paper titled "Joint
-                              Congestion Control and Routing Optimization: An
-                              Efficient Second-Order Distributed Approach" has
-                              recently been accepted for publication in <b><font
-                                  color="#BC1B32">IEEE/ACM
-                                  Transactions on Networking</font></b>.</font></li>
-                          <li><font class="BodyText_News">My paper titled
-                              "Distributed Cross-Layer Optimization in Wireless
-                              Networks: A Second-Order Approach" received <b><font
-                                  color="#BC1B32">INFOCOM
-                                  2013 Best Paper Runner-up Award</font></b>.
-                              This is my <b><font color="#BC1B32">second
-                                  INFOCOM Best Paper Runner-up Award in three
-                                  years!</font></b></font></li>
-                          <li><font class="BodyText_News">Two of my papers have
-                              been accepted for publicatoin in IEEE INFOCOM
-                              2012.</font></li>
-                          <li><font class="BodyText_News">Two of my papers have
-                              been accepted for publication in IEEE JSAC and
-                              will appear in 2012.</font></li>
-                          <li><font class="BodyText_News">One of my papers won
-                              the only <b><font color="#BC1B32"> Best Paper
-                                  Award Runner-up </font></b> at IEEE INFOCOM
-                              2011.</font></li>
-                          <li><font class="BodyText_News">Two of my papers have
-                              been accepted for publication in IEEE INFOCOM
-                              2010.</font></li>
-                          <li><font class="BodyText_News">I recently received
-                              the <b><font color="#BC1B32">2008 China National
-                                  Award for Outstanding Ph.D. Students Abroad</font></b></font></li>
-                          <li><font class="BodyText_News">One of my papers won <b><font
-                                  color="#BC1B32">Best
-                                  Paper Award</font></b> at IEEE ICC 2008.</font></li>
-                            <center><span id="myspan"><b>+ Click for the Next 10 News Items ...</b></span></center>
-                        </ul>
-                      </li>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="section-label">
+            <h2 id="contact-heading">Contact Information</h2>
           </div>
-          <!-- end #sidebar -->
-          <div style="clear: both;"> </div>
-        </div>
+            <div class="contact-row">
+              <dl class="facts">
+                <div class="fact-office"><dt>Office</dt><dd>620 Dreese Laboratories, 2015 Neil Ave, Columbus, OH 43210 U.S.A.</dd></div>
+                <div><dt>Email</dt><dd><a href="mailto:liu@ece.osu.edu">liu@ece.osu.edu</a></dd></div>
+                <div><dt>Phone</dt><dd><a href="tel:+16142474588">614-247-4588</a></dd></div>
+                <div><dt>Fax</dt><dd>614-292-7596</dd></div>
+              </dl>
+              <ul class="social">
+                <li><a href="https://www.linkedin.com/in/jia-kevin-liu/" target="_blank" rel="noopener" title="LinkedIn"><img src="images/linkedin_red.png" alt="LinkedIn" /></a></li>
+                <li><a href="https://scholar.google.com/citations?user=Ofx3dScAAAAJ&amp;hl=en" target="_blank" rel="noopener" title="Google Scholar"><img src="images/googlescholar_red.png" alt="Google Scholar" /></a></li>
+                <li><a href="https://twitter.com/kevinlauka" target="_blank" rel="noopener" title="Twitter / X"><img src="images/twitter_red.png" alt="Twitter / X" /></a></li>
+                <li><a href="https://www.facebook.com/Jia.Kevin.Liu" target="_blank" rel="noopener" title="Facebook"><img src="images/facebook_red.png" alt="Facebook" /></a></li>
+              </ul>
+            </div>
+
+          <div class="section-label bio-label" id="bio">
+            <h2 id="bio-heading">Short Biography</h2>
+          </div>
+            <p class="body-copy">Jia (Kevin) Liu is an Associate Professor in the <a href="http://www.ece.osu.edu/">Dept. of Electrical and Computer Engineering</a> at <a href="http://www.osu.edu">The Ohio State University</a> (OSU) and an <span class="hl">Amazon Scholar</span> with Amazon.com.
+              He received his Ph.D. degree from the <a href="http://www.ece.vt.edu">Dept. of Electrical and Computer Engineering</a> at <a href="http://www.vt.edu">Virginia Tech</a> in 2010.
+              From Aug. 2017 to Aug. 2020, he was an Assistant Professor in the <a href="http://web.cs.iastate.edu">Dept. of Computer Science</a> at <a href="http://www.iastate.edu">Iowa State University</a> (ISU).
+<!--
+              Prior to that, he was a Postdoctoral Researcher and subsequently a Research Assistant Professor from Feb. 2010 to Jul. 2017, both in the ECE department at OSU.
+-->
+              He currently serves as the Managing Director of the <a href="https://aiedge.osu.edu/">NSF AI Institute for Future Edge Networks and Distributed Intelligence (AI-EDGE)</a> at OSU. He is a Co-Principal Investigator of the <a href="https://tads.research.iastate.edu/people/leadership">NSF TRIPODS D4 (Dependable Data-Driven Discovery) Institute</a> at ISU. He is also a faculty investigator affiliated with the <a href="https://arawireless.org/">NSF ARA Wireless Living Lab PAWR Platform</a> between ISU and OSU, and the <a href="https://icdt.osu.edu/">Institute of Cybersecurity and Digital Trust (ICDT)</a> at OSU.
+              Dr. Liu's research areas include theoretical machine learning, stochastic network optimization and control, and performance analysis for data analytics infrastructure and cyber-physical systems. Dr. Liu is a senior member of IEEE and a member of ACM.
+              He has received numerous best paper awards at top venues, including IEEE INFOCOM'19 Best Paper Award, IEEE INFOCOM'16 Best Paper Award, IEEE INFOCOM'13 Best Paper Runner-up Award, IEEE INFOCOM'11 Best Paper Runner-up Award, and IEEE ICC'08 Best Paper Award.
+              He has also received multiple honors of long/spotlight presentations at top machine learning conferences, including ICML, NeurIPS, and ICLR.
+              His joint work with IBM Research was selected to receive the IBM Pat Goldberg Memorial Best Paper Award Distinction of Honorable Mention in 2024.
+              Dr. Liu is an <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1943226&amp;HistoricalAwards=false">NSF CAREER Award</a> recipient in 2020,
+              a winner of the <a href="https://ece.osu.edu/news/2024/08/professor-jia-kevin-liu-wins-2024-darpa-young-faculty-award-yfa">DARPA Young Faculty Award (YFA)</a> in 2024,
+              and a winner of the <a href="https://docs.google.com/document/d/e/2PACX-1vRYagtwX_MRJUCc_3KMWhmBNnKz2ZHh0vM63B7OxLWWEfghrWjySPoVYtYum9BBVnrlx-wLi0q6KGAP/pub">Google Faculty Research Award</a> in 2020.
+              He received the <span class="hl">College of Engineering Lumley Research Award</span> at The Ohio State University in 2026, the <a href="https://news.las.iastate.edu/2020/06/03/faculty-and-staff-honored-with-2020-las-awards/">College of Liberal Arts and Sciences Award for Early Achievement in Research</a> at Iowa State University in 2020, and the Bell Labs President Gold Award from Bell Labs, Lucent Technologies.
+              Dr. Liu is the Lead Editor of the Special Issue on AI and Networking of IEEE/ACM Transactions on Networking in 2025. He is an Associate Editor for IEEE Transactions on Cognitive Communications and Networking.
+              He has served the TPC for numerous top conferences, including ICML, NeurIPS, ICLR, ACM SIGMETRICS, IEEE INFOCOM, and ACM MobiHoc.
+<!--
+              He has served as the conference submission and publication chairs for ACM MobiHoc 2020 and IEEE/IFIP WiOpt 2021, conference workshop chair for ACM MobiHoc 2021, and the conference publication chair for IEEE/IFIP WiOpt 2023.
+-->
+              His research is supported by NSF, DARPA, AFOSR, AFRL, ONR, Google, Meta, and Cisco. <a href="CV/Liu_CV.pdf"><b>[Full CV]</b></a></p>
+        </section>
+
+        <!-- Openings -->
+        <section class="section" id="openings" aria-labelledby="openings-heading" data-reveal>
+          <div class="section-label">
+            <h2 id="openings-heading">Immediate Openings for Ph.D. Students &amp; PostDocs</h2>
+          </div>
+          <div class="section-body openings-body">
+            <p>Openings for Ph.D. students and PostDoc are available and expected to be filled as early as Spring 2025 or in Fall 2025.
+              Detailed descriptions of the openings can be found <a href="Liu_PhD_PostDoc_Flyer.pdf"><b>here</b></a>.
+              Please also see the "<a href="research/">Research</a>" section on this web to learn about my research areas and interests.
+              If you are interested, please send me your <span class="hl">CV/Resume</span>, <span class="hl">transcripts</span>, <span class="hl">publications</span> (if available) and <span class="hl">GRE/TOEFL scores</span> (if available) for consideration.
+              I apologize for not being able to respond to every inquiry, but that doesn't mean I'm not considering. :-)
+              Please also refer to the <a href="https://www.ece.osu.edu/futurestudents/graduate/application">OSU ECE Graduate Admissions Site</a> for detailed application instructions.</p>
+            <div class="openings-actions">
+              <a class="button button-primary" href="Liu_PhD_PostDoc_Flyer.pdf">Openings flyer (PDF)</a>
+              <a class="button button-secondary" href="https://www.ece.osu.edu/futurestudents/graduate/application">Graduate admissions</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- News -->
+        <section class="section" id="news" aria-labelledby="news-heading" data-reveal>
+          <div class="section-label">
+            <h2 id="news-heading">News</h2>
+          </div>
+          <div class="section-body">
+            <ul id="datalist">
+              <li>A paper on variance-reduced performative optimization has been accepted by <b>Transactions on Machine Learning Research (TMLR)</b> in Oct. 2026.</li>
+              <li>A paper on lower-level agnostic bilevel optimization has been accepted by <b>NeurIPS 2026</b> (acceptance rate: 25.7%).</li>
+              <li>A paper on democratizing LLM training across geo-distributed heterogeneous compute has been accepted by <b>NeurIPS 2026 Workshop on Collaborative, Open, and Decentralized Training of Foundation Models</b>.</li>
+              <li>A paper on holistic evaluation of formal specification generation has been accepted by <b>NeurIPS 2026 Workshop on AI for Verifiable Coding</b>.</li>
+              <li>A paper on a kinetic theory of controlled emergence and meta-cognition is accepted by <b>AAAI 2026 Symposium on Artificial Metacognition</b> (Metacog-26).</li>
+              <li>Together with Dr. Chaosheng Dong (Pinterest) and Prof. Lisha Chen (University of Rochester), we will organize a 3-hour <b>NeurIPS 2026 Tutorial</b> titled "<b>Multi-Objective Optimization for Modern Machine Learning: Foundations, Recent Advances, and Emerging Applications</b>" in Sydney. The tutorial will have a panel discussion on multi-objective optimization (MOO), featuring Prof. Tianyi Chen (Cornell Univ.) and Prof. Kaiyi Ji (U. Buffalo). See you in Sydney!</li>
+              <li>A paper on foundation model-assisted wireless random access network optimization has been accepted by <b>ACM MobiHoc 2026</b> (acceptance rate: 23%).</li>
+              <li>Our paper on faithful visual language reasoning in tool-aware policy optimization has received the <b>CVPR 2026 Compute Transparency Champion Award</b>.</li>
+              <li>A paper on a generic operator-level PyTorch model transformation framework has been accepted by <b>ACM SIGKDD 2026</b> (acceptance rate: 19.6%).</li>
+              <li>My Ph.D. student Zhiyao Zhang received the <b>Dr. Burn Lin Travel Grant Award</b> sponsored by <b>OSU ECE</b> endowment to attend <b>ICML 2026</b>. Big Congrats!</li>
+              <li>A paper on multi-objective bilevel optimization with lower-level general convexity has been accepted by <b>ICML 2026</b> (acceptance rate: 26.6%).</li>
+              <li>Our paper on faithful visual language reasoning in tool-aware policy optimization has been selected for an <b>Oral Presentation</b> at <b>CVPR 2026</b> (oral rate: 1%).</li>
+              <li>I am humbled and honored to receive the <b>2026 College of Engineering Lumley Research Award</b> at The Ohio State University.</li>
+              <li>A paper on faithful visual language reasoning in tool-aware policy optimization has been accepted by <b>CVPR 2026</b> (acceptance rate: 25.42%).</li>
+              <li>A paper on a scalable lift-and-project differentiable approach for the max-cut problem has been accepted by <b>AISTATS 2026</b> (acceptance rate: 28%).</li>
+              <li>A paper on multi-objective bilevel learning optimization theory and algorithms has been accepted by <b>AAAI 2026</b> (acceptance rate: 17.6%).</li>
+              <li>My Ph.D. student Zhiyao Zhang received an <b>ACM MobiHoc 2025 Student Travel Grant</b> award sponsored by <b>NSF</b>. Big Congratulations!</li>
+              <li>A paper on communication-efficient federated LoRA finetuning method for LLMs has been accepted by <b>EMNLP 2025</b> (acceptance rate: 22.2%).</li>
+              <li>A paper on multi-agent reinforcement learning for random access network optimization has been accepted by <b>ACM MobiHoc 2025</b> (acceptance rate: 23%).</li>
+              <li>My Ph.D. student Srijith Nair received the <b>Dr. Burn Lin Travel Grant Award</b> sponsored by <b>OSU ECE</b> endowment to attend <b>ICML 2025</b>. Big Congrats!</li>
+              <li>My Ph.D. student Zhiyao Zhang received the <b>Dr. Burn Lin Travel Grant Award</b> sponsored by <b>OSU ECE</b> endowment to attend <b>ICML 2025</b>. Big Congrats!</li>
+              <li>A paper on decentralized multi-agent reinforcement learning with nonlinear function approximation has been accepted by <b>ICML 2025</b> (acceptance rate: 26.9%).</li>
+              <li>A paper on federated split learning via smashed activation gradient estimation has been accepted by <b>ICML 2025</b> (acceptance rate: 26.9%).</li>
+              <li>A paper on quadratic differentiable optimization for the maximum independent set problem has been accepted by <b>ICML 2025</b> (acceptance rate: 26.9%).</li>
+              <li>I received a <b>$500K</b> research grant as the <b>Sole PI</b> from <b>DARPA</b> to work on <b>"complex-structured optimization for non-learning neural networks."</b></li>
+              <li>I am honored to have been invited to serve as an <b>Area Chair</b> of the <b>IEEE INFOCOM 2026</b> Technical Program Committee.</li>
+              <li>A paper on decentralized bilevel optimization without lower-level strong convexity has been accepted by <b>ICLR 2025</b> (acceptance rate: 32%).</li>
+              <li>A paper on Byzantine-robust federated learning over the ring-all-reduce distributed computing architecture is accepted by <b>WWW 2025</b>.</li>
+              <li>A paper on periodic dynamic weighting in the stochastic MGDA method for multi-objective optimization is accepted by <b>AAAI 2025</b> (acceptance rate: 23.4%).</li>
+              <li>I received a one-year research grant of <b>$100K</b> from the <b>Meta Platforms, Inc.</b> as the <b>Sole PI</b> to conduct research on <b>"Taming Sample and Communication Complexities in Distributed Complex-Structured Optimization for Learning."</b></li>
+              <li>A paper on online distributed large model learning workload scheduling in GPU clusters is accepted by <b>IEEE INFOCOM 2025</b> (acceptance rate: 18.6%).</li>
+              <li>My interview titled "<b>Kevin Liu - The Future of Machine Learning with Creative AI and Science</b>" with the <b>Conversations on Applied AI Podcast</b> has been released at <a href="https://www.buzzsprout.com/1101152/episodes/15802480" target="_blank" rel="noopener"><b>this link</b></a> and can also be found on most major media platforms, including <a href="https://podcasts.apple.com/us/podcast/conversations-on-applied-ai/id1515976660?i=1000671405174" target="_blank" rel="noopener"><b>Apple Podcasts</b></a>, <a href="https://www.youtube.com/watch?v=faC_9LC4Tto&t=68s" target="_blank" rel="noopener"><b>YouTube</b></a>, <a href="https://open.spotify.com/episode/0HXc6THNCoLF7GmG5HrUHW?si=tDE-ZIqmQU-xc_8cY04OPg" target="_blank" rel="noopener"><b>Spotify</b></a>, <a href="https://music.amazon.com/podcasts/0c0f1fdb-a9c2-4c68-9e55-62590290ebdf/episodes/bf3efa1c-6a3c-4b6b-b920-cf3e694103c1/conversations-on-applied-ai-kevin-liu---the-future-of-machine-learning-with-creative-ai-and-science" target="_blank" rel="noopener"><b>Amazon Music</b></a>, etc.!</li>
+              <li>A paper on transitivity-encoded graph attention networks for complementary item recommendation is accepted by <b>IEEE ICDM 2024</b> (acceptance rate: 10.9%).</li>
+              <li>Our proposal on communication-computation-efficient <b>Federated Learning</b> has been funded by the <b>Office of Naval Research (ONR)</b>. This <b>$750K</b> ONR grant is in collaboration with my esteemed OSU ECE colleagues Profs. Ness Shroff and Eylem Ekici. I'm honored to serve as the <b>Lead PI</b> on this exciting project!</li>
+              <li>I'm deeply humbled and honored to receive the <b>2024 Defense Advanced Research Projects Agency (DARPA) Young Faculty Award (YFA)</b>!</li>
+              <li>Our joint <b>NeurIPS 2023</b> paper with IBM Research on decentralized bilevel optimization received an Honorable Mention in the <b>IBM Research Pat Goldberg Memorial Best Paper Award</b> competition for the best papers published by IBM Research in 2023. Big congrats to our colleague Songtao Lu and the team!</li>
+              <li>My Ph.D. student Peiwen Qiu received a <b>Best Poster Award</b> from the <b>Midwest Machine Learning Symposium (MMLS) 2024</b>.</li>
+              <li>A paper on understanding the impacts of local updates on federated learning generalization is accepted by <b>ACM MobiHoc 2024</b> (acceptance rate: 24.5%).</li>
+              <li>Our proposal on <b>real-time crowd-sourced geospatial digital twin</b> has been funded by the <b>Cyber-Physical Systems</b> program of the <b>National Science Foundation</b>! This <b>$1.2 million</b> collaborative project involves esteemed colleagues: Prof. Bin Li at Penn State University, Prof. Randall Berry at Northwestern University, and my ECE colleague Prof. Rongjun Qin at The Ohio State University. I'm honored to serve as the <b>Lead PI</b> on this exciting venture!</li>
+              <li>A paper on finite-time sample complexity of actor-critic multi-objective reinforcement learning is accepted by <b>ICML 2024</b> (acceptance rate: 27.5%).</li>
+              <li>A paper on understanding server-assisted federated learning under partial client participation is accepted by <b>ICML 2024</b> (acceptance rate: 27.5%).</li>
+              <li>A paper on Byzantine-resilient decentralized federated learning has been accepted by <b>ACM CCS 2024</b> (a "Security Big Four," acceptance rate: 19%).</li>
+              <li>A paper on queue-based continual prompt tuning method called Q-Tuning for language models in collaboration with Amazon is accepted by <b>NAACL 2024</b>.</li>
+              <li>A paper on achieving O(1/T)-convergent policy evaluation for reinforcement learning with nonlinear function approximation is accepted by <b>ICLR 2024</b> for a <b>spotlight presentation</b> (acceptance rate: 31%, spotlight rate: 5%). Big congrats to my students Zhuqing Liu, Xin Zhang, and collaborator Songtao Lu at IBM!</li>
+              <li>A paper on multi-agent reinforcement learning policy evaluation with local TD-learning updates is accepted by <b>ACM AAMAS 2024</b> (acceptance rate: 25%).</li>
+              <li>A joint paper on federated multi-objective learning (in collaboration with Amazon) has been accepted by <b>NeurIPS 2023</b> (acceptance rate: 26.1%).</li>
+              <li>My Ph.D. student Zhuqing Liu received the <b>Dr. Burn Lin Travel Grant Award</b> sponsored by <b>OSU ECE</b> endowment. Big Congratulations!</li>
+              <li>I received a one-year research grant of <b>$150K</b> from the <b>Cisco Systems, Inc</b> as the <b>Lead PI</b> (co-PI: Prof. Ness Shroff) to conduct research on <b>"Efficient Online Scheduling for Distributed Machine Learning Inference Jobs."</b></li>
+              <li>My Ph.D. student Peiwen Qiu received the <b>IEEE INFOCOM 2023 Student Conference Grant</b> award sponsored by <b>NSF</b>. Big Congratulations!</li>
+              <li>A paper on low sample-communication complexity decentralized constrained min-max learning is accepted by <b>ACM MobiHoc 2023</b> (acceptance rate: 21.9%).</li>
+              <li>A paper on variance-reduced approach for stochastic decentralized constrained bilevel optimization is accepted by <b>ICML 2023</b> (acceptance rate: 27.9%).</li>
+              <li>A paper on solving linear constrained bilevel optimization with a smoothed implicit gradient approach is accepted by <b>ICML 2023</b> (acceptance rate: 27.9%).</li>
+              <li>I am co-chairing the <b>4th Workshop on Machine Learning in Wireless Communications</b> at WiOpt 2023, which will be held in Singapore Aug. 23-27, 2023. The submission deadline is May 8, 2023. Please visit the <a href="https://sites.google.com/view/wmlc/home" target="_blank" rel="noopener"><b>workshop web here</b></a> for more information. Your submission to this workshop is highly appreciated!</li>
+              <li>My Ph.D. student Peiwen Qiu received the <b>IEEE INFOCOM 2023 Student Travel Grant</b> award sponsored by <b>IEEE ComSoc</b>. Big Congratulations!</li>
+              <li>My Ph.D. student <b>Haibo Yang</b> has accepted a faculty position offer from <b>Rochester Institute of Technology</b> (RIT) and will officially start as a tenure-track Assistant Professor in the <b>Golisano College of Computing and Information Sciences</b> at RIT in August 2023! Big Congrats to Haibo! RIT is ranked 62 on csrankings.org, tied with Notre Dame. Haibo is one of my first batch of Ph.D. students, who started at <b>Iowa State University</b> in 2018 and then moved to <b>The Ohio State University</b> with me in 2020. As his Ph.D. advisor in the last five years, I have witnessed Haibo's entire growing process from a junior Ph.D. student, to a blossoming outstanding researcher, and now to a professor-soon-to-be. So proud! <b>#OhioState</b> <b>#IowaState</b> <b>#RochesterIT</b></li>
+              <li>I am invited to serve as an Associate Editor of <b>IEEE Transactions on Cognitive Communications and Networking (TCCN)</b>.</li>
+              <li>A paper on STORM-type momentum-based stochastic decentralized bilevel optimization is accepted by <b>IEEE INFOCOM 2023</b> (acceptance rate: 19.2%).</li>
+              <li>A paper on the PAC non-learnability of federated learning under partial client participation and the mitigation by using server-aided federated learning is accepted by NeurIPS Workshop on Recent Advances and New Challenges in Federated Learning <b>(FL-NeurIPS'22)</b>.</li>
+              <li>My Ph.D. student Haibo Yang received the <b>NeurIPS 2022 Scholar Award</b>, with full travel support to attend NeurIPS 2022 in New Orleans. Congratulations!</li>
+              <li>A paper on Byzantine-resilient asynchronous federated learning algorithm design is accepted by <b>ACM ACSAC 2022</b> (acceptance rate: 24.1%).</li>
+              <li>A paper on a distributed spanning-tree-based fused-lasso regression for learning coefficient heterogeneity over networks is accepted by the highly prestigious <b>Journal of the American Statistical Association (JASA)</b> (JASA is referred to as one of the "Big-4" journals in the areas of statistics).</li>
+              <li>A paper on mitigating fat-tailed noise (with potentially infinite variance) in federated learning is accepted by <b>NeurIPS 2022</b> (acceptance rate: 25.6%).</li>
+              <li>A paper on achieving O(&epsilon;<sup>-2</sup>) communication complexity in federated min-max learning is accepted by <b>NeurIPS 2022</b> (acceptance rate: 25.6%).</li>
+              <li>A paper on stochastic linearized augmented Lagrangian method for decentralized bilevel optimization is accepted by <b>NeurIPS 2022</b> (acceptance rate: 25.6%).</li>
+              <li>I am thrilled to be a <b>Winner of the 2022 AFRL/RI and Griffiss Institute Poster Competition</b> among the summer visiting faculty in 2022.</li>
+              <li>A paper on scheduling ring-all-reduce learning jobs with communication contention is accepted by <b>ACM MobiHoc 2022</b> (acceptance rate: 19.8%).</li>
+              <li>A paper on decentralized bilevel optimization with low sample and communication complexities is accepted by <b>ACM MobiHoc 2022</b> (acceptance rate: 19.8%).</li>
+              <li>A paper on semi-asynchronous optimization algorithm for distributed learning is accepted by <b>ACM MobiHoc 2022</b> (acceptance rate: 19.8%).</li>
+              <li>A paper on achieving linear convergence speedup for fully decentralized federated learning is accepted by <b>ACM MobiHoc 2022</b> (acceptance rate: 19.8%).</li>
+              <li>A paper titled "Anarchic Federated Learning" has been accepted by <b>ICML 2022</b> as a <b>long oral presentation</b> (long oral presentation rate: 2%, acceptance rate: 21.9%). Big congrats to my students Haibo Yang, Xin Zhang, as well as my PostDoc Prashant Khanduri! Great Job!</li>
+              <li>A joint paper with Amazon on multi-objective optimization (MOO) and multi-task learning (MTL) is accepted by <b>ICML 2022</b> (acceptance rate: 21.9%).</li>
+              <li>I received a one-year research grant of $200K from <b>Cisco Systems, Inc.</b> as the Lead PI (Prof. Ness Shroff being the co-PI). The project is titled <b>"Low-Latency Computing Resource Scheduling and Allocation Algorithms for Distributed Deep Learning: A Spatial-Temporal Approach."</b></li>
+              <li>An invited paper on channel-quality-adaptive over-the-air federated learning over wireless networks has been accepted by <b>IEEE SPAWC 2022</b>.</li>
+              <li>A paper on over-the-air federated learning with joint adaptive computation and power control under noisy wireless channels is accepted by <b>IEEE ISIT 2022</b>.</li>
+              <li>My Ph.D. student Menglu Yu received the <b>IEEE INFOCOM 2022 Student Conference Grant</b> award sponsored by <b>IEEE ComSoc</b>. Big Congratulations!</li>
+              <li>A paper on improving multiple fairness performances for recommender systems with optimized antidote data is accepted by <b>ACM SACMAT 2022</b>.</li>
+              <li>A paper on finite-time convergence and sample complexity of multi-agent actor-critic reinforcement learning with average reward is accepted by <b>ICLR 2022</b> for a <b>spotlight presentation</b> (acceptance rate: 32%, spotlight rate: 5%). Big congrats to my PostDoc Hairi and my collaborator Songtao Lu at IBM!</li>
+              <li>A paper on incentivized bandit learning with delayed feedback and self-reinforcing user preferences is accepted by <b>ICLR 2022</b> (acceptance rate: 32%).</li>
+              <li>A paper on a multi-agent kernel approximation approach for overparameterized decentralized learning is accepted by <b>ICLR 2022</b> (acceptance rate: 32%).</li>
+              <li>A paper on a global convergence theory for deep ReLU implicit networks via overparameterization is accepted by <b>ICLR 2022</b> (acceptance rate: 32%).</li>
+              <li>A paper on online scheduling and resource allocation for ring-all-reduce based learning jobs is accepted by <b>IEEE INFOCOM 2022</b> (acceptance rate: 19.9%).</li>
+              <li>I'm thrilled and honored to join <b>Amazon.com</b> as an <b>Amazon Visiting Academics (AVA)</b> starting November 2021, while continuing to conduct research and teach at <b>The Ohio State University</b>! I'm so looking forward to applying my theoretical expertise to tackle complex real-world technical challenges in machine learning (ML) and artificial intelligence (AI), by splitting my time between academia and the industry! <b>#GoAmazon</b>! <b>#GoBucks</b>!</li>
+              <li>A paper on sample complexity bounds for active ranking from noisy multi-wise comparisons is accepted by <b>NeurIPS 2021</b> (acceptance rate: 26%).</li>
+              <li>A paper on sample- and communication-efficient policy evaluation for multi-agent reinforcement learning is accepted by <b>NeurIPS 2021</b> (acceptance rate: 26%).</li>
+              <li>A paper on achieving near-optimal sample and communication complexities in federated learning is accepted by <b>NeurIPS 2021</b> (acceptance rate: 26%).</li>
+              <li>The <b>NSF AI Institute for Future Edge Networks and Distributed Intelligence (<a href="https://aiedge.osu.edu" target="_blank" rel="noopener">AI-EDGE</a>)</b> is officially announced! A <b>$20M</b> AI Institute funded by <b>NSF</b>, AI-EDGE is led by <b>OSU</b> (PI: Prof. Ness Shroff), with <b>29 investigators</b> coming from <b>11 leading research universities</b> (OSU, Michigan, Wisconsin, Univ. Washington, UIC, UIUC, Purdue, Texas Austin, CMU, UMASS, and Northeastern) and <b>10 collaborators</b> coming from <b>three DOD Research Labs</b> (ARL, AFRL, and NRL) and <b>four leading companies</b> in the industry (Microsoft, IBM, Qualcomm, and AT&T). Big Congrats to the <b><a href="https://live-aiedge-program.pantheonsite.io/organization-and-key-personnel" target="_blank" rel="noopener">AI-EDGE Team</a></b>!</li>
+              <li>A paper on primal-dual online computing resource allocation and scheduling algorithm design for distributed deep learning system control and optimization has been accepted for publication in <b>IEEE Transactions on Network Science and Engineering</b> in 2021.</li>
+              <li>A paper on the compressed FedAvg algorithm for federated learning with non-i.i.d. datasets has been accepted by <b>IEEE/IFIP WiOpt 2021</b>.</li>
+              <li>A paper on achieving optimal sample and communication complexities for non-i.i.d. Federated Learning is accepted by ICML Workshop on Federated Learning for User Privacy and Data Confidentiality <b>(FL-ICML'21)</b>.</li>
+              <li>A paper on multi-round submodular maximization for Federated Learning with fair worker selection is accepted by <b>IEEE MASS 2021</b> (acceptance rate: 28.3%).</li>
+              <li>Our <b>ARA Wireless Living Lab</b> is officially announced [<a href="https://advancedwireless.org/the-platforms-for-advanced-wireless-research-pawr-program-announces-fourth-wireless-research-platform-in-central-iowa-to-drive-innovation-in-rural-broadband-connectivity/" target="_blank" rel="noopener">news link</a>] [<a href="https://arawireless.org/" target="_blank" rel="noopener">project web</a>]. An <b>$8 million</b> project with researchers coming from <b>ISU</b>, <b>OSU</b>, and <b>UCI</b>, ARA is one of the four <b>NSF-funded</b> Platforms for Advanced Wireless Research (<b>PAWR</b>) located in Central Iowa. Big Congrats to the <b><a href="https://arawireless.org/ara-project-team/" target="_blank" rel="noopener">ARA Project Team</a></b>!</li>
+              <li>A paper on incentivized multi-armed bandit learning policy designs with self-reinforcing user preferences is accepted by <b>ICML 2021</b> (acceptance rate: 20.4%).</li>
+              <li>A paper on taming sample, communication, and memory complexities in decentralized learning is accepted by <b>ACM MobiHoc 2021</b> (acceptance rate: 20.1%).</li>
+              <li>An invited paper on logarithmic regrets for multi-armed bandit problems with knapsack-type constraints has been accepted by <b>IEEE CISS 2021</b>.</li>
+              <li>My Ph.D. student Minghong Fang received the <b>ACM TheWebConf (WWW) 2021 Student Scholarship Award</b>. My Ph.D. student Menglu Yu received the <b>IEEE INFOCOM 2021 NSF Student Conference Award</b>. Big Congratulations!</li>
+              <li>A paper on achieving <b>information freshness</b> with selfish and rational users in <b>mobile crowd-learning</b> is accepted by the Special Issue of Age of Information in Real-Time Systems and Networks, <b>IEEE Journal on Selected Areas in Communications (JSAC)</b>, to appear in the second quarter of 2021.</li>
+              <li>A paper on a randomized Bregman coordinate descent approach for non-Lipschitz composite optimization problems is accepted by <b>IEEE ICASSP 2021</b>.</li>
+              <li>A paper on data poisoning attacks to and defenses for aggregation algorithms in crowd-sensing is accepted by <b>ACM WWW 2021</b> (acceptance rate: 20.6%).</li>
+              <li>A paper on linear convergence speedup for non-i.i.d. Federated Learning with partial worker participation is accepted by <b>ICLR 2021</b> (acceptance rate: 28.6%).</li>
+              <li>A paper on server-side trust bootstrapping for Byzantine-robust Federated Learning is accepted by <b>NDSS 2021</b> (a "Security Big Four," acceptance rate: 16%).</li>
+              <li>A paper on resource scheduling for training deep neural network computing jobs has been accepted by <b>IEEE INFOCOM 2021</b> (acceptance rate: 19.9%).</li>
+              <li>A paper on decentralized learning with low sample and communication complexities has been accepted by <b>IEEE INFOCOM 2021</b> (acceptance rate: 19.9%).</li>
+              <li>A joint paper with colleagues at Purdue (Peizhong Ju and Prof. Xiaojun Lin) on investigating the <b>double-descent phenomenon</b> of basis pursuit has been accepted by <b>NeurIPS 2020</b> for a <b>spotlight presentation</b> (acceptance rate: 20%, spotlight presentations: 3%). Big congrats to the team!</li>
+              <li>After working in the <b>CS</b> department at <b>Iowa State University</b> for three years, I will join the <b>ECE</b> department at <b>The Ohio State University</b> in <b>Fall 2020</b>!</li>
+              <li>A paper on the convergence of distributed asynchronous stochastic gradient descent with unbounded delay has been accepted by <b>IEEE CDC 2020</b>.</li>
+              <li>I'm invited to be a panelist and give a talk in the <b><a href="https://sites.google.com/tamu.edu/nsf-nets-resource-site/career-webinar" target="_blank" rel="noopener">NSF NeTS CAREER Webinar for Aspiring PIs</a></b> on 6/17/20 <a href="https://www.dropbox.com/s/nopukd0c4zg0g31/NeTS_CAREER_Wrkshp%2720_Liu_Slides.pdf?dl=0" target="_blank" rel="noopener">[Slides]</a> <a href="https://www.youtube.com/watch?v=B-2dOysNFqI&t=5275s" target="_blank" rel="noopener">[Video]</a>. Delighted to serve our community!</li>
+              <li>I'm invited to serve as a TPC member for <b><a href="http://sigmetrics.org/sigmetrics2021/" target="_blank" rel="noopener">ACM SIGMETRICS 2021</a></b>, which will be held in Beijing, China, June 14--18, 2021.</li>
+              <li>A paper on low-sample-complexity top-k selection from noisy pairwise comparisons has been accepted by <b>ICML 2020</b> (acceptance rate: 21.8%).</li>
+              <li>I received the <b>2020 LAS Award for Early Achievement in Research</b> from the College of Liberal Arts and Sciences at ISU! See LAS announcement <a href="https://news.las.iastate.edu/2020/06/03/faculty-and-staff-honored-with-2020-las-awards/" target="_blank" rel="noopener"><b>here</b></a>.</li>
+              <li>My students Minghong Fang and Menglu Yu received the <b>Research Excellence Award</b> and <b>Teaching Excellence Award</b>, respectively, at ISU in 2020!</li>
+              <li>An invited paper on adaptive multi-hierarchical signSGD for communication-efficient distributed optimization has been accepted by <b>IEEE SPAWC 2020</b>.</li>
+              <li>A paper on efficient trip-vehicle matching and routes optimization for Uber-like ride-sharing is accepted by <b>ACM e-Energy 2020</b> (acceptance rate: 23%).</li>
+              <li>A paper on privacy-preserving and communication-efficient distributed SGD for edge learning is accepted by <b>ACM MobiHoc 2020</b> (acceptance rate: 15%).</li>
+              <li>I received the prestigious <b>NSF CAREER Award</b> (<em>first attempt</em>) in 2020! The awarded project is titled "<b><a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1943226&HistoricalAwards=false" target="_blank" rel="noopener">CAREER: Computing-Aware Network Optimization for Efficient Distributed Data Analytics at the Wireless Edge</a></b>," which spans a five-year period from 10/2020 to 09/2025 with $524,125 in total.</li>
+              <li>A paper on predictive arrival reshaping policy for crowd-learning data freshness has been accepted by <b>IEEE INFOCOM'20 Age of Information Workshop</b>.</li>
+              <li>I received the prestigious <b>Google Faculty Research Award</b> in 2020! See the Google news announcement <a href="https://docs.google.com/document/d/e/2PACX-1vRYagtwX_MRJUCc_3KMWhmBNnKz2ZHh0vM63B7OxLWWEfghrWjySPoVYtYum9BBVnrlx-wLi0q6KGAP/pub" target="_blank" rel="noopener"><b>here</b></a> and the ISU CS department news <a href="https://www.cs.iastate.edu/announcements/dr-jia-kevin-liu-receives-google-faculty-research-award-1" target="_blank" rel="noopener"><b>here</b></a>.</li>
+              <li>A paper on distributed traffic consolidation for data center network energy optimization has been accepted by <b>IEEE Transactions on Cloud Computing</b>.</li>
+              <li>A paper on resource allocation and scheduling for mining energy cost minimization in distributed Blockchain networks has been accepted by <b>IEEE ICC 2020</b>.</li>
+              <li>A paper on influence-function-based data poisoning attacks to recommender systems has been accepted by <b>ACM WWW 2020</b> (acceptance rate: 25%).</li>
+              <li>A paper on network-distributed learning with differential-coded compressors has been accepted by <b>IEEE INFOCOM 2020</b> (acceptance rate: 19.8%).</li>
+              <li>A paper on exploring best arm with top reward-cost ratio in multi-armed bandits has been accepted by <b>IEEE INFOCOM 2020</b> (acceptance rate: 19.8%).</li>
+              <li>My undergrad advisee John Wahlig received the <b>2020 Dean's High Impact Award for Undergraduate Research from College of Liberal Arts and Sciences</b>.</li>
+              <li>Our INFOCOM'19 paper on fairness-constrained MAB has been fast-tracked to and accepted by <b>IEEE Transactions on Network Science and Engineering</b>.</li>
+              <li>I'm invited to serve the technical program committee of the 3rd <b>Age of Information Workshop</b> in conjunction with <b>IEEE INFOCOM 2020</b>.</li>
+              <li>A paper on low-overhead uplink scheduling algorithm for wireless Internet-of-Things (IoT) networks is accepted by <b>IEEE Transactions on Mobile Computing</b>.</li>
+              <li>A paper on Hybrid-Beamforming-Based Millimeter Wave Cellular Networks Optimization has been accepted by the Special Issue on Millimeter-Wave (mmWave) Networking, <b>IEEE Journal on Selected Areas in Communications (JSAC)</b>, to appear in December, 2019.</li>
+              <li>A paper on sample complexity bounds for recovering exact ranking from noisy comparisons has been accepted by <b>NeurIPS 2019</b> (acceptance rate: 21%).</li>
+              <li>A paper on Byzantine-resilient stochastic gradient descent for distributed learning has been accepted by <b>IEEE CDC 2019</b>.</li>
+              <li>I'll serve as a submission co-chair of <b><a href="https://www.sigmobile.org/mobihoc/2020/" target="_blank" rel="noopener">ACM MobiHoc 2020</a></b>. Please consider submitting your best work to MobiHoc 2020.</li>
+              <li>My joint work with Fengjiao Li and Prof. Bo Ji at Temple University received the <b>Best Paper Award</b> at <b>IEEE INFOCOM 2019</b> (acceptance rate: 288/1464 = 19.6%)! Big congrats to Fengjiao and Bo! This is my <b>4th Best Paper or Best Paper Runner-up Awards from IEEE INFOCOM in 8 years!</b> This work also received an <b>INFOCOM Best-in-Session Presentation Award</b>. Kudos to Fengjiao's fantastic delivery of the presentation!</li>
+              <li>A paper on Age-of-Information (AoI) in Crowd-Learning/Crowd-Sensing has been accepted by <b>IEEE/IFIP WiOpt 2019</b>.</li>
+              <li>A paper on PAC pure exploration of stochastic bandits has been accepted by <b>AISTATS 2019</b> (acceptance rate: 32.4%).</li>
+              <li>A paper on compression-based distributed consensus optimization has been accepted by <b>IEEE INFOCOM 2019</b> (acceptance rate: 19.7%).</li>
+              <li>A paper on combinatorial fairness-constrained sleeping bandits has been accepted by <b>IEEE INFOCOM 2019</b> (acceptance rate: 19.7%).</li>
+              <li>My Ph.D. student Xin Zhang received the <b>Holly C. and E. Beth Fryer Award in Statistics</b> (the award for top Ph.D. student) in the Department of Statistics at Iowa State University in 2018!</li>
+              <li>A paper on poisoning attacks to graph-based recommender systems is accepted for publication in <b>ACM ACSAC 2018</b> (acceptance rate: 20.1%).</li>
+              <li>I received a 3-year research grant of $500K from AFRL (FA8750-18-1-0107) as the <b>Sole PI</b> to investigate <b>Tactical Autonomous Swarms Optimization</b>.</li>
+              <li>Our <b>ACM e-Energy'18</b> paper has been fast-tracked to <b>IEEE Transactions on Sustainable Computing</b>.</li>
+              <li>I'm invited to give a tutorial at the <a href="http://mbds.cs.iastate.edu/2018/program-foundations.shtml" target="_blank" rel="noopener"><b>2018 Midwest Big Data Summer School</b></a> held at Iowa State University.</li>
+              <li>I'm invited to hold seminars at three universities in China in May 2018: University of Science and Technologies of China, Sun Yat-Sen University (a.k.a. Zhongshan University), and South China University of Technology.</li>
+              <li>I'm invited as a <b>joint keynote speaker</b> for the 2018 International Workshop on Edge and Fog Computing for Intelligent IoT Applications (<a href="http://www.wi-opt.org/efc_iot.html" target="_blank" rel="noopener"><b>EFC-IoT</b></a>) and the 2018 International Workshop on Resource Allocation, Cooperation and Competition in Wireless Networks (<a href="http://www.wi-opt.org/rawnet.html" target="_blank" rel="noopener"><b>RAWNET</b></a>), both held in Shanghai, China.</li>
+              <li>A paper on green building HVAC pre-cooling control and optimization has been accepted for publication in <b>ACM e-Energy'18</b> (acceptance rate: 21.9%).</li>
+              <li>A paper on large-scale IoT uplink scheduling optimization has been accepted for publication in <b>WiOpt'18</b>.</li>
+              <li>My paper on stochastic network optimization with high-order momentum information has been accepted for publication in <b>IEEE INFOCOM 2018</b> (acceptance rate: 309/1606=19.2%).</li>
+              <li>I received a 3-year (08/2017-07/2020) research grant of $549,999 from NSF as the <b>Lead PI</b> (Co-PI: John Volakis). The project is titled "<a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1731649&amp;HistoricalAwards=false" target="_blank" rel="noopener"><b>SpecEES: Toward Spectral and Energy Efficient Cross-Layer Designs for Millimeter-Wave-Based Massive MIMO Networks</b></a>."</li>
+              <li>I joined the Department of Computer Science at Iowa State University as a Tenure-Track Assistant Professor in Fall 2017!</li>
+              <li>My paper on Massive MIMO has been accepted for publication in <b>IEEE JSAC'17</b> Special Issue on Deployment Issues and Performance Challenges for 5G.</li>
+              <li>My paper on Hybrid-Beamforming-Based Millimeter-Wave Cellular Network Optimization has been accepted for publication in <b>WiOpt'17</b>.</li>
+              <li>I received a 3-year (02/2017-02/2020) 6.2 research grant (N00014-17-1-2417) from ONR as a <b>Co-PI</b>. The project is titled "<b>Achieving Low Delay and Highly Adaptive Tactical Networking with Multi-Path TCP</b>."</li>
+              <li>I received a 3-year (07/2016-06/2019) research grant of $317,896 from NSF as the <b>Sole PI</b>. The project is titled "<a href="http://www.nsf.gov/awardsearch/showAward?AWD_ID=1618318&amp;HistoricalAwards=false" target="_blank" rel="noopener"><b>CIF: Small: Taming Convergence and Delay in Stochastic Network Optimization with Hessian Information</b></a>."</li>
+              <li>My paper titled "<a href="http://infocom2016.ieee-infocom.org/content/best-paper-award-runner" target="_blank" rel="noopener"><b>Heavy-Ball: A New Approach to Tame Delay and Convergence in Wireless Network Optimization</b></a>" receives the <b>Best Paper Award</b> at <b>IEEE INFOCOM 2016</b> (acceptance rate: 300/1644=18%)! I have received <b>3 Best Paper or Best paper Runner-up Awards from IEEE INFOCOM in 5 years!</b></li>
+              <li>My paper on Massive MIMO networking has been accepted for publication in <b>ACM MobiHoc 2016</b> (acceptance rate: 35/187=18%).</li>
+              <li>I recently received an <b>AFOSR Summer Faculty Fellowship Program (SFFP) 2016 Award</b>. I will be working at Air Force Research Lab - Information Directorate (AFRL/RI) again in the summer of 2016.</li>
+              <li>One of my recent papers has been accepted for publication in <b>ACM SIGMETRICS 2016</b> (acceptance rate: 28/208=13%).</li>
+              <li>One of my recent papers has been accepted for publication in <b>IEEE INFOCOM 2016</b> (acceptance rate: 300/1644=18%).</li>
+              <li>I recently won a 3-year (10/2015-09/2018) research grant of $300,000 from NSF as the <b>Sole PI</b>. The project is titled "<a href="http://www.nsf.gov/awardsearch/showAward?AWD_ID=1527078&amp;HistoricalAwards=false" target="_blank" rel="noopener"><b>Toward Optimal, Efficient, and Holistic Networking Design for Massive MIMO Wireless Networks</b></a>."</li>
+              <li>I received the <b>Visiting Faculty Research Program (VFRP) Award</b> from the Air Force Research Lab (AFRL) Information Institute. I will be working at AFRL in the summer of 2015.</li>
+              <li>My paper titled "Joint Congestion Control and Routing Optimization: An Efficient Second-Order Distributed Approach" has recently been accepted for publication in <b>IEEE/ACM Transactions on Networking</b>.</li>
+              <li>My paper titled "Distributed Cross-Layer Optimization in Wireless Networks: A Second-Order Approach" received <b>INFOCOM 2013 Best Paper Runner-up Award</b>. This is my <b>second INFOCOM Best Paper Runner-up Award in three years!</b></li>
+              <li>Two of my papers have been accepted for publication in IEEE INFOCOM 2012.</li>
+              <li>Two of my papers have been accepted for publication in IEEE JSAC and will appear in 2012.</li>
+              <li>One of my papers won the only <b>Best Paper Award Runner-up</b> at IEEE INFOCOM 2011.</li>
+              <li>Two of my papers have been accepted for publication in IEEE INFOCOM 2010.</li>
+              <li>I recently received the <b>2008 China National Award for Outstanding Ph.D. Students Abroad</b></li>
+              <li>One of my papers won <b>Best Paper Award</b> at IEEE ICC 2008.</li>
+            </ul>
+            <div class="news-more" id="newsMore" hidden>
+              <button type="button" class="button button-secondary" id="newsToggle" aria-controls="datalist"></button>
+            </div>
+            <script>
+              (function () {
+                var list = document.getElementById('datalist');
+                var more = document.getElementById('newsMore');
+                var btn = document.getElementById('newsToggle');
+                var items = list.children;
+                var SHORT = 20, STEP = 10, shown = SHORT;
+                function render() {
+                  for (var i = 0; i < items.length; i++) {
+                    items[i].classList.toggle('is-hidden', i >= shown);
+                  }
+                  var left = items.length - shown;
+                  if (left > 0) {
+                    btn.textContent = 'Show the next ' + Math.min(STEP, left) + ' news items';
+                    btn.setAttribute('aria-expanded', 'false');
+                  } else {
+                    btn.textContent = 'Back to the short news list';
+                    btn.setAttribute('aria-expanded', 'true');
+                  }
+                }
+                if (items.length > SHORT) {
+                  more.hidden = false;
+                  btn.addEventListener('click', function () {
+                    if (shown >= items.length) {
+                      shown = SHORT;
+                      render();
+                      document.getElementById('news').scrollIntoView();
+                    } else {
+                      shown = Math.min(shown + STEP, items.length);
+                      render();
+                    }
+                  });
+                }
+                render();
+              })();
+            </script>
+          </div>
+        </section>
+
+      </div>
+      <!-- end #sidebar -->
+    </main>
+    <!-- end #page -->
+  </div>
+
+  <footer id="footer">
+    <div class="footer-main">
+      <div class="footer-title">
+        <p>Jia (Kevin) Liu</p>
+        <p>Associate Professor of Electrical and Computer Engineering<span>&middot;</span>The Ohio State University<span>&middot;</span><a href="mailto:liu@ece.osu.edu">liu@ece.osu.edu</a></p>
       </div>
     </div>
-    <!-- end #page -->
-    <div id="footer">
-      <center>
-        <table>
-          <tbody>
-            <tr>
-              <td valign="middle">
-                  Copyright © 2004-<script>var today = new Date(); year = today.getFullYear(); document.write(year);</script>
-                <a href="mailto:liu@ece.osu.edu">Jia (Kevin) Liu</a>. All
-                rights reserved.<br />
-                Updated: <script> var date = document.lastModified; document.write(date.substr(0,10));</script>. Design adapted from <a href="http://templated.co"
-                  rel="nofollow">TEMPLATED</a>.
-              </td>
-              <!----------Place for the extreme tracking icon----------------------------------------->
-              <!----------Old Image Link: http://t1.extreme-dm.com/i.gif-------------->
-              <td>
-                <!-- extreme_jialiu_b782d478f8f780aa94e2c07df5dd86c1 -->
-                  <script src="//t1.extreme-dm.com/f.js" id="eXF-jialiu-1" async defer></script>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </center>
+    <div class="footer-meta">
+      <p>Copyright &copy; 2004&ndash;<span class="js-year">2026</span> Jia (Kevin) Liu. All rights reserved. Updated: <span class="js-updated"></span>.</p>
+      <p>Design adapted from <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.
+        <!-- extreme_jialiu_b782d478f8f780aa94e2c07df5dd86c1 -->
+        <script src="//t1.extreme-dm.com/f.js" id="eXF-jialiu-1" async defer></script></p>
     </div>
-    <!-- end #footer -->
+  </footer>
+  <!-- end #footer -->
 
-<script>
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+  <button type="button" id="myBtn" title="Go to top">Back to Top</button>
 
-var menubar = document.getElementById("menu");
-var stickyPos = menubar.offsetTop;
-
-function scrollFunction() {
-    if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
-        document.getElementById("myBtn").style.display = "block";
-    } else {
-        document.getElementById("myBtn").style.display = "none";
-    }
-        
-  if (window.pageYOffset >= stickyPos) {
-    menubar.classList.add("sticky_menu");
-    document.body.style.backgroundImage = "url('images/img03.png')";
-    document.body.style.backgroundAttachment = "fixed";
-  } else {
-    menubar.classList.remove("sticky_menu");
-    document.body.style.backgroundImage = "url('images/img01.jpg')";
-    document.body.style.backgroundAttachment = "initial";
-  }
-    
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0; // For Chrome, Safari and Opera 
-    document.documentElement.scrollTop = 0; // For IE and Firefox
-}
-</script> 
-
-    
+  <script>
+    var topBtn = document.getElementById('myBtn');
+    window.addEventListener('scroll', function () {
+      topBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+    }, { passive: true });
+    topBtn.addEventListener('click', function () {
+      window.scrollTo(0, 0);
+    });
+  </script>
 </body>
 </html>

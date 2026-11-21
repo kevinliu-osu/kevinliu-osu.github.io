@@ -1,561 +1,1795 @@
-
 /*
-Design by TEMPLATED
-http://templated.co
-Released for free under the Creative Commons Attribution License
+  Shared stylesheet for every page on kevinliu-osu.github.io
+  2026 refresh: white editorial look (serif headings, scarlet accents, light rules),
+  in the style of nessfest.github.io. Page structure/HTML skeleton originally
+  adapted from TEMPLATED (http://templated.co, CC Attribution License).
+
+  Quick tweaks:
+    - Colors, fonts and widths live in the :root block below.
+    - In the homepage News list, wrap highlights in <b>...</b>; they turn
+      scarlet automatically (no <font color> tags needed).
+    - Fonts: Source Serif 4 and IBM Plex Sans (SIL Open Font License), in /fonts.
 */
 
-/*@media screen and (max-device-width: 480px){
-  body{
-    -webkit-text-size-adjust: none;
-  }
-}*/
+/* ---------- Fonts ---------- */
+
+@font-face {
+	font-family: "Source Serif 4";
+	src: url("fonts/source-serif-4-400.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Source Serif 4";
+	src: url("fonts/source-serif-4-600.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Source Serif 4";
+	src: url("fonts/source-serif-4-400-italic.woff2") format("woff2");
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+}
+@font-face {
+	font-family: "IBM Plex Sans";
+	src: url("fonts/ibm-plex-sans-400.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+@font-face {
+	font-family: "IBM Plex Sans";
+	src: url("fonts/ibm-plex-sans-500.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+}
+@font-face {
+	font-family: "IBM Plex Sans";
+	src: url("fonts/ibm-plex-sans-600.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+}
+
+/* ---------- Tokens ---------- */
+
+:root {
+	--paper: #ffffff;
+	--ink: #171717;
+	--ink-soft: #3f3f3f;
+	--muted: #666666;
+	--muted-light: #757575;
+	--rule: #cfd2d4;
+	--rule-light: #e5e7e8;
+	--scarlet: #bb0000;        /* Ohio State scarlet */
+	--scarlet-dark: #8f0000;
+	--tint: #faf6f6;
+	--page-bg: #F7F7F7;        /* page background (original) */
+	--band: #E8E8E8;           /* light grey band behind the header (original) */
+	--band-dark: #C6C6C6;      /* darker grey band behind the menu (original) */
+	--menu-bg: #000000;        /* black menu bar (original) */
+	--footer-bg: #ECECEC;      /* footer grey (original) */
+	--serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+	--sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+	--max: 1040px;             /* content width */
+	--gutter: 36px;            /* side margin */
+	--nav-h: 36px;             /* sticky menu height (original) */
+	--menu-pad-stuck: 14px;    /* stuck menu bar: half the space between items */
+	--head-gap: 24px;          /* homepage Openings/News headings: space to the rules above and below */
+	--card-gray: #F0F0F0;      /* My Group: background of each person's card */
+	--card-line: 1.45;         /* My Group: line spacing inside each card */
+	--card-gap: 4px;           /* My Group: space after the name and between paragraphs, same in every card */
+	--card-name-gap: 16px;     /* My Group: space after the name in cards with room to spare (site.js) */
+	--pub-trim: 12px;         /* Publications: how much closer together the entries are than one blank line + padding */
+	--title-gap: 30px;         /* main pages: space above the page title (matches the space below it to the line) */
+	--wrap-gap: 20px;          /* space between a picture and the text that wraps around it */
+	--card-pad-top: 34px;      /* white panel: space above the content */
+	--card-pad-x: clamp(20px, 3.2vw, 34px);   /* white panel: space at the sides */
+}
+
+/* ---------- Base ---------- */
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: calc(var(--nav-h) + 20px);
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
 
 body {
 	margin: 0;
 	padding: 0;
-	background: #F7F7F7 url(images/img01.png) repeat-x left top;
-	font-family: Arial, Helvetica, sans-serif;
+	background: var(--page-bg);
+	background-image: none !important; /* older pages swap background images on scroll */
+	color: var(--ink-soft);
+	font-family: var(--sans);
 	font-size: 12px;
-	color: #787878;
-    -webkit-text-size-adjust: none;
+	line-height: 1.7;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
 }
 
-
-table.SchTable
-{
-    border: 2px solid black;
-    border-collapse: collapse;
-}
-table.SchTable tr
-{
-    border: 1px solid black;
-}
-table.SchTable td
-{
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-table.SchTable th
-{
-    border: 1px solid black;
-    border-collapse: collapse;
+body.menu-open {
+	overflow: hidden;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
 	margin: 0;
 	padding: 0;
-	font-weight: normal;
-	color: #000000;
+	font-family: var(--serif);
+	font-weight: 400;
+	color: var(--ink);
+	letter-spacing: -0.02em;
+	line-height: 1.2;
 }
 
-h1 {
-	font-size: 2em;
-}
-
-h2 {
-	font-size: 2.4em;
-}
-
-h3 {
-	font-size: 1.6em;
-}
+h1 { font-size: 24px; }
+h2 { font-size: 22px; }
+h3 { font-size: 19px; }
 
 p, ul, ol {
 	margin-top: 0;
-	line-height: 160%;
-}
-
-ul, ol {
+	line-height: 1.75;
 }
 
 a {
+	color: var(--scarlet);
 	text-decoration: none;
-	color: #BC1B32;
+	text-underline-offset: 0.22em;
+	text-decoration-thickness: 1px;
+	transition: color 180ms ease;
 }
 
 a:hover {
+	color: var(--scarlet-dark);
+	text-decoration: underline;
 }
 
-#wrapper {
-	width: 960px;
-	margin: 0 auto;
-	padding: 0;
+b, strong {
+	font-weight: 600;
+	color: var(--ink);
 }
 
+:focus-visible {
+	outline: 2px solid var(--scarlet);
+	outline-offset: 3px;
+}
 
-hr.style1{
-	border-top: 1px solid #8c8b8b;
+::selection {
+	background: rgba(187, 0, 0, 0.16);
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+hr,
+hr.style1,
+hr.style2 {
+	height: 0;
+	margin: 18px 0;
+	border: 0;
+	border-top: 1px solid var(--rule);
+	background: none;
+	color: transparent;
 }
 
 hr.style2 {
-	border-top: 1px dashed #8c8b8b;
+	border-top-color: var(--rule-light);
 }
 
-/* Header */
+table.SchTable {
+	border: 1px solid var(--rule);
+	border-collapse: collapse;
+}
+table.SchTable tr,
+table.SchTable td,
+table.SchTable th {
+	border: 1px solid var(--rule);
+	border-collapse: collapse;
+}
+table.SchTable td,
+table.SchTable th {
+	padding: 6px 10px;
+}
+table.SchTable th {
+	background: var(--footer-bg);
+	color: var(--ink);
+	font-weight: 600;
+}
+
+/* ---------- Page frame ---------- */
+
+#wrapper {
+	max-width: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* ---------- Masthead (name, title, OSU logo) ---------- */
 
 #header {
-	width: 940px;
-	height: 102px;
+	width: min(calc(100% - 2 * var(--gutter)), var(--max));
 	margin: 0 auto;
+	padding: 38px 0 30px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 32px;
+	background: var(--band);
+	/* extend the light grey band to the full window width */
+	box-shadow: 0 0 0 100vmax var(--band);
+	clip-path: inset(0 -100vmax);
 }
-
-.sticky_header {
-    position: sticky;
-    top: 0;
-    background: #F7F7F7 url(images/img01.jpg) repeat-x left top;
-    z-index = 10: 
-}
-
-
-/* Logo */
 
 #logo {
-	float: left;
+	position: relative;
 	margin: 0;
-	padding-top: 30px;
-	color: #000000;
+	padding: 2px 0 2px clamp(22px, 3vw, 34px);
+	color: var(--ink);
 }
 
-#logo h1, #logo p {
+/* thin scarlet rule, as on nessfest.github.io */
+#logo::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 1px;
+	background: var(--scarlet);
+	transform-origin: top;
+}
+
+#logo h1,
+#logo p {
+	float: none;
 	margin: 0;
 	padding: 0;
 }
 
 #logo h1 {
-	float: left;
-	letter-spacing: -1px;
-/*	text-transform: lowercase;*/
-	font-size: 3.2em;
+	font-family: var(--serif);
+	font-size: clamp(30px, 4vw, 38px);
+	font-weight: 400;
+	letter-spacing: -0.025em;
+	line-height: 1.1;
+	color: var(--ink);
 }
 
 #logo p {
-	float: left;
-	margin: 0;
-	padding: 22px 0 0 10px;
-	font: normal 14px Georgia, "Times New Roman", Times, serif;
-	/* font-style: italic; */
-	/* margin-top: -16px; */
-} 
+	margin-top: 10px;
+	font-family: var(--serif);
+	font-size: 14px;
+	font-style: italic;
+	line-height: 1.45;
+	color: #4a4a4a;
+}
 
 #logo a {
-	border: none;
-	background: none;
+	color: inherit;
 	text-decoration: none;
-	color: #000000;
 }
 
 #logo2 {
-	float: right;
-	margin: 0;
-	padding-top: 17px;
-	color: #000000;
-}
-
-/* Search */
-
-#search {
-	float: right;
-	width: 280px;
-	height: 60px;
-	padding: 20px 0px 0px 0px;
-	background: #E2E2E2;
-	border-bottom: 4px solid #FFFFFF;
-}
-
-#search form {
-	height: 41px;
-	margin: 0;
-	padding: 10px 0 0 20px;
-}
-
-#search fieldset {
+	flex: none;
+	float: none;
 	margin: 0;
 	padding: 0;
-	border: none;
+	line-height: 0;
 }
 
-#search-text {
-	width: 170px;
-	padding: 6px 5px 2px 5px;
-	border: 1px solid #DEDEDE;
-	background: #FFFFFF;
-	text-transform: lowercase;
-	font: normal 11px Arial, Helvetica, sans-serif;
-	color: #5D781D;
+/* Logos: Ohio State | AI-EDGE Institute, side by side.
+   The Ohio State wordmark is drawn larger than the AI-EDGE logo because
+   its lettering is a single thin line, while AI-EDGE's is two bold lines;
+   at these sizes the two look about the same height. */
+#logo2 {
+	display: flex;
+	align-items: center;
+	gap: 18px;
+	--logo-osu-h: 36px;
+	--logo-aiedge-h: 30px;
 }
 
-#search-submit {
-	width: 50px;
-	height: 22px;
-	border: none;
-	background: #B9B9B9;
-	color: #000000;
+#logo2 .logo-osu {
+	width: auto;
+	height: var(--logo-osu-h);
 }
 
-/* Menu */
+.logo-aiedge {
+	display: block;
+	padding-left: 18px;
+	border-left: 1px solid #c4c4c4;
+	line-height: 0;
+	transition: opacity 150ms ease;
+}
+
+.logo-aiedge:hover {
+	opacity: 0.8;
+}
+
+.logo-aiedge img {
+	width: auto;
+	height: var(--logo-aiedge-h);
+}
+
+/* Homepage: draw the rule and ease the masthead in */
+.home #logo::before {
+	transform: scaleY(0);
+	animation: draw-rule 700ms cubic-bezier(0.2, 0.75, 0.25, 1) 120ms forwards;
+}
+
+.home #logo > * {
+	opacity: 0;
+	transform: translateY(12px);
+	animation: rise-in 620ms ease forwards;
+}
+
+.home #logo > :nth-child(1) { animation-delay: 180ms; }
+.home #logo > :nth-child(2) { animation-delay: 280ms; }
+
+@keyframes draw-rule {
+	to { transform: scaleY(1); }
+}
+
+@keyframes rise-in {
+	to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Sticky menu bar ---------- */
 
 #menu {
-	width: 940px;
-	height: 36px;
-	margin: 0 auto;
-	padding: 0;
-	background: #000000;
+	position: sticky;
+	top: 0;
+	z-index: 50;
+	width: auto;
+	height: var(--nav-h);
+	margin: 0;
+	padding: 0 max(var(--gutter), calc((100% - var(--max)) / 2));
+	display: flex;
+	align-items: stretch;
+	gap: 0;
+	background: var(--band-dark);   /* darker grey band, full width */
+	transition: box-shadow 220ms ease;
 }
 
+#menu.is-stuck {
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+/* compact name: shown in the bar once it sticks to the top of the window */
+.menu-name {
+	display: none;
+	align-self: center;
+	font-family: var(--serif);
+	font-size: 15px;
+	font-weight: 600;
+	letter-spacing: -0.015em;
+	color: #ffffff !important;
+	text-decoration: none !important;
+	white-space: nowrap;
+	opacity: 0;
+	transform: translateY(4px);
+	pointer-events: none;
+	transition: opacity 200ms ease, transform 200ms ease;
+}
+
+#menu.is-stuck .menu-name {
+	opacity: 1;
+	transform: none;
+	pointer-events: auto;
+}
+
+/* the black bar itself */
 #menu ul {
+	flex: 1 1 auto;
 	margin: 0;
 	padding: 0;
+	display: flex;
+	gap: 0;
 	list-style: none;
 	line-height: normal;
+	background: var(--menu-bg);
 }
 
+/* Each item is as wide as its word plus the same padding, and any spare
+   room is shared out equally, so the gaps between words are all the same */
 #menu li {
-	float: left;
+	float: none;
+	flex: 1 1 auto;
+	min-width: 0;
 }
 
-#menu a {
+#menu ul a {
+	position: relative;
 	display: block;
-	width: 117.5px;
-	height: 28px;
-	background: #000000;
-	padding-top: 8px;
-	border-right: 1px solid #FFFFFF;
-	text-decoration: none;
-	text-align: center;
-	font-family: Arial, Helvetica, sans-serif;
+	width: auto;
+	height: var(--nav-h);
+	line-height: var(--nav-h);
+	padding: 0 10px;
+	background: transparent;
+	color: #ffffff;
+	font-family: var(--sans);
 	font-size: 13px;
-	font-weight: bold;
-	color: #FFFFFF;
-	border: none;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	transition: background-color 150ms ease;
 }
 
-#menu a:hover, #menu .current_page_item a {
-	background: #BC1B32;
+#menu ul a:hover,
+#menu .current_page_item a {
+	color: #ffffff;
+	background: var(--scarlet);
 	text-decoration: none;
 }
 
-#menu .current_page_item a {
-	background: #BC1B32;
-	padding-left: 0;
+#menu ul a:focus-visible {
+	outline: 2px solid #ffffff;
+	outline-offset: -4px;
+}
+
+.menu-button {
+	display: none;
+}
+
+/* Desktop: when the bar sticks, the name slides in at its left end and the
+   menu items move over to the right to make room */
+@media (min-width: 901px) {
+	#menu .menu-name {
+		display: block;
+		flex: none;
+		align-self: stretch;
+		max-width: 0;
+		padding: 0;
+		overflow: hidden;
+		background: var(--menu-bg);
+		font-size: 16px;
+		font-weight: 600;          /* bold */
+		line-height: var(--nav-h);
+		opacity: 1;                /* the black stays solid; only the text fades in */
+		color: transparent !important;
+		transform: none;
+		transition: max-width 420ms cubic-bezier(0.2, 0.7, 0.2, 1),
+		            padding 420ms cubic-bezier(0.2, 0.7, 0.2, 1),
+		            color 260ms ease 160ms;
+	}
+
+	#menu.is-stuck .menu-name {
+		max-width: 240px;
+		padding: 0 22px 0 18px;
+		color: #ffffff !important;
+	}
+
+	#menu .menu-name:hover {
+		background: var(--scarlet);
+	}
+
+	/* Once the bar sticks: the menu items stop stretching and sit close
+	   together on the right, every pair the same distance apart
+	   (2 x --menu-pad-stuck), and a spacer after the name takes all the
+	   remaining room. Everything animates together, so the spaces between
+	   items stay equal while they move. */
+	#menu li {
+		transition: flex-grow 420ms cubic-bezier(0.2, 0.7, 0.2, 1);
+	}
+
+	#menu ul a {
+		transition: background-color 150ms ease,
+		            padding 420ms cubic-bezier(0.2, 0.7, 0.2, 1);
+	}
+
+	#menu ul::before {
+		content: "";
+		flex: 0 0 0;
+		transition: flex-grow 420ms cubic-bezier(0.2, 0.7, 0.2, 1);
+	}
+
+	#menu.is-stuck ul::before {
+		flex-grow: 1;
+	}
+
+	#menu.is-stuck li {
+		flex-grow: 0;
+	}
+
+	#menu.is-stuck ul a {
+		padding: 0 var(--menu-pad-stuck);
+	}
+}
+
+/* While the mouse is over another menu item (or the name), only that item is
+   highlighted; the current page's highlight comes back when the mouse leaves */
+@media (min-width: 901px) and (hover: hover) {
+	#menu ul:has(li a:hover) .current_page_item a:not(:hover),
+	#menu .menu-name:hover ~ ul .current_page_item a {
+		background: transparent;
+	}
 }
 
 .sticky_menu {
-  position: sticky;
-  top: 0;
-  z-index: 10; 
+	position: sticky;
+	top: 0;
 }
 
-
-/* Page */
+/* ---------- Content ---------- */
 
 #page {
-	width: 940px;
-	margin: 0 auto;
-	padding: 0;
+	display: flow-root;         /* keeps the panel's own height (site.js trims the space at its bottom) */
+	width: min(calc(100% - 2 * var(--gutter)), var(--max));
+	margin: 0 auto 28px;
+	padding: var(--card-pad-top) var(--card-pad-x) 64px;
+	background: var(--paper);   /* white card on the grey page */
 }
 
-#page-bgtop {
-	padding: 20px px;
-}
-
+#page-bgtop,
 #page-bgbtm {
-}
-
-/* Content */
-
-#content {
-	float: left;
-	width: 620px;
 	padding: 0;
 }
 
-.post {
-	margin-bottom: 15px;
-	border-bottom: 1px solid #E2E2E2;
+#sidebar {
+	float: none;
+	width: auto;
+	padding: 0;
+	background: none;
+	color: var(--ink-soft);
+	overflow-wrap: break-word;
 }
 
-.post-bgtop {
+#sidebar table {
+	max-width: 100%;
 }
 
-.post-bgbtm {
+/* Older pages: large page titles written with <font size="6"> */
+#sidebar font[face] {
+	font-family: inherit;
 }
 
-.post .title {
-	height: 38px;
-	margin-bottom: 10px;
-	padding: 12px 0 0 0px;
-	letter-spacing: -.5px;
-	color: #000000;
+#sidebar font[size="6"] {
+	font-family: var(--serif);
+	font-size: clamp(26px, 3.4vw, 32px);
+	letter-spacing: -0.025em;
+	line-height: 1.15;
+	color: var(--ink);
 }
 
-.post .title a {
-	color: #000000;
+#sidebar font[size="6"] b {
+	font-weight: 600;            /* bold page titles */
+	color: var(--ink);
+}
+
+/* Main pages (Research, Publications, ...): space from the top of the white
+   panel to the top of the title's capital letters = --title-gap. The whole
+   title block (title plus any subtitle) moves up together.
+   3px = the old table's cell spacing and padding; the capitals start
+   0.235 x the title size below the top of the title's line. */
+#sidebar table.page-title {
+	--title-size: clamp(26px, 3.4vw, 32px);   /* same as font[size="6"] above */
+	margin-top: calc(var(--title-gap) - var(--card-pad-top) - 3px - 0.235 * var(--title-size));
+}
+
+/* Course pages: title written with <font size="5">, term in <sub><sup> */
+#sidebar font[size="5"] {
+	font-family: var(--serif);
+	font-size: clamp(20px, 2.6vw, 24px);
+	letter-spacing: -0.02em;
+	line-height: 1.2;
+	color: var(--ink);
+}
+
+#sidebar font[size="5"] b {
+	font-weight: 400;
+	color: var(--ink);
+}
+
+#sidebar font[size="5"] sub {
+	vertical-align: baseline;
+}
+
+#sidebar font[size="5"] sub sup {
+	display: inline-block;
+	margin-top: 10px;
+	color: var(--scarlet);
+	font-family: var(--sans);
+	font-size: 10px;
+	font-weight: 600;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	vertical-align: baseline;
+}
+
+#sidebar font[color="red"],
+#sidebar font[color="#BC1B32"],
+#sidebar font[color="#bc1b32"] {
+	color: var(--scarlet);
+}
+
+#sidebar font[color="red"] b,
+#sidebar font[color="#BC1B32"] b,
+#sidebar b font[color="#BC1B32"],
+#sidebar b font[color="red"] {
+	color: var(--scarlet);
+}
+
+#sidebar h1 {
+	margin: 18px 0 6px;
+	font-size: clamp(20px, 2.6vw, 24px);
+	color: var(--ink);
+}
+
+#sidebar h2 {
+	margin: 0;
+	padding: 16px 0 10px;
+	font-size: clamp(19px, 2.2vw, 22px);
+	color: var(--ink);
+}
+
+#sidebar h3 {
+	font-size: 18px;
+	line-height: 1.3;
+}
+
+#sidebar p {
+	margin: 0;
+	padding: 0 0 14px;
+	text-align: justify;         /* as on the original site: text keeps an even edge next to pictures */
+	font-size: 1em;
+}
+
+#sidebar a {
 	border: none;
 }
 
-.post .meta {
-	width: 400px;
-	padding: 5px 20px 5px 10px;
-	background: #676767;
-	text-align: left;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 11px;
-	font-style: italic;
-	color: #FFFFFF;
+a b,
+a strong {
+	color: inherit;
 }
 
-.post .meta a {
-	color: #FFFFFF;
-}
-
-.post .entry {
-	padding: 0px 0px 20px 0px;
-	padding-bottom: 20px;
-	text-align: justify;
-}
-
-.links {
-	padding-top: 20px;
-	font-size: 12px;
-	font-weight: bold;
-}
-
-/* Sidebar */
-
-#sidebar {
-	float: right;
-	width: 940px;
-	padding: 0px;
-	color: #363636; /* Kevin: this is for font color */
-	background: #FFFFFF;
-}
-
+/* Lists: rows separated by light rules */
 #sidebar ul {
-	margin: -3px;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 	list-style: none;
 }
 
 #sidebar ol {
-	margin: 0px 48px;
-    padding: 0;
-	padding-bottom: 6px;    
+	margin: 0 0 0 1.6em;
+	padding: 0 0 10px;
+}
+
+#sidebar ol > li {
+	padding: 5px 0 5px 0.3em;
+}
+
+/* Publications page: the copyright note sits close to the rules above and
+   below it, as on the original site */
+#sidebar .pub-note {
+	margin: -14px 0 -15px;
+}
+
+/* Publications page: entries are separated by a blank line (<br>); pull each
+   entry up a little so the lists read a bit tighter */
+#sidebar ol.pub-list > br + li {
+	margin-top: calc(-1 * var(--pub-trim));
+}
+
+#sidebar ol > li::marker {
+	color: var(--muted-light);
+	font-size: 0.85em;
+	font-variant-numeric: tabular-nums;
 }
 
 #sidebar li {
 	margin: 0;
 	padding: 0;
-	border-left: 0px solid #E2E2E2;
 }
 
 #sidebar li ul {
-	margin: 0px 0px;
-    padding-top: -30px;
-	padding-bottom: 30px;
-	list-style: circle;    
+	margin: 0 0 8px;
+	padding: 0 0 24px;
+	border-top: 1px solid var(--rule-light);
+	list-style: none;
 }
-
-
 
 #sidebar li li {
-	line-height: 26px;
-	border-bottom: 1px dashed #D1D1D1;
-	margin: 0px 48px;
-	border-left: none;
+	margin: 0;
+	padding: 7px 0;
+	border-bottom: 1px solid var(--rule-light);
+	line-height: 1.65;
 }
 
+/* A heading right after a ruled list: same space below the list's last rule
+   as below the page's top rule (e.g. "Late Policy" after "Grading Policy") */
+#sidebar ul:has(li ul) + h2 {
+	padding-top: 6px;
+}
 
+/* Teaching and Activities: a small circle bullet at the start of each line,
+   like the news list on the Home page */
+#sidebar.bulleted li li {
+	position: relative;
+	padding-left: 18px;
+}
 
-#sidebar li li span {
+#sidebar.bulleted li li::before {
+	content: "";
+	position: absolute;
+	left: 3px;
+	top: calc(7px + 0.825em - 2px);  /* centred on the first line */
+	width: 4px;
+	height: 4px;
+	border: 1px solid var(--muted);
+	border-radius: 50%;
+}
+
+/* Images inside text */
+#sidebar img[align="right"] {
+	margin: 4px 0 10px var(--wrap-gap) !important;
+}
+
+#sidebar img[align="left"] {
+	margin: 4px var(--wrap-gap) 10px 0 !important;
+}
+
+/* My Group cards (table cells with a grey background) */
+#sidebar td[bgcolor] {
+	background: var(--card-gray);
+	padding: 10px 14px;
+	vertical-align: top;
+	line-height: var(--card-line);
+}
+
+#sidebar td[bgcolor] img {
 	display: block;
-	margin-top: -20px;
+}
+
+/* the text sits in the middle of the photo's height (the photo stays at the
+   top when the text is the taller of the two, e.g. on phones) */
+#sidebar td[bgcolor] + td[bgcolor] {
+	vertical-align: middle;
+}
+
+/* Card text: the name, then one paragraph per item (dates, research
+   interests, awards ...). Every card uses the same line spacing and the same
+   space between paragraphs (--card-gap); cards with less text than the photo
+   get a wider space after the name (site.js, up to --card-name-gap) and are
+   centred against the photo. */
+#sidebar td[bgcolor] h3 {
+	margin: 0 0 var(--card-gap);
+	line-height: 1.25;
+}
+
+#sidebar td[bgcolor] p.card-p {
+	margin: 0;
 	padding: 0;
+	line-height: inherit;
+	text-align: left;
+}
+
+#sidebar td[bgcolor] p.card-p + p.card-p {
+	margin-top: var(--card-gap);
+}
+
+/* "+ Click for the next ..." toggles on Activities */
+#myspan,
+#myspan1 {
+	display: inline-block;
+	margin-top: 16px;
+	padding: 12px 18px 11px;
+	border: 1px solid #b7b7b7;
+	cursor: pointer;
+	color: var(--ink-soft);
+	font-size: 10px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	transition: color 180ms ease, border-color 180ms ease;
+}
+
+/* a "+ Click for the next ..." button that ends a section: the same space
+   between the button and the section's closing rule as after text elsewhere */
+#sidebar li ul > center:last-child {
+	margin-bottom: -15px;
+}
+
+#myspan b,
+#myspan1 b {
+	font-weight: 500;
+	color: inherit;
+}
+
+#myspan:hover,
+#myspan1:hover {
+	border-color: var(--scarlet);
+	color: var(--scarlet);
+}
+
+#talklist > li:nth-child(n+20) {
+	display: none;
+}
+
+/* ---------- Shared components ---------- */
+
+.eyebrow,
+#sidebar .eyebrow {
+	margin: 0 0 10px;
+	color: var(--scarlet);
+	font-family: var(--sans);
+	font-size: 10px;
+	font-weight: 600;
+	letter-spacing: 0.18em;
+	line-height: 1.4;
+	text-transform: uppercase;
+	padding: 0;
+}
+
+.button {
+	min-height: 36px;
+	padding: 10px 16px 9px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid;
+	background: none;
+	font-family: var(--sans);
+	font-size: 10px;
+	font-weight: 500;
+	letter-spacing: 0.11em;
+	line-height: 1.2;
+	text-decoration: none !important;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: color 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+#sidebar a.button {
+	border: 1px solid;
+}
+
+.button-primary,
+#sidebar a.button-primary {
+	border-color: var(--scarlet);
+	background: var(--scarlet);
+	color: #ffffff !important;
+}
+
+.button-primary:hover,
+#sidebar a.button-primary:hover {
+	border-color: var(--scarlet-dark);
+	background: var(--scarlet-dark);
+}
+
+.button-secondary,
+#sidebar a.button-secondary {
+	border-color: #b7b7b7;
+	color: var(--ink-soft) !important;
+}
+
+.button-secondary:hover,
+#sidebar a.button-secondary:hover {
+	border-color: var(--scarlet);
+	color: var(--scarlet) !important;
+}
+
+.text-link {
+	display: inline-block;
+	color: var(--scarlet);
 	font-size: 11px;
-	font-style: italic;
-    font-size: 12px;
+	font-weight: 500;
+	text-decoration: none !important;
 }
 
-#sidebar h2 {
-	height: 38px;
-	padding-left: 30px;
-	letter-spacing: -.5px;
-	font-size: 1.8em;
-	color: #000000;
-}
-
-#sidebar p {
-	margin: 0 0px;
-	padding: 0px 30px 20px 30px;
-	text-align: justify;
-    font-size: 1em;    
-}
-
-#sidebar a {
-	border: none;
-	/*color: #BC1B32;*/
-}
-
-#sidebar a:hover {
-	text-decoration: underline;
-	/* color: #8A8A8A; */
-    /* color: #BC1B32 */
-}
-
-span {
-    cursor: pointer;
-    color: #BC1B32;
-/*    line-height: 2.8em;*/
-    position: relative; 
-    top: 8px; 
-    left: 33px;
-}
-
-ul li:nth-child(n+20) {
-    display:none;
-}
-
-
-/* Calendar */
-
-#calendar {
-}
-
-#calendar_wrap {
-	padding: 20px;
-}
-
-#calendar table {
+.text-link::after {
+	display: block;
 	width: 100%;
+	height: 1px;
+	margin-top: 3px;
+	background: currentColor;
+	content: "";
+	transform: scaleX(0.2);
+	transform-origin: left;
+	transition: transform 220ms ease;
 }
 
-#calendar tbody td {
-	text-align: center;
+.text-link:hover::after {
+	transform: scaleX(1);
 }
 
-#calendar #next {
-	text-align: right;
+.image-frame {
+	position: relative;
+	margin: 0;
+	overflow: hidden;
+	background: #e5e5e5;
+	line-height: 0;
 }
 
-/* Footer */
+.image-frame::after {
+	position: absolute;
+	inset: 0;
+	border: 1px solid rgba(0, 0, 0, 0.09);
+	content: "";
+	pointer-events: none;
+}
+
+.image-frame img {
+	width: 100%;
+	transition: transform 700ms cubic-bezier(0.2, 0.65, 0.25, 1);
+}
+
+.image-frame:hover img {
+	transform: scale(1.018);
+}
+
+/* ---------- Back-to-top button (all pages) ---------- */
+
+body #myBtn {
+	display: none;
+	position: fixed;
+	right: 24px;
+	bottom: 22px;
+	z-index: 60;
+	min-height: 34px;
+	padding: 9px 14px 8px;
+	border: 1px solid var(--scarlet);
+	border-radius: 0;
+	outline: none;
+	background: var(--scarlet);
+	color: #ffffff;
+	cursor: pointer;
+	font-family: var(--sans);
+	font-size: 10px;
+	font-weight: 500;
+	letter-spacing: 0.11em;
+	text-transform: uppercase;
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+	transition: background 180ms ease;
+}
+
+body.menu-open #myBtn {
+	display: none !important;
+}
+
+body #myBtn:hover,
+body #myBtn:focus-visible {
+	border-color: var(--scarlet-dark);
+	background: var(--scarlet-dark);
+}
+
+/* ---------- Footer ---------- */
 
 #footer {
-	height: 50px;
-	margin: 0 auto;
-	padding: 0px 0 15px 0;
-	background: #ECECEC;
-	border-top: 1px solid #DEDEDE;
-	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	border-top: 4px solid var(--scarlet);
+	background: var(--footer-bg);
+	color: var(--muted-light);
+	font-family: var(--sans);
+	font-size: 12px;
+	line-height: 1.6;
+	text-align: left;
 }
 
-#footer p {
+.footer-main,
+.footer-meta {
+	width: min(calc(100% - 2 * var(--gutter)), var(--max));
+	margin: 0 auto;
+}
+
+.footer-main {
+	padding: 30px 0 26px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 40px;
+}
+
+.footer-title p {
 	margin: 0;
-	padding-top: 20px;
-	line-height: normal;
-	font-size: 9px;
-	text-transform: uppercase;
-	text-align: center;
-	color: #A0A0A0;
+}
+
+.footer-title p:first-child {
+	margin-bottom: 8px;
+	color: var(--ink);
+	font-family: var(--serif);
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.3;
+}
+
+.footer-title span,
+.footer-meta span.sep {
+	margin: 0 0.45em;
+}
+
+.footer-meta {
+	padding: 16px 0 24px;
+	display: flex;
+	justify-content: space-between;
+	gap: 24px;
+	border-top: 1px solid #d7d7d7;
+	font-size: 11px;
+}
+
+.footer-meta p {
+	margin: 0;
 }
 
 #footer a {
-	color: #787878;
+	color: var(--ink-soft);
 }
 
 #footer a:hover {
-	text-decoration: underline;
-    color: #787878;
+	color: var(--scarlet);
 }
 
+/* ---------- Group-page slideshow ---------- */
 
-/* Slideshow container */
+/* Same space above the slideshow (to the line) as at its sides (to the edge
+   of the white panel). 22px = the line's own margin below it plus the old
+   table's cell spacing; 3px = cell spacing at the sides. */
+#sidebar table.slideshow-table {
+	margin-top: calc(var(--card-pad-x) + 3px - 22px);
+}
+
 .slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-  z-index: 0;    
+	max-width: 1000px;
+	position: relative;
+	margin: auto;
+	z-index: 0;
 }
 
-/* Hide the images by default */
 .mySlides {
-  display: none;
+	display: none;
 }
 
-/* Next & previous buttons */
+.mySlides img {
+	display: block;
+}
+
 .prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  font-weight: bold;
-  font-size: 28px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  color: white;
+	cursor: pointer;
+	position: absolute;
+	top: 45%;
+	width: auto;
+	margin-top: -22px;
+	padding: 14px 16px;
+	font-weight: 400;
+	font-size: 26px;
+	line-height: 1;
+	transition: background 0.3s ease;
+	user-select: none;
+	color: #ffffff !important;
+	background: rgba(0, 0, 0, 0.25);
+	text-decoration: none !important;
 }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
+.next { right: 0; }
+.prev { left: 0; }
 
-.prev {
-  left: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+	background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Caption text */
 .text {
-  color: black;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: -40px;
-  width: 97%;
-  text-align: center;
+	position: static;
+	width: auto;
+	padding: 10px 0 4px;
+	color: var(--muted-light);
+	font-size: 12px;
+	line-height: 1.5;
+	text-align: left;
 }
 
-/* Number text (1/3 etc) */
 .numbertext {
-  color: #f2f2f2;
-  font-size: 18px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+	color: #f2f2f2;
+	font-size: 11px;
+	letter-spacing: 0.1em;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
 }
 
-/* The dots/bullets/indicators */
 .dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+	cursor: pointer;
+	height: 8px;
+	width: 8px;
+	margin: 0 3px;
+	background-color: var(--rule);
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.3s ease;
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+	background-color: var(--scarlet);
 }
 
-/* Fading animation */
 .fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.2s;
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+	from { opacity: .4; }
+	to   { opacity: 1; }
+}
+
+/* ======================================================
+   Homepage (index.html)
+   ====================================================== */
+
+.section {
+	padding: 34px 0 0;
+	display: block;              /* headings sit above their content */
+}
+
+.section + .section {
+	margin-top: 34px;
+	border-top: 1px solid var(--rule);
+}
+
+.section:first-child {
+	padding-top: 4px;
+}
+
+.section-label {
+	display: flow-root;          /* stays beside the photo instead of under it */
+	margin-bottom: 12px;
+}
+
+#sidebar .section-label h2 {
+	padding: 0;
+	font-size: clamp(20px, 2.2vw, 22px);
+	letter-spacing: -0.025em;
+	line-height: 1.12;
+}
+
+.section-body {
+	min-width: 0;
+}
+
+/* Contact + biography share one block; the photo floats on the right
+   and the text wraps around it, as on the original homepage */
+.intro {
+	display: flow-root;
+}
+
+.intro .portrait {
+	float: right;
+	width: 246px;
+	/* The photo's right edge lines up with the text below it, so its right
+	   margin is the white panel's side margin (--card-pad-x). The same
+	   distance is used above it (to the panel's top edge), on its left (to
+	   the text beside it) and below it (to the text under it; site.js
+	   matches the space below to the left margin). */
+	margin: calc(var(--card-pad-x) - var(--card-pad-top) - 4px)
+	        0
+	        14px var(--card-pad-x);
+}
+
+.bio-label {
+	margin-top: 0;               /* rule sits right under the contact lines */
+	padding-top: 20px;
+	border-top: 1px solid var(--rule);
+}
+
+#sidebar .bio-label + .body-copy {
+	margin-top: 0;
+}
+
+/* Contact: two lines (Office, then Email | Phone | Fax) with the social
+   icons beside them, centred on both lines as on the original site */
+.contact-row {
+	padding: 6px 0 4.5px;        /* equal space above and below the two lines */
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px 28px;
+	border-top: 1px solid var(--rule-light);
+}
+
+.facts {
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: auto auto auto;      /* Email | Phone | Fax */
+	justify-content: start;
+	column-gap: var(--fact-pair-gap);            /* space between Email, Phone and Fax */
+	--fact-gap: 8px;
+	--fact-pair-gap: 26px;       /* chosen so the two lines come out about the same length */
+}
+
+.facts > div {
+	padding: 3px 0;
+	display: flex;
+	align-items: baseline;
+	gap: var(--fact-gap);        /* space between a label and its value */
+}
+
+.facts > .fact-office {
+	grid-column: 1 / -1;
+}
+
+.facts dt {
+	padding-top: 0;
+	color: var(--scarlet);
+	font-size: 9.5px;
+	font-weight: 600;
+	letter-spacing: 0.13em;
+	text-transform: uppercase;
+}
+
+.facts dd {
+	margin: 0;
+	color: var(--ink-soft);
+	font-size: 12px;
+	line-height: 1.55;
+}
+
+
+#sidebar .social {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	gap: 8px;
+	list-style: none;
+}
+
+.social a {
+	display: block;
+	line-height: 0;
+	transition: transform 150ms ease, opacity 150ms ease;
+}
+
+.social a:hover {
+	transform: translateY(-1px);
+	opacity: 0.8;
+}
+
+.social img {
+	width: 30px;
+	height: 30px;
+}
+
+.portrait figcaption {
+	margin-top: 10px;
+	color: var(--muted-light);
+	font-size: 11px;
+	line-height: 1.5;
+}
+
+/* Biography */
+#sidebar .lead {
+	margin: 0;
+	padding: 0;
+	color: #242424;
+	font-family: var(--serif);
+	font-size: 16px;
+	line-height: 1.55;
+}
+
+#sidebar .lead a {
+	color: inherit;
+	text-decoration: underline;
+	text-decoration-color: var(--rule);
+}
+
+#sidebar .lead a:hover {
+	color: var(--scarlet);
+	text-decoration-color: currentColor;
+}
+
+#sidebar .section-body > .body-copy:first-child {
+	margin-top: 0;
+}
+
+#sidebar .body-copy {
+	margin: 14px 0 0;
+	padding: 0;
+	color: var(--ink-soft);
+	font-size: 12px;
+	line-height: 1.8;
+}
+
+.hl {
+	color: var(--scarlet);
+}
+
+.inline-links {
+	margin-top: 24px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px 28px;
+}
+
+/* Openings */
+.openings-body {
+	padding: 24px 0 4px 24px;
+	border-top: 1px solid var(--rule);
+	border-left: 1px solid var(--scarlet);
+}
+
+#sidebar .openings-body p {
+	padding: 0;
+	color: var(--ink-soft);
+	font-size: 12px;
+	line-height: 1.8;
+}
+
+.openings-actions {
+	margin-top: 26px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 11px;
+}
+
+/* News */
+#sidebar #datalist {
+	margin: 0;
+	padding: 0;
+	border-top: 1px solid var(--rule);
+	list-style: none;
+}
+
+/* small circle bullet on each item, as on the original site */
+#sidebar #datalist > li::before {
+	content: "";
+	position: absolute;
+	left: 3px;
+	top: calc(8px + 0.85em - 2px);   /* centred on the first line */
+	width: 4px;
+	height: 4px;
+	border: 1px solid var(--muted);
+	border-radius: 50%;
+}
+
+#sidebar #datalist > li {
+	position: relative;
+	margin: 0;
+	padding: 8px 0 9px 18px;
+	border-bottom: 1px solid var(--rule-light);
+	color: var(--ink-soft);
+	font-size: 12px;
+	line-height: 1.7;
+}
+
+#datalist b {
+	color: var(--scarlet);
+	font-weight: 500;
+}
+
+#datalist > li.is-hidden {
+	display: none;
+}
+
+/* "Show the next 10 news items" sits in the centre */
+.news-more {
+	margin-top: 28px;
+	display: flex;
+	justify-content: center;
+}
+
+.news-more[hidden],
+.news-more [hidden] {
+	display: none;
+}
+
+
+/* Openings and News headings: the same space above the capital letters
+   (to the rule above) as below the baseline (to the rule below).
+   0.2386em / 0.2095em are where Source Serif 4's capitals start and its
+   baseline sits inside the heading's line, so the gap is exact at any size. */
+#sidebar #openings,
+#sidebar #news {
+	padding-top: 0;
+}
+
+#sidebar #openings .section-label,
+#sidebar #news .section-label {
+	margin-bottom: 0;
+}
+
+#sidebar #openings .section-label h2,
+#sidebar #news .section-label h2 {
+	padding: calc(var(--head-gap) - 0.2386em) 0 calc(var(--head-gap) - 0.2095em);
+}
+
+/* Fade-in (added by site.js) */
+.reveal-ready [data-reveal] {
+	opacity: 0;
+	transform: translateY(18px);
+	transition: opacity 650ms ease, transform 650ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.reveal-ready [data-reveal].is-visible {
+	opacity: 1;
+	transform: none;
+}
+
+/* ======================================================
+   Tablets and phones
+   ====================================================== */
+
+@media (max-width: 900px) {
+	:root {
+		--gutter: 24px;
+		--nav-h: 48px;
+	}
+
+	#menu {
+		padding: 0 var(--gutter);
+		align-items: center;
+		background: var(--menu-bg);
+	}
+
+	#menu .menu-name {
+		display: block;
+	}
+
+	#menu ul {
+		background: none;
+	}
+
+	#header {
+		padding: 36px 0 28px;
+	}
+
+	#logo2 {
+		gap: 16px;
+		--logo-osu-h: 31px;
+		--logo-aiedge-h: 26px;
+	}
+
+	.logo-aiedge {
+		padding-left: 16px;
+	}
+
+	/* Phone/tablet menu: "Menu" button + full-screen list */
+	.js #menu ul {
+		display: none;
+	}
+
+	.js #menu.menu-open ul {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		z-index: 2;
+		min-height: calc(100vh - var(--nav-h));
+		min-height: calc(100svh - var(--nav-h));
+		margin: 0;
+		padding: 12px var(--gutter) 24px;
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+		overflow-y: auto;
+		background: var(--menu-bg);
+	}
+
+	.js #menu.menu-open ul a {
+		height: auto;
+		padding: 14px 12px;
+		border-bottom: 1px solid #2a2a2a;
+		color: #ffffff;
+		text-align: left;
+		font-family: var(--serif);
+		font-weight: 400;
+		font-size: 21px;
+		line-height: 1.3;
+		letter-spacing: -0.01em;
+	}
+
+	.js #menu.menu-open ul a::after {
+		display: none;
+	}
+
+	/* no "stuck" hover highlight under the finger after tapping Menu */
+	.js #menu.menu-open ul a:hover {
+		background: transparent;
+	}
+
+	.js #menu.menu-open .current_page_item a,
+	.js #menu.menu-open .current_page_item a:hover {
+		color: #ffffff;
+		background: var(--scarlet);
+	}
+
+	.js .menu-button {
+		width: 72px;
+		height: 44px;
+		margin-left: auto;
+		padding: 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border: 0;
+		background: transparent;
+		color: #ffffff;
+		font: inherit;
+		cursor: pointer;
+	}
+
+	.menu-label {
+		font-size: 10px;
+		font-weight: 500;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+	}
+
+	.menu-icon {
+		position: relative;
+		width: 18px;
+		height: 12px;
+		display: block;
+	}
+
+	.menu-icon i {
+		position: absolute;
+		right: 0;
+		width: 18px;
+		height: 1px;
+		display: block;
+		background: currentColor;
+		transition: transform 180ms ease, top 180ms ease;
+	}
+
+	.menu-icon i:first-child { top: 2px; }
+	.menu-icon i:last-child  { top: 9px; }
+
+	.menu-button[aria-expanded="true"] .menu-icon i:first-child {
+		top: 6px;
+		transform: rotate(45deg);
+	}
+
+	.menu-button[aria-expanded="true"] .menu-icon i:last-child {
+		top: 6px;
+		transform: rotate(-45deg);
+	}
+
+	@media (hover: hover) {
+		.js #menu.menu-open li:not(.current_page_item) a:hover {
+			background: #1f1f1f;
+		}
+	}
+
+	/* Without JavaScript: show the links as a wrapping row */
+	html:not(.js) #menu {
+		height: auto;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+	html:not(.js) #menu ul {
+		margin: 0;
+		flex-wrap: wrap;
+		gap: 0;
+	}
+
+	html:not(.js) #menu li {
+		flex: 1 1 25%;
+	}
+
+	html:not(.js) #menu ul a {
+		height: 40px;
+		line-height: 40px;
+	}
+
+	html:not(.js) .menu-name {
+		display: none;
+	}
+
+	/* Homepage: smaller photo on tablets */
+	.intro .portrait {
+		width: 200px;
+	}
+
+	.facts {
+		grid-template-columns: 1fr;
+	}
+
+	/* stacked one per line: give the labels one width so the values line up */
+	.facts dt {
+		min-width: 44px;
+	}
+
+	/* icons sit below the lines here, so match the space above them */
+	.contact-row {
+		padding-bottom: 10px;
+	}
+
+	.section-body {
+		max-width: none;
+	}
+}
+
+@media (max-width: 680px) {
+	:root {
+		--gutter: 18px;
+		--head-gap: 20px;
+	}
+
+
+
+	body {
+		font-size: 13px;
+	}
+
+	/* phones: logos move to their own row under the name */
+	#header {
+		padding: 28px 0 22px;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 18px;
+	}
+
+	#logo {
+		padding-left: 18px;
+	}
+
+	#logo h1 {
+		font-size: clamp(26px, 8vw, 32px);
+	}
+
+	#logo p {
+		margin-top: 10px;
+		font-size: 13px;
+	}
+
+	#logo2 {
+		gap: 14px;
+		padding-left: 18px;          /* lines up with the name */
+		--logo-osu-h: 25px;
+		--logo-aiedge-h: 21px;
+	}
+
+	.logo-aiedge {
+		padding-left: 14px;
+	}
+
+	#sidebar p {
+		text-align: left;
+	}
+
+	/* white card runs edge to edge on phones */
+	#page {
+		width: 100%;
+		margin-bottom: 0;
+		padding: 28px var(--gutter) 56px;
+	}
+
+	#sidebar table.page-title {
+		margin-top: calc(var(--title-gap) - 28px - 3px - 0.235 * var(--title-size));
+	}
+
+	#sidebar table.slideshow-table {
+		margin-top: calc(var(--gutter) + 3px - 22px);
+	}
+
+	#sidebar ol {
+		margin-left: 1.4em;
+	}
+
+	/* Floated figures on Research and similar pages: stack them */
+	#sidebar img[align="right"],
+	#sidebar img[align="left"] {
+		float: none;
+		display: block;
+		margin: 6px auto 18px !important;
+	}
+
+	/* small gap between photo and text columns (My Group) */
+	#sidebar td + td {
+		padding-left: 10px;
+	}
+
+	#sidebar td[bgcolor] {
+		padding: 8px 8px;
+	}
+
+	/* wide course schedules scroll sideways inside their own box */
+	#sidebar table.SchTable {
+		display: block;
+		max-width: calc(100vw - 2 * var(--gutter));
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	body #myBtn {
+		right: 14px;
+		bottom: 14px;
+	}
+
+	.section {
+		padding-top: 30px;
+	}
+
+	.section + .section {
+		margin-top: 30px;
+	}
+
+	.intro .portrait {
+		float: none;
+		width: 200px;
+		margin: 0 0 22px;
+	}
+
+	.facts {
+		grid-template-columns: 1fr;
+	}
+
+	.openings-body {
+		padding: 26px 0 0 18px;
+	}
+
+	.openings-actions .button {
+		flex: 1 1 150px;
+	}
+
+	.footer-main {
+		flex-direction: column;
+		gap: 20px;
+		padding: 32px 0 26px;
+	}
+
+	.footer-meta {
+		flex-direction: column;
+		gap: 8px;
+	}
+}
+
+/* ---------- Motion & print ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	*, *::before, *::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+
+	.home #logo::before {
+		transform: none;
+	}
+
+	.home #logo > *,
+	[data-reveal] {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@media print {
+	#menu, #myBtn, .news-more, .menu-button {
+		display: none !important;
+	}
+
+	#menu { position: static; }
+
+	#datalist > li.is-hidden,
+	#talklist > li {
+		display: list-item !important;
+	}
+
+	[data-reveal],
+	.home #logo > * {
+		opacity: 1 !important;
+		transform: none !important;
+	}
+
+	a { color: #000; }
 }

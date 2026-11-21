@@ -15,11 +15,15 @@ Released   : 20090905
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="google" content="notranslate">
 <meta http-equiv="Content-Language" content="en">
 <title>Jia Liu</title>
-<link href="../style_s.css" rel="stylesheet" type="text/css" media="screen" />
-<link rel="shortcut icon" href="https://www.osu.edu/assets/site-dev/osu_navbar/images/favicon.ico">
+<link href="../style_s.css?v=41" rel="stylesheet" type="text/css" media="screen" />
+<link rel="icon" href="../favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
 <style>
 #myBtn {
   display: none;
@@ -72,16 +76,17 @@ $(function () {
 });      
 </script>
     
+<script src="../site.js?v=24"></script>
 </head>
     
 <body>
     <div id="wrapper">
       <div id="header">
         <div id="logo">
-          <h1>Jia (Kevin) Liu,</h1>
+          <h1>Jia (Kevin) Liu</h1>
           <p>Associate Professor of Electrical and Computer Engineering, The Ohio State University</p>
         </div>
-        <div id="logo2"><img src="../images/osu-logo.png" width="100"></div>
+        <div id="logo2"><img class="logo-osu" src="../images/osu-logo-horizontal.png" width="223" height="32" alt="The Ohio State University" /><a class="logo-aiedge" href="https://aiedge.osu.edu/" target="_blank" rel="noopener" title="NSF AI Institute for Future Edge Networks and Distributed Intelligence (AI-EDGE)"><img src="../images/ai-edge-logo.png" width="140" height="36" alt="AI-EDGE Institute" /></a></div>
       </div>
       <!-- end #header -->
       <div id="menu">
@@ -101,13 +106,12 @@ $(function () {
         <div id="page-bgtop">
           <div id="page-bgbtm"> </div>
           <!-- end #content -->
-          <div id="sidebar">
+          <div id="sidebar" class="bulleted">
             <table>
               <tbody>
                 <tr>
                   <td>
-                    <p> </p>
-                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <table class="page-title" cellspacing="0" cellpadding="0" border="0" width="100%">
                       <tbody>
                         <tr>
                           <td width="100%" valign="bottom"><a name="overview"></a><font
@@ -498,12 +502,6 @@ $(function () {
                   </td>
                 </tr>
                 <tr>
-                  <td> <font color="white">"<b>CIF: Small: Taming Convergence
-                        and Delay in Stochastic Network Optimization with
-                        Hessian Information,</b>" CCF-1618318, 07/2016 --
-                      08/2019, Amount: $317,896 (So).</font> </td>
-                </tr>
-                <tr>
                   <td valign="top">
                     <hr noshade="noshade" /> </td>
                 </tr>
@@ -583,30 +581,21 @@ $(function () {
       </div>
     </div>
     <!-- end #page -->
-    <div id="footer">
-      <center>
-        <table>
-          <tbody>
-            <tr>
-              <td valign="middle">
-                  Copyright © 2004-<script>var today = new Date(); year = today.getFullYear(); document.write(year);</script>
-                <a href="mailto:liu@ece.osu.edu">Jia (Kevin) Liu</a>. All
-                rights reserved.<br />
-                Updated: <script> var date = document.lastModified; document.write(date.substr(0,10));</script>. Design adapted from <a href="http://templated.co"
-                  rel="nofollow">TEMPLATED</a>.
-              </td>
-              <!----------Place for the extreme tracking icon----------------------------------------->
-              <!----------Old Image Link: http://t1.extreme-dm.com/i.gif-------------->
-              <td>
-                <!-- extreme_jialiu_b782d478f8f780aa94e2c07df5dd86c1 -->
-                  <script src="//t1.extreme-dm.com/f.js" id="eXF-jialiu-1" async defer></script>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </center>
+    <footer id="footer">
+    <div class="footer-main">
+      <div class="footer-title">
+        <p>Jia (Kevin) Liu</p>
+        <p>Associate Professor of Electrical and Computer Engineering<span>&middot;</span>The Ohio State University<span>&middot;</span><a href="mailto:liu@ece.osu.edu">liu@ece.osu.edu</a></p>
+      </div>
     </div>
-    <!-- end #footer -->
+    <div class="footer-meta">
+      <p>Copyright &copy; 2004&ndash;<span class="js-year">2026</span> Jia (Kevin) Liu. All rights reserved. Updated: <span class="js-updated"></span>.</p>
+      <p>Design adapted from <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.
+        <!-- extreme_jialiu_b782d478f8f780aa94e2c07df5dd86c1 -->
+        <script src="//t1.extreme-dm.com/f.js" id="eXF-jialiu-1" async defer></script></p>
+    </div>
+  </footer>
+  <!-- end #footer -->
 
 <script>
 // When the user scrolls down 20px from the top of the document, show the button
