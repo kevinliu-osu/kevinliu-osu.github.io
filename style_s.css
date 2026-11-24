@@ -78,7 +78,7 @@
 	--sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
 	--max: 1040px;             /* content width */
 	--gutter: 36px;            /* side margin */
-	--nav-h: 36px;             /* sticky menu height (original) */
+	--nav-h: 37px;             /* sticky menu height (original 36px; at 37px the words sit exactly mid-bar, since the space above and below them is then an even number of pixels) */
 	--menu-pad-stuck: 14px;    /* stuck menu bar: half the space between items */
 	--head-gap: 24px;          /* homepage Openings/News headings: space to the rules above and below */
 	--card-gray: #F0F0F0;      /* My Group: background of each person's card */
